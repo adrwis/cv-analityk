@@ -150,6 +150,20 @@ body {
   background: #1e56a0;
 }
 
+/* --- Top bar title --- */
+.cv-analyst__topbar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ca-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cv-analyst__topbar-spacer {
+  flex: 1;
+}
+
 /* --- Top bar divider --- */
 .cv-analyst__topbar-divider {
   width: 1px;
@@ -708,13 +722,15 @@ body {
 
 /* --- Photo --- */
 .cv-analyst__photo {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--ca-accent);
   box-shadow: 0 4px 20px rgba(30, 86, 160, 0.15);
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 2rem;
 }
 
 .cv-analyst[data-mode="dark"] .cv-analyst__photo {
@@ -859,6 +875,11 @@ button:focus-visible {
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .cv-analyst__topbar-title,
+  .cv-analyst__topbar-spacer {
+    display: none;
   }
 
   .cv-analyst__exp-header {

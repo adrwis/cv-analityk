@@ -19,7 +19,7 @@
 <body>
 <div class="cv-analyst" id="cv-analyst" data-mode="light">
 
-  <a href="#cv-name" class="cv-analyst__skip-link">Przejdź do treści</a>
+  <a href="#cv-name" class="cv-analyst__skip-link" data-i18n="skip">Przejdź do treści</a>
 
   <!-- Binary rain background (Matrix-style) -->
   <canvas class="cv-analyst__binary-rain" id="rain-canvas" aria-hidden="true"></canvas>
@@ -458,6 +458,7 @@ var translations = {
     ai_built: 'Zbudowane z pomoc\u0105 AI: Claude Code',
     print: 'Drukuj CV',
     gdpr: 'Wyra\u017Cam zgod\u0119 na przetwarzanie moich danych osobowych w celu rekrutacji.',
+    skip: 'Przejd\u017A do tre\u015Bci',
   },
   en: {
     badge: 'Open to new opportunities',
@@ -533,6 +534,7 @@ var translations = {
     ai_built: 'Built with AI: Claude Code',
     print: 'Print CV',
     gdpr: 'I consent to the processing of my personal data for recruitment purposes.',
+    skip: 'Skip to content',
   }
 };
 
@@ -713,7 +715,7 @@ startTyping();
 
     ctx.fillStyle = mode === 'dark'
       ? 'rgba(10, 22, 40, 0.04)'
-      : 'rgba(248, 250, 251, 0.04)';
+      : 'rgba(248, 250, 251, 0.03)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = fontSize + 'px "JetBrains Mono", monospace';
@@ -728,7 +730,7 @@ startTyping();
 
       if (y >= 0 && y <= canvas.height && yFade > 0.01) {
         var opD = (0.35 * b * yFade).toFixed(3);
-        var opL = (0.05 * b * yFade).toFixed(3);
+        var opL = (0.14 * b * yFade).toFixed(3);
         ctx.fillStyle = mode === 'dark'
           ? 'rgba(91, 155, 213, ' + opD + ')'
           : 'rgba(30, 86, 160, ' + opL + ')';

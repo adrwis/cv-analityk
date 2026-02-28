@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CV - Adriana Gusciora, Senior Data Analyst</title>
+  <meta name="description" content="Curriculum Vitae - Adriana Gusciora, Senior Data Analyst & BI Developer">
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234c583e'/%3E%3Ctext x='16' y='22' font-family='Georgia, serif' font-size='16' font-weight='600' fill='%23f6f6f5' text-anchor='middle' letter-spacing='-0.5'%3EAG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="canonical" href="https://adrwis.github.io/cv-analityk/">
+  <link rel="stylesheet" href="cv-analityk.css">
+</head>
+<body>
+<div class="cv-analyst" id="cv-analyst" data-mode="light">
+
+  <a href="#cv-name" class="cv-analyst__skip-link">Przejdź do treści</a>
+
+  <!-- Binary rain background (Matrix-style) -->
+  <canvas class="cv-analyst__binary-rain" id="rain-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top bar: lang + theme toggles -->
+  <nav class="cv-analyst__topbar" aria-label="Language and theme controls">
+    <button type="button" class="cv-analyst__toggle-btn cv-analyst__toggle-btn--active" id="btn-pl" aria-label="Polski" aria-pressed="true">PL</button>
+    <button type="button" class="cv-analyst__toggle-btn" id="btn-en" aria-label="English" aria-pressed="false">EN</button>
+    <span class="cv-analyst__topbar-divider" aria-hidden="true"></span>
+    <button type="button" class="cv-analyst__toggle-btn" id="btn-theme" aria-label="Toggle dark/light mode">
+      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <span data-i18n="theme">Tryb</span>
+    </button>
+  </nav>
+
+  <main class="cv-analyst__container">
+
+    <!-- Hero -->
+    <section class="cv-analyst__hero" aria-labelledby="cv-name">
+      <div class="cv-analyst__hero-content">
+        <div class="cv-analyst__hero-badge">
+          <span class="pulse" aria-hidden="true"></span>
+          <span data-i18n="badge">Otwarta na nowe możliwości</span>
+        </div>
+        <h1 id="cv-name" class="cv-analyst__name">Adriana Gusciora</h1>
+        <p class="cv-analyst__tagline" data-i18n="tagline">Senior Data Analyst & BI Developer z&nbsp;7+ latami doświadczenia w&nbsp;przekształcaniu danych w&nbsp;strategiczne decyzje biznesowe.</p>
+        <div class="cv-analyst__typing" id="typing-area" aria-live="polite"></div>
+
+        <div class="cv-analyst__contact">
+          <span class="cv-analyst__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:Gusciora.Ada@gmail.com">Gusciora.Ada@gmail.com</a>
+          </span>
+          <span class="cv-analyst__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="location">remote / part-time</span>
+          </span>
+          <span class="cv-analyst__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 016 14v1H2v-1a6 6 0 016-6z"/><circle cx="12" cy="7" r="4"/></svg>
+            <a href="https://www.linkedin.com/in/adriana-gu/" target="_blank" rel="noopener">LinkedIn</a>
+          </span>
+        </div>
+      </div>
+      <img src="ada2.jpg" alt="Adriana Gusciora" class="cv-analyst__photo" width="140" height="140" loading="eager">
+    </section>
+
+    <!-- Experience -->
+    <section class="cv-analyst__section" aria-labelledby="sec-exp">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h2 id="sec-exp" class="cv-analyst__section-title" data-i18n="exp_title">Doświadczenie zawodowe</h2>
+      </div>
+
+      <!-- Trustwave -->
+      <div class="cv-analyst__exp-card">
+        <div class="cv-analyst__exp-header">
+          <h3 class="cv-analyst__exp-role" data-i18n="exp1_role">Starszy Analityk Finansowy</h3>
+          <span class="cv-analyst__exp-period" data-i18n="exp1_period">paź 2024 - obecnie</span>
+        </div>
+        <p class="cv-analyst__exp-company" data-i18n="exp1_company">Trustwave Sp. z o.o. · Performance Management · Warszawa</p>
+        <ul class="cv-analyst__exp-bullets" role="list">
+          <li data-i18n="exp1_b1">Tworzenie analiz finansowych i raportów: SQL, Power Query, Power BI</li>
+          <li data-i18n="exp1_b2">Automatyzacja raportowania finansowego i wdrażanie zmian procesowych</li>
+          <li data-i18n="exp1_b3">Przygotowywanie dashboardów finansowych dla Financial Directors i CFO</li>
+          <li data-i18n="exp1_b4">Usprawnianie procesów: zmiana manualnej pracy na automatyzację za pomocą np. Power Query czy Alteryx</li>
+          <li data-i18n="exp1_b5">Czyszczenie i manipulacja danymi: tworzenie i utrzymywanie workflow w narzędziu ETL Alteryx</li>
+          <li data-i18n="exp1_b6">Utrzymywanie aplikacji w Alteryx</li>
+        </ul>
+      </div>
+
+      <!-- HSBC/Alten -->
+      <div class="cv-analyst__exp-card">
+        <div class="cv-analyst__exp-header">
+          <h3 class="cv-analyst__exp-role" data-i18n="exp2_role">Analityk Finansowy w HSBC</h3>
+          <span class="cv-analyst__exp-period" data-i18n="exp2_period">lip 2022 - kwi 2024</span>
+        </div>
+        <p class="cv-analyst__exp-company" data-i18n="exp2_company">Alten Polska Sp. z o.o. · Kraków / zdalnie</p>
+        <ul class="cv-analyst__exp-bullets" role="list">
+          <li data-i18n="exp2_b1">Koordynacja zespołu 5 osób</li>
+          <li data-i18n="exp2_b2">Tworzenie analiz i raportów: SQL, Power Query, Power BI</li>
+          <li data-i18n="exp2_b3">Wdrażanie procesów finansowych dla ~40 projektów (15M$) w 2023</li>
+          <li data-i18n="exp2_b4">Budżetowanie, prognozowanie i alokacja zasobów: Excel, Clarity, GPDM, Cognos</li>
+          <li data-i18n="exp2_b5">Automatyzacja plików za pomocą Power Query z wieloma źródłami danych</li>
+          <li data-i18n="exp2_b6">Szkolenia z procesów finansowych i narzędzi (Excel, Power Query, Power BI)</li>
+        </ul>
+      </div>
+
+      <!-- Zimmer Biomet -->
+      <div class="cv-analyst__exp-card">
+        <div class="cv-analyst__exp-header">
+          <h3 class="cv-analyst__exp-role" data-i18n="exp3_role">Deweloper Smartsheet</h3>
+          <span class="cv-analyst__exp-period" data-i18n="exp3_period">cze 2021 - cze 2022</span>
+        </div>
+        <p class="cv-analyst__exp-company" data-i18n="exp3_company">Zimmer Biomet Polska · Global Business Support · Warszawa</p>
+        <ul class="cv-analyst__exp-bullets" role="list">
+          <li data-i18n="exp3_b1">Raportowanie w procesie Global Transition dla 14 departamentów</li>
+          <li data-i18n="exp3_b2">Szkolenia narzędziowe dla globalnych użytkowników i developerów Smartsheet</li>
+          <li data-i18n="exp3_b3">Stworzenie aplikacji Continuous Improvement: PowerApps</li>
+        </ul>
+      </div>
+
+      <!-- ISS -->
+      <div class="cv-analyst__exp-card">
+        <div class="cv-analyst__exp-header">
+          <h3 class="cv-analyst__exp-role" data-i18n="exp4_role">Programista BI i Analityk</h3>
+          <span class="cv-analyst__exp-period" data-i18n="exp4_period">wrz 2018 - maj 2021</span>
+        </div>
+        <p class="cv-analyst__exp-company" data-i18n="exp4_company">ISS Facility Services · Project Management · Warszawa</p>
+        <ul class="cv-analyst__exp-bullets" role="list">
+          <li data-i18n="exp4_b1">Zarządzanie zespołami (4-15 osób) i audyty wewnętrzne</li>
+          <li data-i18n="exp4_b2">Analizy finansowe (budżetowanie, prognozowanie) i niefinansowe: SharePoint, Power BI</li>
+          <li data-i18n="exp4_b3">Automatyzacja procesów: Power Automate, SharePoint, Power BI</li>
+          <li data-i18n="exp4_b4">Raporty dla Zarządu: Power BI i SharePoint</li>
+          <li data-i18n="exp4_b5">Projekt Novatorium: implementacja innowacji za pomocą Power Platform</li>
+        </ul>
+      </div>
+
+      <!-- Earlier roles -->
+      <div class="cv-analyst__exp-card">
+        <div class="cv-analyst__exp-header">
+          <h3 class="cv-analyst__exp-role" data-i18n="exp5_role">Młodszy Kierownik Projektu &middot; Management Trainee</h3>
+          <span class="cv-analyst__exp-period" data-i18n="exp5_period">lut 2016 - sie 2018</span>
+        </div>
+        <p class="cv-analyst__exp-company" data-i18n="exp5_company">Jeronimo Martins (Lizbona i Warszawa) · Robert BOSCH (Warszawa)</p>
+        <ul class="cv-analyst__exp-bullets" role="list">
+          <li data-i18n="exp5_b1">Employer Branding, Store Excellence, Customer Service & Logistics</li>
+          <li data-i18n="exp5_b2">Międzynarodowe doświadczenie: Portugalia i Polska</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills & AI -->
+    <section class="cv-analyst__section" aria-labelledby="sec-skills">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h2 id="sec-skills" class="cv-analyst__section-title" data-i18n="skills_title">Umiejętności techniczne</h2>
+      </div>
+
+      <div class="cv-analyst__skills-grid">
+
+        <!-- AI & Automation — highlighted -->
+        <div class="cv-analyst__skill-group cv-analyst__skill-group--ai">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
+            <span data-i18n="ai_title">AI & Automatyzacja</span>
+          </h3>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>Claude Code</span><span>90%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Claude Code"><div class="cv-analyst__skill-fill" data-width="90" data-level="expert"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>Prompt Engineering</span><span>85%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Prompt Engineering"><div class="cv-analyst__skill-fill" data-width="85" data-level="advanced"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>AI Chatbot Development</span><span>80%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="AI Chatbot Development"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>Power Automate / Workflow AI</span><span>80%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Power Automate"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
+          </div>
+
+          <!-- AI Project showcase -->
+          <div class="cv-analyst__ai-projects">
+            <div class="cv-analyst__ai-project">
+              <h4 class="cv-analyst__ai-project-name" data-i18n="proj1_name">adriana.gusciora.pl</h4>
+              <p class="cv-analyst__ai-project-desc" data-i18n="proj1_desc">Strona psychologa: dwujęzyczna, 3 motywy, WCAG AA, SEO. Zbudowana z Claude Code.</p>
+            </div>
+            <div class="cv-analyst__ai-project">
+              <h4 class="cv-analyst__ai-project-name" data-i18n="proj2_name">Kamcia Portfolio</h4>
+              <p class="cv-analyst__ai-project-desc" data-i18n="proj2_desc">Portfolio artystyczne: galeria, formularz zamówień, responsywny design.</p>
+            </div>
+            <div class="cv-analyst__ai-project">
+              <h4 class="cv-analyst__ai-project-name" data-i18n="proj3_name">AI Chatbot</h4>
+              <p class="cv-analyst__ai-project-desc" data-i18n="proj3_desc">Asystent relacyjny: detekcja kryzysu, ochrona przed injection, baza wiedzy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BI & Analytics -->
+        <div class="cv-analyst__skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <span data-i18n="bi_title">BI & Analytics</span>
+          </h3>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>Power BI</span><span>95%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>DAX / Power Query (M)</span><span>90%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="DAX / Power Query"><div class="cv-analyst__skill-fill" data-width="90" data-level="expert"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span data-i18n="skill_excel">Excel zaawansowany (formuły, Power Query)</span><span>95%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Excel"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert"></div></div>
+          </div>
+        </div>
+
+        <!-- Data & ETL -->
+        <div class="cv-analyst__skill-group">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg>
+            <span data-i18n="data_title">Data & ETL</span>
+          </h3>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>SQL</span><span>80%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
+          </div>
+          <div class="cv-analyst__skill-bar">
+            <div class="cv-analyst__skill-label"><span>Alteryx (ETL)</span><span>75%</span></div>
+            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Alteryx"><div class="cv-analyst__skill-fill" data-width="75" data-level="proficient"></div></div>
+          </div>
+          <div class="cv-analyst__tags cv-analyst__tags--spaced">
+            <span class="cv-analyst__tag">Jira</span>
+            <span class="cv-analyst__tag">Confluence</span>
+            <span class="cv-analyst__tag">Smartsheet</span>
+            <span class="cv-analyst__tag">Cognos</span>
+            <span class="cv-analyst__tag">SharePoint</span>
+            <span class="cv-analyst__tag">PowerApps</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Terminal showcase -->
+      <div class="cv-analyst__terminal">
+        <div class="cv-analyst__terminal-header">
+          <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--red" aria-hidden="true"></span>
+          <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--yellow" aria-hidden="true"></span>
+          <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--green" aria-hidden="true"></span>
+          <span class="cv-analyst__terminal-title">claude-code</span>
+        </div>
+        <div class="cv-analyst__terminal-body">
+          <div><span class="prompt">$</span> <span class="function">claude</span> <span class="string">"Build a bilingual website with 3 themes"</span></div>
+          <div>&nbsp;</div>
+          <div><span class="comment">&gt; Scaffolding Astro project...</span></div>
+          <div><span class="comment">&gt; Creating 26 pages (PL + EN)...</span></div>
+          <div><span class="comment">&gt; Adding light / dark / sepia modes...</span></div>
+          <div>&nbsp;</div>
+          <div><span class="output">&#10003; Responsive design ready</span></div>
+          <div><span class="output">&#10003; WCAG AA accessible</span></div>
+          <div><span class="output">&#10003; Lighthouse SEO: 100/100</span></div>
+          <div>&nbsp;</div>
+          <div><span class="output">&gt;&gt;&gt; adriana.gusciora.pl deployed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-analyst__section" aria-labelledby="sec-edu">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+        </div>
+        <h2 id="sec-edu" class="cv-analyst__section-title" data-i18n="edu_title">Wykształcenie</h2>
+      </div>
+
+      <div class="cv-analyst__edu-list">
+        <div class="cv-analyst__edu-item">
+          <span class="cv-analyst__edu-year">2020 - 2021</span>
+          <div>
+            <p class="cv-analyst__edu-title" data-i18n="edu1_title">Studia podyplomowe: Menedżer Jakości</p>
+            <p class="cv-analyst__edu-school" data-i18n="edu1_school">Szkoła Główna Handlowa (SGH)</p>
+            <p class="cv-analyst__edu-desc" data-i18n="edu1_desc">Lean Management, Six Sigma, Kaizen</p>
+          </div>
+        </div>
+        <div class="cv-analyst__edu-item">
+          <span class="cv-analyst__edu-year">2012 - 2017</span>
+          <div>
+            <p class="cv-analyst__edu-title" data-i18n="edu2_title">Magister Psychologii Klinicznej</p>
+            <p class="cv-analyst__edu-school" data-i18n="edu2_school">Uniwersytet SWPS</p>
+          </div>
+        </div>
+        <div class="cv-analyst__edu-item">
+          <span class="cv-analyst__edu-year">2012 - 2016</span>
+          <div>
+            <p class="cv-analyst__edu-title" data-i18n="edu3_title">Inżynier: Zarządzanie i Inżynieria Produkcji</p>
+            <p class="cv-analyst__edu-school" data-i18n="edu3_school">Politechnika Warszawska</p>
+          </div>
+        </div>
+        <div class="cv-analyst__edu-item">
+          <span class="cv-analyst__edu-year">2009 - 2010</span>
+          <div>
+            <p class="cv-analyst__edu-title" data-i18n="edu4_title">Rotary Youth Exchange: Brazylia</p>
+            <p class="cv-analyst__edu-school" data-i18n="edu4_school">Liceum ANGLO, Penapolis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv-analyst__section" aria-labelledby="sec-cert">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+        </div>
+        <h2 id="sec-cert" class="cv-analyst__section-title" data-i18n="cert_title">Certyfikaty i szkolenia</h2>
+      </div>
+
+      <div class="cv-analyst__tags cv-analyst__tags--certs">
+        <span class="cv-analyst__tag">SQL Advanced: LabMasters, 2025</span>
+        <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
+        <span class="cv-analyst__tag">Business Analytics in Power BI: LabMasters, 2022</span>
+        <span class="cv-analyst__tag">PRINCE2 Foundation: AXELOS, 2020</span>
+        <span class="cv-analyst__tag">User Experience: USWPS, 2017</span>
+        <span class="cv-analyst__tag">Project Management: INCODO, 2016</span>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="cv-analyst__section" aria-labelledby="sec-langs">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h2 id="sec-langs" class="cv-analyst__section-title" data-i18n="lang_title">Języki</h2>
+      </div>
+
+      <div class="cv-analyst__lang-grid">
+        <div class="cv-analyst__lang-card">
+          <div class="cv-analyst__lang-name" data-i18n="lang_pl">Polski</div>
+          <div class="cv-analyst__lang-level" data-i18n="lang_pl_lvl">ojczysty</div>
+        </div>
+        <div class="cv-analyst__lang-card">
+          <div class="cv-analyst__lang-name" data-i18n="lang_en">Angielski</div>
+          <div class="cv-analyst__lang-level" data-i18n="lang_en_lvl">zaawansowany</div>
+        </div>
+        <div class="cv-analyst__lang-card">
+          <div class="cv-analyst__lang-name" data-i18n="lang_pt">Portugalski</div>
+          <div class="cv-analyst__lang-level" data-i18n="lang_pt_lvl">średniozaawansowany (CELPE-Bras)</div>
+        </div>
+        <div class="cv-analyst__lang-card">
+          <div class="cv-analyst__lang-name" data-i18n="lang_it">Włoski</div>
+          <div class="cv-analyst__lang-level" data-i18n="lang_it_lvl">podstawowy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cv-analyst__footer">
+      <div class="cv-analyst__ai-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
+        <span data-i18n="ai_built">Zbudowane z pomocą AI: Claude Code</span>
+      </div>
+      <button type="button" class="cv-analyst__print-btn" id="print-btn" aria-label="Drukuj CV">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span data-i18n="print">Drukuj CV</span>
+      </button>
+      <p class="cv-analyst__gdpr" data-i18n="gdpr">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu rekrutacji.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+// ===== i18n =====
+var translations = {
+  pl: {
+    badge: 'Otwarta na nowe mo\u017Cliwo\u015Bci',
+    tagline: 'Senior Data Analyst & BI Developer z\u00a07+ latami do\u015Bwiadczenia w\u00a0przekszta\u0142caniu danych w\u00a0strategiczne decyzje biznesowe.',
+    location: 'remote / part-time',
+    theme: 'Tryb',
+    present: 'obecnie',
+    exp_title: 'Do\u015Bwiadczenie zawodowe',
+    exp1_role: 'Starszy Analityk Finansowy',
+    exp1_period: 'pa\u017A 2024 - obecnie',
+    exp1_company: 'Trustwave Sp. z o.o. \u00B7 Performance Management \u00B7 Warszawa',
+    exp1_b1: 'Tworzenie analiz finansowych i raport\u00F3w: SQL, Power Query, Power BI',
+    exp1_b2: 'Automatyzacja raportowania finansowego i wdra\u017Canie zmian procesowych',
+    exp1_b3: 'Przygotowywanie dashboard\u00F3w finansowych dla Financial Directors i CFO',
+    exp1_b4: 'Usprawnianie proces\u00F3w: zmiana manualnej pracy na automatyzacj\u0119 za pomoc\u0105 np. Power Query czy Alteryx',
+    exp1_b5: 'Czyszczenie i manipulacja danymi: tworzenie i utrzymywanie workflow w narz\u0119dziu ETL Alteryx',
+    exp1_b6: 'Utrzymywanie aplikacji w Alteryx',
+    exp2_role: 'Analityk Finansowy w HSBC',
+    exp2_period: 'lip 2022 - kwi 2024',
+    exp2_company: 'Alten Polska Sp. z o.o. \u00B7 Krak\u00F3w / zdalnie',
+    exp2_b1: 'Koordynacja zespo\u0142u 5 os\u00F3b',
+    exp2_b2: 'Tworzenie analiz i raport\u00F3w: SQL, Power Query, Power BI',
+    exp2_b3: 'Wdra\u017Canie proces\u00F3w finansowych dla ~40 projekt\u00F3w (15M$) w 2023',
+    exp2_b4: 'Bud\u017Cetowanie, prognozowanie i alokacja zasob\u00F3w: Excel, Clarity, GPDM, Cognos',
+    exp2_b5: 'Automatyzacja plik\u00F3w za pomoc\u0105 Power Query z wieloma \u017Ar\u00F3d\u0142ami danych',
+    exp2_b6: 'Szkolenia z proces\u00F3w finansowych i narz\u0119dzi (Excel, Power Query, Power BI)',
+    exp3_role: 'Deweloper Smartsheet',
+    exp3_period: 'cze 2021 - cze 2022',
+    exp3_company: 'Zimmer Biomet Polska \u00B7 Global Business Support \u00B7 Warszawa',
+    exp3_b1: 'Raportowanie w procesie Global Transition dla 14 departament\u00F3w',
+    exp3_b2: 'Szkolenia narz\u0119dziowe dla globalnych u\u017Cytkownik\u00F3w i developer\u00F3w Smartsheet',
+    exp3_b3: 'Stworzenie aplikacji Continuous Improvement: PowerApps',
+    exp4_role: 'Programista BI i Analityk',
+    exp4_period: 'wrz 2018 - maj 2021',
+    exp4_company: 'ISS Facility Services \u00B7 Project Management \u00B7 Warszawa',
+    exp4_b1: 'Zarz\u0105dzanie zespo\u0142ami (4-15 os\u00F3b) i audyty wewn\u0119trzne',
+    exp4_b2: 'Analizy finansowe (bud\u017Cetowanie, prognozowanie) i niefinansowe: SharePoint, Power BI',
+    exp4_b3: 'Automatyzacja proces\u00F3w: Power Automate, SharePoint, Power BI',
+    exp4_b4: 'Raporty dla Zarz\u0105du: Power BI i SharePoint',
+    exp4_b5: 'Projekt Novatorium: implementacja innowacji za pomoc\u0105 Power Platform',
+    exp5_role: 'M\u0142odszy Kierownik Projektu \u00B7 Management Trainee',
+    exp5_period: 'lut 2016 - sie 2018',
+    exp5_company: 'Jeronimo Martins (Lizbona i Warszawa) \u00B7 Robert BOSCH (Warszawa)',
+    exp5_b1: 'Employer Branding, Store Excellence, Customer Service & Logistics',
+    exp5_b2: 'Mi\u0119dzynarodowe do\u015Bwiadczenie: Portugalia i Polska',
+    skills_title: 'Umiej\u0119tno\u015Bci techniczne',
+    ai_title: 'AI & Automatyzacja',
+    skill_excel: 'Excel zaawansowany (formu\u0142y, Power Query)',
+    proj1_name: 'adriana.gusciora.pl',
+    proj1_desc: 'Strona psychologa: dwuj\u0119zyczna, 3 motywy, WCAG AA, SEO. Zbudowana z Claude Code.',
+    proj2_name: 'Kamcia Portfolio',
+    proj2_desc: 'Portfolio artystyczne: galeria, formularz zam\u00F3wie\u0144, responsywny design.',
+    proj3_name: 'AI Chatbot',
+    proj3_desc: 'Asystent relacyjny: detekcja kryzysu, ochrona przed injection, baza wiedzy.',
+    edu_title: 'Wykszta\u0142cenie',
+    edu1_title: 'Studia podyplomowe: Mened\u017Cer Jako\u015Bci',
+    edu1_desc: 'Lean Management, Six Sigma, Kaizen',
+    edu1_school: 'Szko\u0142a G\u0142\u00F3wna Handlowa (SGH)',
+    edu2_title: 'Magister Psychologii Klinicznej',
+    edu2_school: 'Uniwersytet SWPS',
+    edu3_title: 'In\u017Cynier: Zarz\u0105dzanie i In\u017Cynieria Produkcji',
+    edu3_school: 'Politechnika Warszawska',
+    edu4_title: 'Rotary Youth Exchange: Brazylia',
+    edu4_school: 'Liceum ANGLO, Penapolis',
+    cert_title: 'Certyfikaty i szkolenia',
+    lang_title: 'J\u0119zyki',
+    lang_pl: 'Polski', lang_pl_lvl: 'ojczysty',
+    lang_en: 'Angielski', lang_en_lvl: 'zaawansowany',
+    lang_pt: 'Portugalski', lang_pt_lvl: '\u015Brednio\u00ADzaawansowany (CELPE-Bras)',
+    lang_it: 'W\u0142oski', lang_it_lvl: 'podstawowy',
+    bi_title: 'BI & Analityka',
+    data_title: 'Dane & ETL',
+    ai_built: 'Zbudowane z pomoc\u0105 AI: Claude Code',
+    print: 'Drukuj CV',
+    gdpr: 'Wyra\u017Cam zgod\u0119 na przetwarzanie moich danych osobowych w celu rekrutacji.',
+  },
+  en: {
+    badge: 'Open to new opportunities',
+    tagline: 'Senior Data Analyst & BI Developer with 7+ years of experience turning raw data into strategic business decisions.',
+    location: 'remote / part-time',
+    theme: 'Theme',
+    present: 'present',
+    exp_title: 'Work Experience',
+    exp1_role: 'Senior Finance Analyst',
+    exp1_period: 'Oct 2024 - present',
+    exp1_company: 'Trustwave Sp. z o.o. \u00B7 Performance Management \u00B7 Warsaw',
+    exp1_b1: 'Creating financial analysis and reports: SQL, Power Query, Power BI',
+    exp1_b2: 'Automating financial reporting and implementing process changes',
+    exp1_b3: 'Preparing financial dashboards for Financial Directors and CFO',
+    exp1_b4: 'Streamlining processes: replacing manual work with automation using e.g. Power Query or Alteryx',
+    exp1_b5: 'Data cleansing and manipulation: building and maintaining ETL workflows in Alteryx',
+    exp1_b6: 'Maintaining applications in Alteryx',
+    exp2_role: 'Finance Analyst at HSBC',
+    exp2_period: 'Jul 2022 - Apr 2024',
+    exp2_company: 'Alten Polska Sp. z o.o. \u00B7 Cracow / remote',
+    exp2_b1: 'Coordinating a team of 5',
+    exp2_b2: 'Creating analysis and reports: SQL, Power Query, Power BI',
+    exp2_b3: 'Implementing finance processes for ~40 projects ($15M) in 2023',
+    exp2_b4: 'Budgeting, forecasting and resource allocation: Excel, Clarity, GPDM, Cognos',
+    exp2_b5: 'Automating files with Power Query using multiple data sources',
+    exp2_b6: 'Training on finance processes and tools (Excel, Power Query, Power BI)',
+    exp3_role: 'Smartsheet Developer',
+    exp3_period: 'Jun 2021 - Jun 2022',
+    exp3_company: 'Zimmer Biomet Polska \u00B7 Global Business Support \u00B7 Warsaw',
+    exp3_b1: 'Reporting for Global Transition Process across 14 departments',
+    exp3_b2: 'Tool training for global end users and Smartsheet developers',
+    exp3_b3: 'Creating Continuous Improvement app: PowerApps',
+    exp4_role: 'BI Developer & Analyst',
+    exp4_period: 'Sep 2018 - May 2021',
+    exp4_company: 'ISS Facility Services \u00B7 Project Management \u00B7 Warsaw',
+    exp4_b1: 'Managing teams (4-15 people) and conducting internal audits',
+    exp4_b2: 'Financial (budgeting, forecasting) and non-financial analysis: SharePoint, Power BI',
+    exp4_b3: 'Process automation: Power Automate, SharePoint, Power BI',
+    exp4_b4: 'Board reports: Power BI and SharePoint',
+    exp4_b5: 'Novatorium Project: innovation implementation using Power Platform',
+    exp5_role: 'Junior Project Manager \u00B7 Management Trainee',
+    exp5_period: 'Feb 2016 - Aug 2018',
+    exp5_company: 'Jeronimo Martins (Lisbon & Warsaw) \u00B7 Robert BOSCH (Warsaw)',
+    exp5_b1: 'Employer Branding, Store Excellence, Customer Service & Logistics',
+    exp5_b2: 'International experience: Portugal and Poland',
+    skills_title: 'Technical Skills',
+    ai_title: 'AI & Automation',
+    skill_excel: 'Excel advanced (formulas, Power Query)',
+    proj1_name: 'adriana.gusciora.pl',
+    proj1_desc: 'Psychologist website: bilingual, 3 themes, WCAG AA, SEO. Built with Claude Code.',
+    proj2_name: 'Kamcia Portfolio',
+    proj2_desc: 'Art portfolio: gallery, order form, responsive design.',
+    proj3_name: 'AI Chatbot',
+    proj3_desc: 'Relationship assistant: crisis detection, injection protection, knowledge base.',
+    edu_title: 'Education',
+    edu1_title: 'Postgraduate: Quality Manager',
+    edu1_desc: 'Lean Management, Six Sigma, Kaizen',
+    edu1_school: 'SGH Warsaw School of Economics',
+    edu2_title: "Master's in Clinical Psychology",
+    edu2_school: 'University of Social Sciences and Humanities (SWPS)',
+    edu3_title: 'Engineering: Management & Production Engineering',
+    edu3_school: 'Warsaw University of Technology',
+    edu4_title: 'Rotary Youth Exchange: Brazil',
+    edu4_school: 'ANGLO High School, Penapolis',
+    cert_title: 'Certifications & Training',
+    lang_title: 'Languages',
+    lang_pl: 'Polish', lang_pl_lvl: 'native',
+    lang_en: 'English', lang_en_lvl: 'advanced',
+    lang_pt: 'Portuguese', lang_pt_lvl: 'intermediate (CELPE-Bras)',
+    lang_it: 'Italian', lang_it_lvl: 'basic',
+    bi_title: 'BI & Analytics',
+    data_title: 'Data & ETL',
+    ai_built: 'Built with AI: Claude Code',
+    print: 'Print CV',
+    gdpr: 'I consent to the processing of my personal data for recruitment purposes.',
+  }
+};
+
+var currentLang = 'pl';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  var t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.getElementById('btn-pl').classList.toggle('cv-analyst__toggle-btn--active', lang === 'pl');
+  document.getElementById('btn-en').classList.toggle('cv-analyst__toggle-btn--active', lang === 'en');
+  document.getElementById('btn-pl').setAttribute('aria-pressed', lang === 'pl');
+  document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+  startTyping();
+}
+
+// ===== Dark/Light mode =====
+function toggleTheme() {
+  var root = document.getElementById('cv-analyst');
+  var isDark = root.getAttribute('data-mode') === 'dark';
+  root.setAttribute('data-mode', isDark ? 'light' : 'dark');
+  document.getElementById('icon-sun').style.display = isDark ? 'block' : 'none';
+  document.getElementById('icon-moon').style.display = isDark ? 'none' : 'block';
+  document.getElementById('btn-theme').setAttribute('aria-label',
+    isDark
+      ? (currentLang === 'pl' ? 'Przełącz na tryb ciemny' : 'Switch to dark mode')
+      : (currentLang === 'pl' ? 'Przełącz na tryb jasny' : 'Switch to light mode')
+  );
+  localStorage.setItem('cv-analyst-theme', isDark ? 'light' : 'dark');
+}
+
+// Apply saved theme (or respect prefers-color-scheme)
+(function() {
+  var saved = localStorage.getItem('cv-analyst-theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.getElementById('cv-analyst').setAttribute('data-mode', 'dark');
+    document.getElementById('icon-sun').style.display = 'none';
+    document.getElementById('icon-moon').style.display = 'block';
+  }
+})();
+
+// ===== Event listeners (no inline onclick) =====
+document.getElementById('btn-pl').addEventListener('click', function() { setLang('pl'); });
+document.getElementById('btn-en').addEventListener('click', function() { setLang('en'); });
+document.getElementById('btn-theme').addEventListener('click', toggleTheme);
+document.getElementById('print-btn').addEventListener('click', function() {
+  document.querySelectorAll('.cv-analyst__skill-fill').forEach(function(bar) {
+    bar.style.width = bar.getAttribute('data-width') + '%';
+  });
+  setTimeout(function() { window.print(); }, 100);
+});
+
+// ===== Typing animation =====
+var typingPhrases = {
+  pl: [
+    'Power BI: insight w 10 minut',
+    'SQL + AI = szybsze decyzje',
+    'Automatyzuj\u0119 to, co powtarzalne',
+    'Dane opowiadaj\u0105 histori\u0119: ja j\u0105 t\u0142umacz\u0119',
+    'Claude Code: moja supermoc'
+  ],
+  en: [
+    'Power BI: insight in 10 minutes',
+    'SQL + AI = faster decisions',
+    'I automate the repetitive stuff',
+    'Data tells a story: I translate it',
+    'Claude Code: my superpower'
+  ]
+};
+
+var typingTimeout;
+function startTyping() {
+  var el = document.getElementById('typing-area');
+  if (!el) return;
+  if (typingTimeout) clearTimeout(typingTimeout);
+
+  var phrases = typingPhrases[currentLang] || typingPhrases.pl;
+
+  // Respect reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = phrases[0];
+    return;
+  }
+
+  var phraseIdx = 0;
+  var charIdx = 0;
+  var deleting = false;
+
+  function tick() {
+    var phrase = phrases[phraseIdx];
+    if (!deleting) {
+      charIdx++;
+      el.innerHTML = phrase.substring(0, charIdx) + '<span class="cursor"></span>';
+      if (charIdx === phrase.length) {
+        typingTimeout = setTimeout(function() { deleting = true; tick(); }, 2000);
+        return;
+      }
+      typingTimeout = setTimeout(tick, 50 + Math.random() * 40);
+    } else {
+      charIdx--;
+      el.innerHTML = phrase.substring(0, charIdx) + '<span class="cursor"></span>';
+      if (charIdx === 0) {
+        deleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        typingTimeout = setTimeout(tick, 400);
+        return;
+      }
+      typingTimeout = setTimeout(tick, 25);
+    }
+  }
+  tick();
+}
+startTyping();
+
+// ===== Skill bar animation =====
+(function() {
+  var bars = document.querySelectorAll('.cv-analyst__skill-fill');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var w = entry.target.getAttribute('data-width');
+        entry.target.style.width = w + '%';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(function(bar) { observer.observe(bar); });
+})();
+
+// ===== Binary rain (Matrix-style, blue/navy, dense top → sparse bottom) =====
+(function() {
+  var canvas = document.getElementById('rain-canvas');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ctx = canvas.getContext('2d');
+  var root = document.getElementById('cv-analyst');
+
+  var fontSize = 14;
+  var columns, drops, speeds, brightness, maxDepth;
+  var chars = '0123456789';
+  var prevMode = '';
+
+  function init() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    drops = [];
+    speeds = [];
+    brightness = [];
+    maxDepth = [];
+    for (var i = 0; i < columns; i++) {
+      drops.push(Math.random() * canvas.height / fontSize);
+      speeds.push(0.15 + Math.random() * 0.55);
+      brightness.push(0.4 + Math.random() * 0.6);
+      maxDepth.push(0.3 + Math.random() * 0.7);
+    }
+    var mode = root.getAttribute('data-mode');
+    ctx.fillStyle = mode === 'dark' ? '#0a1628' : '#f8fafb';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    prevMode = mode;
+  }
+  init();
+  window.addEventListener('resize', init);
+
+  function draw() {
+    var mode = root.getAttribute('data-mode');
+
+    if (mode !== prevMode) {
+      ctx.fillStyle = mode === 'dark' ? '#0a1628' : '#f8fafb';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      prevMode = mode;
+    }
+
+    ctx.fillStyle = mode === 'dark'
+      ? 'rgba(10, 22, 40, 0.04)'
+      : 'rgba(248, 250, 251, 0.04)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = fontSize + 'px "JetBrains Mono", monospace';
+
+    for (var i = 0; i < columns; i++) {
+      var ch = chars[Math.floor(Math.random() * chars.length)];
+      var x = i * fontSize;
+      var y = Math.floor(drops[i]) * fontSize;
+      var b = brightness[i];
+      var yRatio = y / canvas.height;
+      var yFade = Math.max(0, 1 - yRatio * 1.3);
+
+      if (y >= 0 && y <= canvas.height && yFade > 0.01) {
+        var opD = (0.35 * b * yFade).toFixed(3);
+        var opL = (0.05 * b * yFade).toFixed(3);
+        ctx.fillStyle = mode === 'dark'
+          ? 'rgba(91, 155, 213, ' + opD + ')'
+          : 'rgba(30, 86, 160, ' + opL + ')';
+        ctx.fillText(ch, x, y);
+      }
+
+      drops[i] += speeds[i];
+
+      var limit = canvas.height * maxDepth[i];
+      if (drops[i] * fontSize > limit && Math.random() > 0.95) {
+        drops[i] = Math.random() * -15;
+        speeds[i] = 0.15 + Math.random() * 0.55;
+        brightness[i] = 0.4 + Math.random() * 0.6;
+        maxDepth[i] = 0.3 + Math.random() * 0.7;
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
+</body>
+</html>

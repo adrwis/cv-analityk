@@ -293,10 +293,10 @@
             <p class="cv-analyst__edu-title" data-i18n="edu1_title">Studia podyplomowe: Menedżer Jakości</p>
             <p class="cv-analyst__edu-school" data-i18n="edu1_school">Szkoła Główna Handlowa (SGH)</p>
             <p class="cv-analyst__edu-desc" data-i18n="edu1_desc">Lean Management, Six Sigma, Kaizen</p>
-            <a href="edukacja/manager-jakosci.jpg" target="_blank" rel="noopener" class="cv-analyst__cert-link">
+            <button type="button" class="cv-analyst__cert-link" data-lightbox="edukacja/manager-jakosci.jpg">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               <span data-i18n="cert_diploma">Dyplom</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="cv-analyst__edu-item">
@@ -311,10 +311,10 @@
           <div>
             <p class="cv-analyst__edu-title" data-i18n="edu3_title">Inżynier: Zarządzanie i Inżynieria Produkcji</p>
             <p class="cv-analyst__edu-school" data-i18n="edu3_school">Politechnika Warszawska</p>
-            <a href="edukacja/inzynier-pl.jpg" target="_blank" rel="noopener" id="cert-engineer" class="cv-analyst__cert-link">
+            <button type="button" id="cert-engineer" class="cv-analyst__cert-link" data-lightbox="edukacja/inzynier-pl.jpg">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               <span data-i18n="cert_diploma">Dyplom</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="cv-analyst__edu-item">
@@ -337,13 +337,13 @@
       </div>
 
       <div class="cv-analyst__tags cv-analyst__tags--certs">
-        <a href="edukacja/sql-zaawansowany.pdf" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">SQL Advanced: LabMasters, 2025</a>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/sql-zaawansowany.pdf">SQL Advanced: LabMasters, 2025</button>
         <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
-        <a href="edukacja/powerbi-base.pdf" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">Business Analytics in Power BI: LabMasters, 2022</a>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/powerbi-base.pdf">Business Analytics in Power BI: LabMasters, 2022</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/prince2-1.jpg,edukacja/prince2-2.jpg">PRINCE2 Foundation: AXELOS, 2020</button>
-        <a href="edukacja/user-experience.jpg" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">User Experience I: USWPS, 01-02.2017</a>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience.jpg">User Experience I: USWPS, 01-02.2017</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience-1.jpg,edukacja/user-experience-2.jpg">User Experience II: USWPS, 04.2017</button>
-        <a href="edukacja/incodo-project-management.jpg" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">Project Management: INCODO, 2016</a>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/incodo-project-management.jpg">Project Management: INCODO, 2016</button>
       </div>
     </section>
 
@@ -368,10 +368,8 @@
         <div class="cv-analyst__lang-card">
           <div class="cv-analyst__lang-name" data-i18n="lang_pt">Portugalski</div>
           <div class="cv-analyst__lang-level">
-            <span data-i18n="lang_pt_lvl">średniozaawansowany (CELPE-Bras)</span>
-            <a href="edukacja/celpe.jpg" target="_blank" rel="noopener" class="cv-analyst__cert-link cv-analyst__cert-link--inline">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </a>
+            <span data-i18n="lang_pt_lvl">średniozaawansowany</span>
+            <button type="button" class="cv-analyst__lang-cert" data-lightbox="edukacja/celpe.jpg">(CELPE-Bras)</button>
           </div>
         </div>
         <div class="cv-analyst__lang-card">
@@ -402,7 +400,7 @@
   <div class="cv-cert-lightbox__overlay" id="lb-overlay"></div>
   <button type="button" class="cv-cert-lightbox__close" id="lb-close" aria-label="Zamknij">&times;</button>
   <button type="button" class="cv-cert-lightbox__prev" id="lb-prev" aria-label="Poprzedni">&lsaquo;</button>
-  <img class="cv-cert-lightbox__img" id="lb-img" src="" alt="Certyfikat">
+  <div class="cv-cert-lightbox__content" id="lb-content"></div>
   <button type="button" class="cv-cert-lightbox__next" id="lb-next" aria-label="Następny">&rsaquo;</button>
   <div class="cv-cert-lightbox__counter" id="lb-counter"></div>
 </div>
@@ -479,7 +477,7 @@ var translations = {
     lang_title: 'J\u0119zyki',
     lang_pl: 'Polski', lang_pl_lvl: 'ojczysty',
     lang_en: 'Angielski', lang_en_lvl: 'zaawansowany',
-    lang_pt: 'Portugalski', lang_pt_lvl: '\u015Brednio\u00ADzaawansowany (CELPE-Bras)',
+    lang_pt: 'Portugalski', lang_pt_lvl: '\u015Brednio\u00ADzaawansowany',
     lang_it: 'W\u0142oski', lang_it_lvl: 'podstawowy',
     bi_title: 'BI & Analityka',
     data_title: 'Dane & ETL',
@@ -557,7 +555,7 @@ var translations = {
     lang_title: 'Languages',
     lang_pl: 'Polish', lang_pl_lvl: 'native',
     lang_en: 'English', lang_en_lvl: 'advanced',
-    lang_pt: 'Portuguese', lang_pt_lvl: 'intermediate (CELPE-Bras)',
+    lang_pt: 'Portuguese', lang_pt_lvl: 'intermediate',
     lang_it: 'Italian', lang_it_lvl: 'basic',
     bi_title: 'BI & Analytics',
     data_title: 'Data & ETL',
@@ -583,7 +581,7 @@ function setLang(lang) {
   document.getElementById('btn-pl').setAttribute('aria-pressed', lang === 'pl');
   document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
   var certEng = document.getElementById('cert-engineer');
-  if (certEng) certEng.href = lang === 'pl' ? 'edukacja/inzynier-pl.jpg' : 'edukacja/inzynier-en.jpg';
+  if (certEng) certEng.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/inzynier-pl.jpg' : 'edukacja/inzynier-en.jpg');
   startTyping();
 }
 
@@ -785,24 +783,40 @@ startTyping();
   draw();
 })();
 
-// ===== Lightbox =====
+// ===== Lightbox (images + PDFs) =====
 (function() {
   var lb = document.getElementById('cert-lightbox');
-  var img = document.getElementById('lb-img');
+  var content = document.getElementById('lb-content');
   var counter = document.getElementById('lb-counter');
-  var imgs = [];
+  var items = [];
   var idx = 0;
+
+  function isPdf(url) { return url.toLowerCase().endsWith('.pdf'); }
 
   function show(i) {
     idx = i;
-    img.src = imgs[i];
-    counter.textContent = imgs.length > 1 ? (i + 1) + ' / ' + imgs.length : '';
-    document.getElementById('lb-prev').style.display = imgs.length > 1 ? '' : 'none';
-    document.getElementById('lb-next').style.display = imgs.length > 1 ? '' : 'none';
+    var url = items[i];
+    content.innerHTML = '';
+    if (isPdf(url)) {
+      var iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.className = 'cv-cert-lightbox__pdf';
+      iframe.title = 'Certyfikat PDF';
+      content.appendChild(iframe);
+    } else {
+      var img = document.createElement('img');
+      img.src = url;
+      img.alt = 'Certyfikat';
+      img.className = 'cv-cert-lightbox__img';
+      content.appendChild(img);
+    }
+    counter.textContent = items.length > 1 ? (i + 1) + ' / ' + items.length : '';
+    document.getElementById('lb-prev').style.display = items.length > 1 ? '' : 'none';
+    document.getElementById('lb-next').style.display = items.length > 1 ? '' : 'none';
   }
 
-  function open(images) {
-    imgs = images;
+  function open(list) {
+    items = list;
     show(0);
     lb.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -812,18 +826,19 @@ startTyping();
   function close() {
     lb.hidden = true;
     document.body.style.overflow = '';
+    content.innerHTML = '';
   }
 
   document.getElementById('lb-close').addEventListener('click', close);
   document.getElementById('lb-overlay').addEventListener('click', close);
-  document.getElementById('lb-prev').addEventListener('click', function() { show((idx - 1 + imgs.length) % imgs.length); });
-  document.getElementById('lb-next').addEventListener('click', function() { show((idx + 1) % imgs.length); });
+  document.getElementById('lb-prev').addEventListener('click', function() { show((idx - 1 + items.length) % items.length); });
+  document.getElementById('lb-next').addEventListener('click', function() { show((idx + 1) % items.length); });
 
   document.addEventListener('keydown', function(e) {
     if (lb.hidden) return;
     if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show((idx - 1 + imgs.length) % imgs.length);
-    if (e.key === 'ArrowRight') show((idx + 1) % imgs.length);
+    if (e.key === 'ArrowLeft') show((idx - 1 + items.length) % items.length);
+    if (e.key === 'ArrowRight') show((idx + 1) % items.length);
   });
 
   document.addEventListener('click', function(e) {

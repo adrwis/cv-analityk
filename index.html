@@ -304,6 +304,10 @@
           <div>
             <p class="cv-analyst__edu-title" data-i18n="edu2_title">Magister Psychologii Klinicznej</p>
             <p class="cv-analyst__edu-school" data-i18n="edu2_school">Uniwersytet SWPS</p>
+            <button type="button" id="cert-master" class="cv-analyst__cert-link" data-lightbox="edukacja/magister-psychologii.jpg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span data-i18n="cert_diploma">Dyplom</span>
+            </button>
           </div>
         </div>
         <div class="cv-analyst__edu-item">
@@ -340,6 +344,7 @@
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/sql-zaawansowany.pdf">SQL Advanced: LabMasters, 2025</button>
         <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/powerbi-base.pdf">Business Analytics in Power BI: LabMasters, 2022</button>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/six-sigma.jpg">Metoda Six Sigma w zarządzaniu jakością: SGH, 05.2020</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/prince2-1.jpg,edukacja/prince2-2.jpg">PRINCE2 Foundation: AXELOS, 2020</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience.jpg">User Experience I: USWPS, 01-02.2017</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience-1.jpg,edukacja/user-experience-2.jpg">User Experience II: USWPS, 04.2017</button>
@@ -582,6 +587,8 @@ function setLang(lang) {
   document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
   var certEng = document.getElementById('cert-engineer');
   if (certEng) certEng.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/inzynier-pl.jpg' : 'edukacja/inzynier-en.jpg');
+  var certMaster = document.getElementById('cert-master');
+  if (certMaster) certMaster.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/magister-psychologii.jpg' : 'edukacja/psychology-master-degree.jpg');
   startTyping();
 }
 

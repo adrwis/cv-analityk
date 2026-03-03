@@ -48,7 +48,7 @@
           <span data-i18n="badge">Otwarta na nowe możliwości</span>
         </div>
         <h1 id="cv-name" class="cv-analyst__name">Adriana Gusciora</h1>
-        <p class="cv-analyst__tagline" data-i18n="tagline">Senior Data Analyst & BI Developer z&nbsp;7+ latami doświadczenia w&nbsp;przekształcaniu danych w&nbsp;strategiczne decyzje biznesowe.</p>
+        <p class="cv-analyst__tagline" data-i18n="tagline">Senior Data Analyst & BI Developer z&nbsp;8+ latami doświadczenia w&nbsp;przekształcaniu danych w&nbsp;strategiczne decyzje biznesowe.</p>
         <div class="cv-analyst__typing" id="typing-area" aria-live="polite"></div>
 
         <div class="cv-analyst__contact">
@@ -192,18 +192,18 @@
 
           <!-- AI Project showcase -->
           <div class="cv-analyst__ai-projects">
-            <div class="cv-analyst__ai-project">
+            <a href="https://adriana.gusciora.pl" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
               <h4 class="cv-analyst__ai-project-name" data-i18n="proj1_name">adriana.gusciora.pl</h4>
               <p class="cv-analyst__ai-project-desc" data-i18n="proj1_desc">Strona psychologa: dwujęzyczna, 3 motywy, WCAG AA, SEO. Zbudowana z Claude Code.</p>
-            </div>
-            <div class="cv-analyst__ai-project">
+            </a>
+            <a href="https://polskatsanddogs.github.io" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
               <h4 class="cv-analyst__ai-project-name" data-i18n="proj2_name">Portfolio Portretów</h4>
               <p class="cv-analyst__ai-project-desc" data-i18n="proj2_desc">Portfolio artystyczne: galeria, formularz zamówień, responsywny design.</p>
-            </div>
-            <div class="cv-analyst__ai-project">
+            </a>
+            <a href="https://adriana.gusciora.pl" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
               <h4 class="cv-analyst__ai-project-name" data-i18n="proj3_name">AI Chatbot</h4>
               <p class="cv-analyst__ai-project-desc" data-i18n="proj3_desc">Asystent relacyjny: detekcja kryzysu, ochrona przed injection, baza wiedzy.</p>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -293,6 +293,10 @@
             <p class="cv-analyst__edu-title" data-i18n="edu1_title">Studia podyplomowe: Menedżer Jakości</p>
             <p class="cv-analyst__edu-school" data-i18n="edu1_school">Szkoła Główna Handlowa (SGH)</p>
             <p class="cv-analyst__edu-desc" data-i18n="edu1_desc">Lean Management, Six Sigma, Kaizen</p>
+            <a href="edukacja/manager-jakosci.jpg" target="_blank" rel="noopener" class="cv-analyst__cert-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span data-i18n="cert_diploma">Dyplom</span>
+            </a>
           </div>
         </div>
         <div class="cv-analyst__edu-item">
@@ -336,10 +340,10 @@
         <span class="cv-analyst__tag">SQL Advanced: LabMasters, 2025</span>
         <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
         <span class="cv-analyst__tag">Business Analytics in Power BI: LabMasters, 2022</span>
-        <span class="cv-analyst__tag">PRINCE2 Foundation: AXELOS, 2020</span>
+        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/prince2-1.jpg,edukacja/prince2-2.jpg">PRINCE2 Foundation: AXELOS, 2020</button>
         <a href="edukacja/user-experience.jpg" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">User Experience I: USWPS, 01-02.2017</a>
         <a href="edukacja/user-experience-1.jpg" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">User Experience II: USWPS, 04.2017</a>
-        <span class="cv-analyst__tag">Project Management: INCODO, 2016</span>
+        <a href="edukacja/incodo-project-management.jpg" target="_blank" rel="noopener" class="cv-analyst__tag cv-analyst__tag--link">Project Management: INCODO, 2016</a>
       </div>
     </section>
 
@@ -363,7 +367,12 @@
         </div>
         <div class="cv-analyst__lang-card">
           <div class="cv-analyst__lang-name" data-i18n="lang_pt">Portugalski</div>
-          <div class="cv-analyst__lang-level" data-i18n="lang_pt_lvl">średniozaawansowany (CELPE-Bras)</div>
+          <div class="cv-analyst__lang-level">
+            <span data-i18n="lang_pt_lvl">średniozaawansowany (CELPE-Bras)</span>
+            <a href="edukacja/celpe.jpg" target="_blank" rel="noopener" class="cv-analyst__cert-link cv-analyst__cert-link--inline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="cv-analyst__lang-card">
           <div class="cv-analyst__lang-name" data-i18n="lang_it">Włoski</div>
@@ -388,12 +397,22 @@
   </main>
 </div>
 
+<!-- Lightbox -->
+<div class="cv-cert-lightbox" id="cert-lightbox" hidden aria-modal="true" role="dialog" aria-label="Podgląd certyfikatu">
+  <div class="cv-cert-lightbox__overlay" id="lb-overlay"></div>
+  <button type="button" class="cv-cert-lightbox__close" id="lb-close" aria-label="Zamknij">&times;</button>
+  <button type="button" class="cv-cert-lightbox__prev" id="lb-prev" aria-label="Poprzedni">&lsaquo;</button>
+  <img class="cv-cert-lightbox__img" id="lb-img" src="" alt="Certyfikat">
+  <button type="button" class="cv-cert-lightbox__next" id="lb-next" aria-label="Następny">&rsaquo;</button>
+  <div class="cv-cert-lightbox__counter" id="lb-counter"></div>
+</div>
+
 <script>
 // ===== i18n =====
 var translations = {
   pl: {
     badge: 'Otwarta na nowe mo\u017Cliwo\u015Bci',
-    tagline: 'Senior Data Analyst & BI Developer z\u00a07+ latami do\u015Bwiadczenia w\u00a0przekszta\u0142caniu danych w\u00a0strategiczne decyzje biznesowe.',
+    tagline: 'Senior Data Analyst & BI Developer z\u00a08+ latami do\u015Bwiadczenia w\u00a0przekszta\u0142caniu danych w\u00a0strategiczne decyzje biznesowe.',
     location: 'zdalnie / niepe\u0142ny etat',
     theme: 'Tryb',
     topbar_title: 'Adriana Gu\u015Bciora | Starszy Analityk Danych',
@@ -471,7 +490,7 @@ var translations = {
   },
   en: {
     badge: 'Open to new opportunities',
-    tagline: 'Senior Data Analyst & BI Developer with 7+ years of experience turning raw data into strategic business decisions.',
+    tagline: 'Senior Data Analyst & BI Developer with 8+ years of experience turning raw data into strategic business decisions.',
     location: 'remote / part-time',
     theme: 'Theme',
     topbar_title: 'Adriana Gu\u015Bciora | Senior Data Analyst',
@@ -764,6 +783,56 @@ startTyping();
     requestAnimationFrame(draw);
   }
   draw();
+})();
+
+// ===== Lightbox =====
+(function() {
+  var lb = document.getElementById('cert-lightbox');
+  var img = document.getElementById('lb-img');
+  var counter = document.getElementById('lb-counter');
+  var imgs = [];
+  var idx = 0;
+
+  function show(i) {
+    idx = i;
+    img.src = imgs[i];
+    counter.textContent = imgs.length > 1 ? (i + 1) + ' / ' + imgs.length : '';
+    document.getElementById('lb-prev').style.display = imgs.length > 1 ? '' : 'none';
+    document.getElementById('lb-next').style.display = imgs.length > 1 ? '' : 'none';
+  }
+
+  function open(images) {
+    imgs = images;
+    show(0);
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lb-close').focus();
+  }
+
+  function close() {
+    lb.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-overlay').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', function() { show((idx - 1 + imgs.length) % imgs.length); });
+  document.getElementById('lb-next').addEventListener('click', function() { show((idx + 1) % imgs.length); });
+
+  document.addEventListener('keydown', function(e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show((idx - 1 + imgs.length) % imgs.length);
+    if (e.key === 'ArrowRight') show((idx + 1) % imgs.length);
+  });
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-lightbox]');
+    if (btn) {
+      e.preventDefault();
+      open(btn.getAttribute('data-lightbox').split(','));
+    }
+  });
 })();
 </script>
 

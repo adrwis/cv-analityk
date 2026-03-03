@@ -547,6 +547,39 @@ body {
   gap: 0.5rem;
 }
 
+.cv-analyst__tag--link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cv-analyst__tag--link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.cv-analyst__cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--ca-accent);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.cv-analyst__cert-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.cv-analyst__cert-link svg {
+  width: 12px;
+  height: 12px;
+}
+
 .cv-analyst__tag--ai {
   background: var(--ca-accent-glow);
   color: var(--ca-accent);

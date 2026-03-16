@@ -1,5 +1,45 @@
 # Changelog - CV PDF Generator
 
+## 2026-03-16 — Sesja 3: 4 nowe CV dopasowane do ofert
+
+### Nowe CV
+| Generator | Oferta | Firma | PDF |
+|-----------|--------|-------|-----|
+| `_write_emea.py` | Regional Finance Manager EMEA | - | AG_Regional Finance Manager EMEA_EN.pdf |
+| `_write_jazz.py` | Data Analyst, Finance Ops & Analytics | Jazz Pharmaceuticals | AG_Data Analyst_Jazz Pharmaceuticals_EN.pdf |
+| `_write_mira.py` | Data Analyst, FP&A, E-commerce | Mira | AG_Data Analyst_Mira_EN.pdf |
+| `_write_finanalyst.py` | Financial Analyst, FP&A, Process Improvement | - | AG_Financial Analyst_EN.pdf |
+
+### Zmiany w generowaniu
+- Nowy pattern: Python helper (`_write_*.py`) generuje JS, Node.js generuje PDF (unika problemow z escapowaniem template literals)
+- Wszystkie CV bez em dashes (feedback Adriany)
+- Summary: "Finance Professional" (nie "Finance Manager"), nacisk na process improvements i BI tools
+
+### Odrzucone oferty (analiza dopasowania)
+- Jazz Pharmaceuticals Data Analyst: oferta w UK, nie mozna aplikowac z Polski
+- GoMining Senior Data Analyst: brak Python, crypto/Web3, product analytics
+- Hach BI Architect: rola BI Admin/Engineer, brak Fabric, Azure, enterprise security
+
+---
+
+## 2026-03-12 — Sesja 2: Data Analytics & Technical Support Specialist
+
+### Nowe CV
+| Generator | Oferta | Język | PDF |
+|-----------|--------|-------|-----|
+| `generate-cv-data-analytics.js` | Data Analytics & Technical Support Specialist | EN | AG_Data Analytics and Technical Support Specialist_EN.pdf |
+
+### Tailoring
+- Summary: dashboarding, monitoring, knowledge management (SharePoint, Confluence), współpraca z PM-ami i konsultantami
+- Bullets: KPI identification, monitoring systems, process optimization, centralized knowledge repository, collaboration platforms
+- Skills: 5 grup — Dashboarding & BI, Data & Monitoring, Knowledge & Collaboration, Project Management, Process Optimization
+- Page break przed ISS (BI Developer & Project Manager) → czysta 2. strona
+
+### Konwencja: nazwisko w EN
+- **W wersjach EN używamy polskich znaków: `Adriana Guściora`** (nie "Gusciora")
+
+---
+
 ## 2026-03-11 — Sesja 1: System generowania CV + pierwsze aplikacje
 
 ### System

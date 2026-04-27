@@ -1,5 +1,53 @@
 # Changelog - CV PDF Generator
 
+## 2026-04-27 — Sesja 5: 2 oferty UK (MECS Power BI + Additional Resources BA)
+
+### Nowe CV
+| Generator | Oferta | Firma | PDF |
+|-----------|--------|-------|-----|
+| `generate-cv-mecs-powerbi.js` | Senior Power BI Developer (£85k/y, remote, Slough) | MECS Communications Ltd | AG_Senior Power BI Developer_MECS_EN.pdf |
+| `generate-cv-additional-resources-ba.js` | Business Analyst - Process Improvement (£400-500/d, remote, biotech) | Additional Resources | AG_Business Analyst Process Improvement_Additional Resources_EN.pdf |
+
+### Tailoring — MECS Power BI
+- Tytul: Senior Power BI Developer / BI Lead
+- Summary: enterprise BI, advanced DAX (CALCULATE/SUMX/time intelligence), star schema, performance tuning, mentoring, Microsoft Fabric familiarity
+- Job bullets: emfaza na semantic models, ETL via Power Query M, training/coaching, BI governance
+- Skills: Power BI Expert (RLS, Paginated Reports awareness) → SQL/T-SQL → BI Strategy & Stakeholder Engagement → Tools/Methodology
+
+### Tailoring — Additional Resources BA
+- Tytul: Business Analyst / Process Improvement
+- Summary: process mapping, regulated environments, Lean Six Sigma + PRINCE2, sensitive data handling, compliance alignment
+- Job bullets: workflow mapping, data flows/validation points/escalation routes, requirements gathering, banking ≈ regulated env (HSBC, ISS banking client, Zimmer medical devices)
+- Skills: Business Analysis & Process → Methodologies → Regulated Environment Experience → Stakeholder Engagement → Data & Tools (deprioritized)
+- Certs przegrupowane: PRINCE2 + Six Sigma na poczatku
+
+### Analiza dopasowania
+- MECS: 9/10 — full Power BI/DAX/SQL/Power Query stack, gap = formalny "Lead" tytul + Microsoft Fabric production experience
+- Additional Resources: 7/10 — Lean Six Sigma + PRINCE2 + regulated env = solid fit, gap = healthcare/biotech specifics (oznaczone jako "advantageous", nie hard req)
+
+---
+
+## 2026-03-19 — Sesja 4: Konsultant BI (OneX Group)
+
+### Nowe CV
+| Generator | Oferta | Firma | PDF |
+|-----------|--------|-------|-----|
+| `_write_bi_consultant.py` | Konsultant BI (Power BI / Fabric) | OneX Group | AG_BI Consultant_EN.pdf, AG_Konsultant BI_PL.pdf |
+
+### Tailoring
+- Summary: BI consulting focus, Power BI + DAX + SQL + ETL pipelines, full project lifecycle
+- Bullets przerobione na jezyk konsultancki (delivering solutions, gathering requirements, client-facing)
+- Skills: 5 grup dopasowanych do oferty (Power BI & Data Modelling, SQL & Databases, ETL & Data Pipelines, Microsoft Stack, Project & Stakeholder Management)
+- Dodane: data warehouse concepts (star schema), stored procedures, row-level security
+- PL wersja ze zdjeciem w headerze
+
+### Analiza dopasowania
+- Dopasowanie ~75% — Power BI, SQL, ETL, komunikacja z klientem = pelne pokrycie
+- Gap: Microsoft Fabric (oferta mowi "mile widziane", nie hard requirement)
+- Oferta #2 (CBRE BI Director) odrzucona — za wysoki level (Director), Tableau nie Power BI
+
+---
+
 ## 2026-03-16 — Sesja 3: 4 nowe CV dopasowane do ofert
 
 ### Nowe CV

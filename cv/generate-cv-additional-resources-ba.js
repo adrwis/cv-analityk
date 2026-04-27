@@ -10,7 +10,7 @@ const cvData = {
     name: 'Adriana Gusciora',
     title: 'Business Analyst / Process Improvement',
     contact: 'Gusciora.Ada@gmail.com | +48 728 884 506 | linkedin.com/in/adriana-gu | Remote',
-    summary: 'Business Analyst with 8+ years of experience in process improvement, requirements gathering, and workflow analysis across regulated environments — banking, financial services, and global corporations. Skilled in mapping end-to-end operational workflows, defining data flows and validation points, and identifying inefficiencies. Lean Six Sigma and PRINCE2 certified, with strong experience handling sensitive data and partnering with compliance, finance, and operations teams to align processes with regulatory standards. Effective communicator able to engage stakeholders across all seniority levels and translate complex requirements into scalable, audit-ready solutions.',
+    summary: 'Business Analyst with 8+ years of experience in process improvement, requirements gathering, and workflow analysis across regulated environments: banking, financial services, and global corporations. Skilled in mapping end-to-end operational workflows, defining data flows and validation points, and identifying inefficiencies. Lean Six Sigma and PRINCE2 certified, with strong experience handling sensitive data and partnering with compliance, finance, and operations teams to align processes with regulatory standards. Effective communicator able to engage stakeholders across all seniority levels and translate complex requirements into scalable, audit-ready solutions.',
     sections: {
       experience: 'WORK EXPERIENCE',
       skills: 'KEY SKILLS',
@@ -22,7 +22,7 @@ const cvData = {
       {
         role: 'Senior Business / Finance Analyst',
         company: 'Trustwave Sp. z o.o. · Performance Management · Warsaw / Remote',
-        period: 'Oct 2024 – present',
+        period: 'Oct 2024 - present',
         bullets: [
           'Map and document end-to-end financial and operational workflows: defining data flows, validation points, and escalation routes for Financial Directors and CFO',
           'Analyse process inefficiencies and contribute to service and process enhancement activities across performance management',
@@ -34,30 +34,28 @@ const cvData = {
       {
         role: 'Business Analyst at HSBC',
         company: 'Alten Polska Sp. z o.o. · Cracow / Remote',
-        period: 'Jul 2022 – Apr 2024',
+        period: 'Jul 2022 - Apr 2024',
         bullets: [
-          'Mapped and improved finance processes across ~40 projects worth $15M in a heavily regulated banking environment (HSBC): budgeting, forecasting, resource allocation',
           'Conducted requirements gathering with cross-functional stakeholders and translated business briefs into reporting and analytical solutions',
-          'Identified risks, gaps, and improvement opportunities across global finance processes — recommending and implementing optimisation actions',
+          'Identified risks, gaps, and improvement opportunities across global finance processes, recommending and implementing optimisation actions',
           'Coordinated team of 5 analysts on data quality, process standards, and delivery timelines',
-          'Partnered with Central Finance Controlling to standardise reporting templates, semantic definitions, and process governance',
           'Engaged senior stakeholders across functions: presenting analytical findings and recommending operational improvements',
         ],
       },
       {
         role: 'Process Reporting Lead',
         company: 'Zimmer Biomet Polska · Global Business Support · Warsaw / Remote',
-        period: 'Jun 2021 – Jun 2022',
+        period: 'Jun 2021 - Jun 2022',
         bullets: [
           'Led process reporting for Global Transition Process across 14 departments in a medical-device (regulated) environment: scope tracking, milestone monitoring, escalation routes',
-          'Built Continuous Improvement tracking application using PowerApps — supporting structured process enhancement activities',
+          'Built Continuous Improvement tracking application using PowerApps, supporting structured process enhancement activities',
           'Facilitated training workshops for global end users on reporting and process standards',
         ],
       },
       {
         role: 'Business Analyst & BI Developer',
         company: 'ISS Facility Services · Project Management · Warsaw / Remote',
-        period: 'Sep 2018 – May 2021',
+        period: 'Sep 2018 - May 2021',
         bullets: [
           'Led global collaboration with banking client: end-to-end invoice flow process analysis, designed and implemented data-driven process improvements',
           'Mapped operational workflows and built automated reporting solutions using Power Automate, SharePoint, and Power BI',
@@ -69,7 +67,7 @@ const cvData = {
       {
         role: 'Junior Project Manager · Management Trainee',
         company: 'Jeronimo Martins (Lisbon & Warsaw) · Robert BOSCH (Warsaw)',
-        period: 'Feb 2016 – Aug 2018',
+        period: 'Feb 2016 - Aug 2018',
         bullets: [
           'International process improvement experience (Portugal & Poland): Employer Branding, Store Excellence, Customer Service & Logistics',
           'Cross-functional stakeholder coordination in matrix organisations',

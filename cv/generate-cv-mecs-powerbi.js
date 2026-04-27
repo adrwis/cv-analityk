@@ -10,7 +10,7 @@ const cvData = {
     name: 'Adriana Gusciora',
     title: 'Senior Power BI Developer / BI Lead',
     contact: 'Gusciora.Ada@gmail.com | +48 728 884 506 | linkedin.com/in/adriana-gu | Remote',
-    summary: 'Senior Power BI professional with 8+ years of experience designing, developing, and deploying enterprise-level BI solutions for C-level stakeholders in financial services and global corporations. Deep expertise in advanced DAX (CALCULATE, SUMX, time intelligence), Power Query (M), star schema data modelling, and SQL/T-SQL. Proven track record in performance tuning, semantic models, and data governance. Strong stakeholder engagement and data storytelling skills, with experience leading cross-functional teams and championing best practice in reporting, BI strategy, and self-service adoption. Familiar with Microsoft Fabric, Power Platform, and Agile delivery.',
+    summary: 'Senior Power BI professional with 8+ years of experience designing, developing, and deploying enterprise-level BI solutions for C-level stakeholders in financial services and global corporations. Deep expertise in advanced DAX (CALCULATE, SUMX), Power Query (M), star schema data modelling, and SQL. Proven track record in performance tuning, semantic models, and data governance. Strong stakeholder engagement and data storytelling skills, with experience leading cross-functional teams and championing best practice in reporting, BI strategy, and self-service adoption. Familiar with Power Platform and Agile delivery.',
     sections: {
       experience: 'WORK EXPERIENCE',
       skills: 'KEY SKILLS',
@@ -22,10 +22,10 @@ const cvData = {
       {
         role: 'Senior Finance Analyst / Power BI Developer',
         company: 'Trustwave Sp. z o.o. · Performance Management · Warsaw / Remote',
-        period: 'Oct 2024 – present',
+        period: 'Oct 2024 - present',
         bullets: [
-          'Design and deploy enterprise-level Power BI dashboards for Financial Directors and CFO: budget vs actuals, variance analysis, forecast tracking — delivering at-a-glance, executive-ready insights',
-          'Build advanced DAX measures (CALCULATE, SUMX, time intelligence) and high-performance semantic data models (star schema) optimised for scalability across multiple financial datasets',
+          'Design and deploy enterprise-level Power BI dashboards for Financial Directors and CFO: budget vs actuals, variance analysis, forecast tracking, delivering at-a-glance, executive-ready insights',
+          'Build advanced DAX measures (CALCULATE, SUMX) and high-performance semantic data models (star schema) optimised for scalability across multiple financial datasets',
           'Develop ETL solutions using Power Query (M Language) and Alteryx: multi-source consolidation replacing manual reporting',
           'Apply performance tuning and report optimisation best practice: reducing refresh times and supporting governance standards',
           'Translate complex financial requirements into compelling data storytelling for senior stakeholders, driving commercial decision-making',
@@ -35,30 +35,29 @@ const cvData = {
       {
         role: 'Finance Analyst / BI Developer at HSBC',
         company: 'Alten Polska Sp. z o.o. · Cracow / Remote',
-        period: 'Jul 2022 – Apr 2024',
+        period: 'Jul 2022 - Apr 2024',
         bullets: [
-          'Developed and maintained Power BI dashboards and paginated reports for budget tracking, variance analysis, and trend monitoring across ~40 projects ($15M portfolio)',
           'Built data models and DAX measures connecting multiple sources (Clarity, GPDM, Cognos) using Power Query and SQL',
           'Coached and mentored a team of 5 analysts on Power BI best practice, data quality, and reporting standards',
           'Drove self-service BI adoption: delivered training workshops on Power BI, Power Query, and Excel to stakeholders across functions',
-          'Partnered with Central Finance Controlling to standardise reporting templates, semantic definitions, and data governance',
           'Automated multi-source data consolidation workflows: Power Query transformations replacing manual Excel processes',
         ],
       },
       {
         role: 'Smartsheet Developer & Reporting Lead',
         company: 'Zimmer Biomet Polska · Global Business Support · Warsaw / Remote',
-        period: 'Jun 2021 – Jun 2022',
+        period: 'Jun 2021 - Jun 2022',
         bullets: [
-          'Led reporting for Global Transition Process across 14 departments: scope tracking, milestone dashboards, stakeholder updates',
-          'Facilitated training workshops for global end users and developers on reporting tools — championing best practice and self-service adoption',
+          'Created reporting for Global Transition Process across 14 departments, trained end users on it and implemented it across the organisation: scope tracking, milestone dashboards, stakeholder updates',
+          'Facilitated training workshops for global end users and developers on reporting tools, championing best practice and self-service adoption',
           'Built Continuous Improvement tracking application using PowerApps',
         ],
       },
       {
         role: 'BI Developer & Analyst',
         company: 'ISS Facility Services · Project Management · Warsaw / Remote',
-        period: 'Sep 2018 – May 2021',
+        period: 'Sep 2018 - May 2021',
+        pageBreak: true,
         bullets: [
           'Designed and delivered Power BI dashboards and board-level reports: translating complex operational data into executive-ready visualisations',
           'Built end-to-end automated reporting solutions using Power BI, SharePoint, and Power Automate',
@@ -70,7 +69,7 @@ const cvData = {
       {
         role: 'Junior Project Manager · Management Trainee',
         company: 'Jeronimo Martins (Lisbon & Warsaw) · Robert BOSCH (Warsaw)',
-        period: 'Feb 2016 – Aug 2018',
+        period: 'Feb 2016 - Aug 2018',
         bullets: [
           'International project experience (Portugal & Poland): Employer Branding, Store Excellence, Logistics',
           'Cross-functional stakeholder coordination in matrix organisations',
@@ -78,8 +77,8 @@ const cvData = {
       },
     ],
     skillGroups: [
-      { name: 'Power BI (Expert)', items: 'Desktop & Service · Advanced DAX (CALCULATE, SUMX, time intelligence) · Star schema & semantic data models · Power Query (M Language) · Performance tuning & report optimisation · Workspaces, apps, gateway management · Row-Level Security (RLS) familiarity · Paginated Reports awareness' },
-      { name: 'Data & SQL', items: 'SQL / T-SQL (advanced queries, joins, CTEs, optimisation) · Alteryx (ETL workflows, data cleansing, blending) · Multi-source data integration · Data validation & reconciliation · APIs awareness · Microsoft Fabric familiarity' },
+      { name: 'Power BI (Expert)', items: 'Desktop & Service · Advanced DAX (CALCULATE, SUMX) · Star schema & semantic data models · Power Query (M Language) · Performance tuning & report optimisation · Workspaces, apps, gateway management · Row-Level Security (RLS) familiarity · Paginated Reports awareness' },
+      { name: 'Data & SQL', items: 'SQL (advanced queries, joins, CTEs, optimisation) · Alteryx (ETL workflows, data cleansing, blending) · Multi-source data integration · Data validation & reconciliation · APIs awareness' },
       { name: 'BI Strategy & Stakeholder Engagement', items: 'Data storytelling for C-level audiences · Self-service BI adoption · Data governance & semantic standards · Mentoring & coaching less experienced colleagues · Stakeholder management across seniority levels · Business requirement translation' },
       { name: 'Tools & Methodology', items: 'SharePoint · PowerApps · Power Automate · Smartsheet · Cognos · PRINCE2 Foundation · Agile/Scrum familiarity · Lean Six Sigma (SGH)' },
     ],
@@ -109,7 +108,7 @@ const photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
 
 function buildHTML(data) {
   const jobsHTML = data.jobs.map(j => `
-    <div class="job">
+    <div class="job${j.pageBreak ? ' job-page-break' : ''}">
       <div class="job-header">
         <span class="job-role">${j.role}</span>
         <span class="job-period">${j.period}</span>
@@ -201,6 +200,10 @@ function buildHTML(data) {
   }
 
   .job { margin-bottom: 10px; }
+  .job-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
   .job-header {
     display: flex;
     justify-content: space-between;

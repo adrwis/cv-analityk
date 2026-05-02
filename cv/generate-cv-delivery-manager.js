@@ -13,7 +13,7 @@ const cvData = {
     linkedin: 'linkedin.com/in/adriana-gu',
     linkedinUrl: 'https://www.linkedin.com/in/adriana-gu',
     location: 'Remote · Poland',
-    summary: 'Delivery and project leader with 8+ years of experience in IT delivery, financial services and FinTech (HSBC, Trustwave). Managed cross-functional teams up to 15 people and owned people cost allocation for ~40 IT projects with $15M annual budget. Combining PRINCE2 and Agile/Scrum (Jira, Confluence) with full P&L responsibility for assigned client accounts and stakeholder management at executive level. Skilled in financial forecasting, spend monitoring and risk mitigation across regulated banking and software environments.',
+    summary: 'Delivery and project leader with 8+ years in IT delivery, financial services and FinTech (HSBC, Trustwave). Managed cross-functional teams up to 15 people and owned people cost allocation for ~40 IT projects with $15M annual budget. Combining PRINCE2 and Agile/Scrum with P&L responsibility for assigned client accounts and stakeholder management at executive level.',
     sections: {
       experience: 'Work Experience',
       skills: 'Key Skills',
@@ -24,64 +24,63 @@ const cvData = {
     },
     jobs: [
       {
-        role: 'Senior Finance Analyst | Delivery Coordination',
+        role: 'Senior Finance Analyst · Delivery Coordination',
         company: 'Trustwave Sp. z o.o. · Performance Management',
         location: 'Warsaw / Remote',
-        period: 'Oct 2024 - present',
+        period: 'Oct 2024 — present',
         bullets: [
-          'Analysing IT financial processes and producing dashboards: high-level for CFO and Financial Directors, and detailed views for department heads',
-          'Building Power BI dashboards and Alteryx ETL pipelines used in monthly financial reviews',
-          'Coordinating cross-functional collaboration between finance, IT and business stakeholders on standardized reporting templates',
+          'IT financial process analysis; dashboards for CFO, Financial Directors and department heads',
+          'Power BI dashboards and Alteryx ETL pipelines for monthly financial reviews',
+          'Cross-functional coordination across finance, IT and business reporting standards',
         ],
-        successStory: 'Analysed FP&A and Performance Management processes for the finance team: diagnosed bottlenecks in monthly reporting, designed and implemented improvements, produced before/after process documentation and delivered hands-on training across the full toolset (Excel, Power Query, Alteryx, SQL, Power BI).',
+        successStory: 'Redesigned FP&A and Performance Management reporting end-to-end and trained the team across the full toolset: Excel, Power Query, Alteryx, SQL, Power BI.',
       },
       {
         role: 'Project Finance Analyst at HSBC',
         company: 'Alten Polska Sp. z o.o.',
         location: 'Cracow / Remote',
-        period: 'Jul 2022 - Apr 2024',
+        period: 'Jul 2022 — Apr 2024',
         bullets: [
-          'Coordinated a team of 5 analysts and owned people cost allocation for ~40 IT projects with $15M annual budget: headcount planning, resource cost forecasting, spend monitoring, variance analysis',
-          'Worked in Agile/Scrum environment with global teams: sprint planning, backlog grooming, daily stand-ups',
-          'Day-to-day collaboration in Jira and Confluence: tracking project tasks, dependencies and RAID logs (risks, assumptions, issues, dependencies)',
-          'Built Power BI dashboards and Excel reports: budget, forecast',
-          'Aligned reporting standards with Central Finance Controlling and ran training workshops for stakeholders',
+          'Coordinated team of 5 analysts; owned people cost allocation for ~40 IT projects ($15M annual budget)',
+          'Agile / Scrum with global teams: sprint planning, backlog, daily stand-ups',
+          'Daily Jira and Confluence: tasks, dependencies, RAID logs',
+          'Power BI and Excel reporting (budget, forecast); aligned standards with Central Finance Controlling',
         ],
-        successStory: 'Analysed financial processes of every analyst in the coordinated team, diagnosed inefficiencies, proposed and implemented streamlined workflows, produced new process documentation and trained the team to confidently operate the upgraded toolset (Excel, Power Query).',
+        successStory: 'Mapped financial processes across the analyst team, proposed and implemented streamlined workflows, and trained the team on Excel and Power Query.',
       },
       {
-        role: 'Smartsheet Developer | Project Coordinator',
+        role: 'Smartsheet Developer · Project Coordinator',
         company: 'Zimmer Biomet Polska · Global Business Support',
         location: 'Warsaw',
-        period: 'Jun 2021 - Jun 2022',
+        period: 'Jun 2021 — Jun 2022',
         bullets: [
-          'Led delivery of Global Transition Process across 14 departments: scope and timeline planning, milestone tracking, stakeholder progress reporting',
-          'Organized and facilitated training workshops for global end users and Smartsheet developers',
-          'Built a Continuous Improvement tracking application using PowerApps to standardize process change management',
+          'Led Global Transition delivery across 14 departments: scope, timeline, milestone tracking',
+          'Training workshops for global end users and Smartsheet developers',
+          'Continuous Improvement tracking app in PowerApps',
         ],
-        successStory: 'Designed and rolled out a new generation of dashboards reporting Global Transition migration progress for 14 departments, trained Smartsheet developers (maintenance & roadmap) and end users (data input & consumption), drove iterative dashboard improvements and owned change communication around each release (Smartsheet).',
+        successStory: 'Designed migration-progress dashboards for 14 departments, trained developers and end users in Smartsheet, owned iterative improvements and change communication.',
       },
       {
         role: 'BI Developer & Project Manager',
         company: 'ISS Facility Services · Project Management',
         location: 'Warsaw',
-        period: 'Sep 2018 - May 2021',
+        period: 'Sep 2018 — May 2021',
         bullets: [
-          'Managed cross-functional delivery teams (4-15 people) and held P&L responsibility for an assigned customer account: revenue tracking, cost control, margin optimization',
-          'Comprehensive end-to-end project execution for the assigned client: scope, timeline, budget, financial forecasting, monthly settlements, invoice reconciliation',
-          'Conducted internal audits and risk reviews across active engagements',
-          'Delivered executive Board reports with Power BI, translating complex data into business recommendations',
+          'Cross-functional delivery teams (4–15 people); P&L responsibility for assigned customer account',
+          'End-to-end project execution: scope, timeline, budget, monthly settlements, reconciliation',
+          'Internal audits and risk reviews across active engagements',
+          'Executive Board reports in Power BI translating data into business recommendations',
         ],
-        successStory: 'Owned the project to streamline invoice flow for a global banking client: designed and proposed the new process, implemented it comprehensively, produced full process documentation and trained both internal team and client stakeholders for efficient adoption (Power Automate, SharePoint, Excel). In parallel led the Novatorium initiative: rollout of an internal workflow for capturing new ideas and proven solutions across customer accounts in the Polish branch, owning communication and employee training (Power Automate, PowerApps, Power BI, SharePoint, Excel).',
+        successStory: 'Streamlined invoice flow for a global banking client (Power Automate, SharePoint, Excel) and led the Novatorium initiative — innovation workflow rollout for the Polish branch (Power Automate, PowerApps, Power BI, SharePoint).',
       },
       {
         role: 'Junior Project Manager · Management Trainee',
         company: 'Jeronimo Martins (Lisbon & Warsaw) · Robert BOSCH (Warsaw)',
         location: '',
-        period: 'Feb 2016 - Aug 2018',
+        period: 'Feb 2016 — Aug 2018',
         bullets: [
-          'International project experience (Portugal & Poland): Employer Branding, Store Excellence, Logistics',
-          'Stakeholder coordination and workshop facilitation in matrix organizational setups',
+          'International experience (Portugal, Poland): Employer Branding, Store Excellence, Logistics',
+          'Stakeholder coordination and workshop facilitation in matrix organisations',
         ],
       },
     ],
@@ -356,11 +355,11 @@ function buildHTML(data) {
   /* ---- Header (editorial masthead) ---- */
   .header {
     display: grid;
-    grid-template-columns: 78px 1fr;
-    gap: 16px;
+    grid-template-columns: 96px 1fr;
+    gap: 20px;
     align-items: center;
-    padding-bottom: 10px;
-    margin-bottom: 11px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
     border-bottom: 0.75pt solid var(--rule);
     position: relative;
   }
@@ -368,35 +367,35 @@ function buildHTML(data) {
     content: '';
     position: absolute;
     left: 0; bottom: -1.5pt;
-    width: 60pt; height: 2pt;
+    width: 72pt; height: 2pt;
     background: var(--accent);
   }
   .header-photo {
-    width: 78px;
-    height: 78px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1.5pt solid white;
-    box-shadow: 0 0 0 0.75pt var(--accent), 0 3px 10px rgba(15,29,53,0.10);
+    border: 2pt solid white;
+    box-shadow: 0 0 0 0.75pt var(--accent), 0 3px 12px rgba(15,29,53,0.10);
   }
   .header-text h1 {
     font-family: var(--serif);
-    font-size: 23pt;
+    font-size: 26pt;
     font-weight: 600;
     color: var(--ink);
     letter-spacing: -0.6px;
     line-height: 1.0;
     font-variation-settings: "opsz" 144, "SOFT" 30;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
   .header-title {
     font-family: var(--serif);
     font-style: italic;
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     font-weight: 500;
     color: var(--accent);
     letter-spacing: 0.05px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .header-contact {
     display: flex;
@@ -423,13 +422,13 @@ function buildHTML(data) {
   /* ---- Summary (editorial pull-quote) ---- */
   .summary {
     position: relative;
-    padding: 8px 12px 8px 14px;
-    margin-bottom: 12px;
+    padding: 11px 16px 11px 18px;
+    margin-bottom: 18px;
     text-align: justify;
     hyphens: auto;
-    font-size: 9pt;
+    font-size: 9.4pt;
     color: var(--ink-soft);
-    line-height: 1.55;
+    line-height: 1.62;
     font-weight: 400;
     border-left: 2pt solid var(--accent);
     background: linear-gradient(to right, var(--accent-bg-soft), transparent 70%);
@@ -439,12 +438,12 @@ function buildHTML(data) {
   .section-title {
     font-family: var(--serif);
     font-style: italic;
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     font-weight: 600;
     color: var(--ink);
-    margin-top: 2px;
-    margin-bottom: 7px;
-    padding-bottom: 3px;
+    margin-top: 4px;
+    margin-bottom: 11px;
+    padding-bottom: 4px;
     border-bottom: 0.75pt solid var(--rule);
     letter-spacing: 0.01em;
     position: relative;
@@ -453,7 +452,7 @@ function buildHTML(data) {
     content: '';
     position: absolute;
     left: 0; bottom: -1.25pt;
-    width: 28pt; height: 1.5pt;
+    width: 32pt; height: 1.5pt;
     background: var(--accent);
   }
 
@@ -461,10 +460,10 @@ function buildHTML(data) {
   .exp-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 22px;
     align-items: start;
-    margin-bottom: 7px;
-    padding-bottom: 6px;
+    margin-bottom: 13px;
+    padding-bottom: 11px;
     border-bottom: 0.5pt solid var(--rule-soft);
     page-break-inside: avoid;
     break-inside: avoid;
@@ -473,24 +472,24 @@ function buildHTML(data) {
   .job-content, .success-content { position: relative; z-index: 2; }
 
   .job-content {
-    padding-left: 10px;
-    border-left: 1.25pt solid var(--accent);
+    padding-left: 12px;
+    border-left: 1.5pt solid var(--accent);
   }
-  .job-head { margin-bottom: 4px; }
+  .job-head { margin-bottom: 6px; }
   .job-role {
     font-family: var(--serif);
-    font-size: 10.5pt;
+    font-size: 11pt;
     font-weight: 600;
     color: var(--ink);
-    line-height: 1.18;
+    line-height: 1.2;
     letter-spacing: -0.1px;
     margin-bottom: 2px;
   }
   .job-company {
-    font-size: 8.4pt;
+    font-size: 8.6pt;
     color: var(--ink-mid);
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.35;
   }
   .job-loc {
     color: var(--ink-muted);
@@ -498,50 +497,50 @@ function buildHTML(data) {
   }
   .job-period {
     display: inline-block;
-    font-size: 7.6pt;
+    font-size: 7.8pt;
     color: var(--accent);
     font-weight: 600;
     white-space: nowrap;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     background: var(--accent-bg);
-    padding: 1px 7px;
+    padding: 2px 8px;
     border-radius: 2pt;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
     font-variant-numeric: tabular-nums;
   }
   .job-bullets {
-    padding-left: 13px;
-    margin-top: 3px;
+    padding-left: 14px;
+    margin-top: 4px;
     list-style: none;
   }
   .job-bullets li {
     position: relative;
-    margin-bottom: 2px;
-    font-size: 8.6pt;
+    margin-bottom: 4px;
+    font-size: 8.9pt;
     color: var(--ink-soft);
-    line-height: 1.42;
-    padding-left: 1px;
+    line-height: 1.5;
+    padding-left: 2px;
   }
   .job-bullets li::before {
     content: '';
     position: absolute;
-    left: -9px; top: 5.5px;
-    width: 4px; height: 1.25pt;
+    left: -10px; top: 6.5px;
+    width: 5px; height: 1.25pt;
     background: var(--accent);
   }
 
   /* ---- Success story (gold-accented narrative) ---- */
-  .success-content { padding-top: 1px; }
+  .success-content { padding-top: 16pt; }
   .success-story {
     position: relative;
-    padding: 7px 11px 7px 13px;
+    padding: 12px 14px 12px 16px;
     background: var(--gold-bg);
-    border-left: 1.25pt solid var(--gold);
+    border-left: 1.5pt solid var(--gold);
     border-radius: 0;
-    font-size: 8.4pt;
+    font-size: 8.8pt;
     color: var(--ink-soft);
-    line-height: 1.45;
+    line-height: 1.6;
     text-align: justify;
     hyphens: auto;
   }
@@ -552,9 +551,9 @@ function buildHTML(data) {
     font-weight: 600;
     color: var(--gold);
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 7.4pt;
-    margin-bottom: 2px;
+    letter-spacing: 0.22em;
+    font-size: 7.6pt;
+    margin-bottom: 5px;
   }
 
   /* ---- Page 2 ---- */
@@ -790,6 +789,5 @@ async function generatePDF(lang) {
 
 (async () => {
   await generatePDF('en');
-  await generatePDF('pl');
   console.log('Done!');
 })();

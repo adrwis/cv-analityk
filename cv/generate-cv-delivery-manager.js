@@ -88,7 +88,7 @@ const cvData = {
     skillGroups: [
       { icon: '◆', name: 'Project execution & Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Risk management', 'Change & adoption management'] },
       { icon: '◆', name: 'PM Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Finance & financial result', items: ['IT P&L', 'Budget up to $15M', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
+      { icon: '◆', name: 'Finance & financial result', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
       { icon: '◆', name: 'Business Intelligence & reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       { icon: '◆', name: 'Power Platform & AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],
@@ -197,7 +197,7 @@ const cvData = {
     skillGroups: [
       { icon: '◆', name: 'Realizacja projektów i Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Zarządzanie ryzykiem', 'Zarządzanie zmianą i adopcją'] },
       { icon: '◆', name: 'Narzędzia PM', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Finanse i wynik finansowy', items: ['Rachunek zysków i strat', 'Budżet do 15 mln $', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
+      { icon: '◆', name: 'Finanse i wynik finansowy', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
       { icon: '◆', name: 'Business Intelligence i raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       { icon: '◆', name: 'Power Platform i AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],

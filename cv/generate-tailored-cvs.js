@@ -95,7 +95,7 @@ const dmProfile = {
     skillGroups: {
       delivery: { name: 'Delivery & PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Risk management', 'Change & adoption management'] },
       tools: { name: 'PM Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      financial: { name: 'Financial & Commercial', items: ['IT P&L', 'Budget up to $15M', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
+      financial: { name: 'Financial & Commercial', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
       bi: { name: 'BI & Reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       automation: { name: 'AI & Automation', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     },
@@ -194,7 +194,7 @@ const dmProfile = {
     skillGroups: {
       delivery: { name: 'Delivery i PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Zarządzanie ryzykiem', 'Zarządzanie zmianą i adopcją'] },
       tools: { name: 'Narzędzia PM', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      financial: { name: 'Finanse i Commercial', items: ['Rachunek zysków i strat', 'Budżet do 15 mln $', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
+      financial: { name: 'Finanse i Commercial', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
       bi: { name: 'BI i Raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       automation: { name: 'AI i Automatyzacja', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     },

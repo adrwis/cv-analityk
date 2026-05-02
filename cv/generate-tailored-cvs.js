@@ -95,7 +95,7 @@ const dmProfile = {
     skillGroups: {
       delivery: { name: 'Delivery & PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Risk management', 'Change & adoption management'] },
       tools: { name: 'PM Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      financial: { name: 'Financial & Commercial', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
+      financial: { name: 'Financial & Commercial', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Invoice reconciliation'] },
       bi: { name: 'BI & Reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       automation: { name: 'AI & Automation', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     },
@@ -194,7 +194,7 @@ const dmProfile = {
     skillGroups: {
       delivery: { name: 'Delivery i PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Zarządzanie ryzykiem', 'Zarządzanie zmianą i adopcją'] },
       tools: { name: 'Narzędzia PM', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      financial: { name: 'Finanse i Commercial', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
+      financial: { name: 'Finanse i Commercial', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Rozliczenia faktur'] },
       bi: { name: 'BI i Raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       automation: { name: 'AI i Automatyzacja', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     },
@@ -302,7 +302,7 @@ const analystProfile = {
     skillGroups: {
       bi: { name: 'BI & Analytics', items: ['Power BI', 'DAX (advanced)', 'Power Query (M)', 'Excel (Power Pivot)', 'Data modeling', 'Cohort & segmentation analysis'] },
       data: { name: 'Data & ETL', items: ['SQL', 'Alteryx (ETL)', 'Cognos', 'Multi-source consolidation', 'Pipeline design'] },
-      financial: { name: 'Financial Analytics', items: ['P&L analysis', 'Budgeting & forecasting', 'Variance analysis', 'Spend monitoring', 'Margin optimization', 'Revenue & cost modeling'] },
+      financial: { name: 'Financial Analytics', items: ['P&L analysis', 'Budgeting & forecasting', 'Variance analysis', 'Spend monitoring', 'Revenue & cost modeling'] },
       automation: { name: 'AI & Automation', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
       tools: { name: 'Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'PowerApps'] },
     },
@@ -404,7 +404,7 @@ const analystProfile = {
     skillGroups: {
       bi: { name: 'BI i Analityka', items: ['Power BI', 'DAX (zaawansowany)', 'Power Query (M)', 'Excel (Power Pivot)', 'Modelowanie danych', 'Analiza kohortowa'] },
       data: { name: 'Dane i ETL', items: ['SQL', 'Alteryx (ETL)', 'Cognos', 'Konsolidacja wieloźródłowa', 'Projektowanie pipeline\'ów'] },
-      financial: { name: 'Analityka finansowa', items: ['Analiza P&L', 'Budżetowanie i prognozowanie', 'Analiza odchyleń', 'Monitoring wydatków', 'Optymalizacja marży', 'Modelowanie przychodów i kosztów'] },
+      financial: { name: 'Analityka finansowa', items: ['Analiza P&L', 'Budżetowanie i prognozowanie', 'Analiza odchyleń', 'Monitoring wydatków', 'Modelowanie przychodów i kosztów'] },
       automation: { name: 'AI i Automatyzacja', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
       tools: { name: 'Narzędzia', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'PowerApps'] },
     },
@@ -525,16 +525,20 @@ function buildHTML(data, title, summary, skillOrder) {
   const allSkills = [...orderedSkills, ...otherSkills];
 
   const jobsHTML = data.jobs.map(j => `
-    <article class="job">
-      <header class="job-head">
-        <div>
-          <h3 class="job-role">${j.role}</h3>
-          <div class="job-company">${j.company}${j.location ? ` · <span class="job-loc">${j.location}</span>` : ''}</div>
-        </div>
-        <span class="job-period">${j.period}</span>
-      </header>
-      <ul class="job-bullets">${j.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-      ${j.successStory ? `<div class="success-story"><span class="success-tag">★ ${data.successLabel}</span> ${j.successStory}</div>` : ''}
+    <article class="exp-row">
+      <div class="job-content">
+        <header class="job-head">
+          <div>
+            <h3 class="job-role">${j.role}</h3>
+            <div class="job-company">${j.company}${j.location ? ` · <span class="job-loc">${j.location}</span>` : ''}</div>
+          </div>
+          <span class="job-period">${j.period}</span>
+        </header>
+        <ul class="job-bullets">${j.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      </div>
+      <div class="success-content">
+        ${j.successStory ? `<div class="success-story"><span class="success-tag">★ ${data.successLabel}</span> ${j.successStory}</div>` : ''}
+      </div>
     </article>
   `).join('');
 
@@ -584,7 +588,7 @@ function buildHTML(data, title, summary, skillOrder) {
   body { position: relative; min-height: 297mm; }
   .rain-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
   .page { position: relative; z-index: 1; max-width: 210mm; margin: 0 auto; padding: 14mm 14mm 10mm; background: rgba(255, 255, 255, 0.86); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .job, .skill-group, .summary, .edu-item, .cert-list, .lang-list { position: relative; z-index: 2; }
+  .skill-group, .summary, .edu-item, .cert-list, .lang-list { position: relative; z-index: 2; }
   .header {
     display: grid; grid-template-columns: 96px 1fr; gap: 16px;
     align-items: center; padding-bottom: 14px;
@@ -621,9 +625,18 @@ function buildHTML(data, title, summary, skillOrder) {
     color: var(--ink-soft); line-height: 1.6;
   }
 
-  .body-grid {
-    display: grid; grid-template-columns: minmax(0, 62%) minmax(0, 38%); gap: 18px;
+  .exp-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start;
+    margin-bottom: 11px; padding-bottom: 9px; border-bottom: 1px dashed var(--border-soft);
+    page-break-inside: avoid; break-inside: avoid;
   }
+  .exp-row:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .job-content, .success-content { position: relative; z-index: 2; }
+
+  .bottom-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px;
+  }
+  .bottom-left, .bottom-right { position: relative; z-index: 2; }
 
   .section-title {
     font-size: 9.5pt; font-weight: 700; color: var(--accent);
@@ -636,11 +649,8 @@ function buildHTML(data, title, summary, skillOrder) {
     content: ''; display: inline-block; width: 3px; height: 11px;
     background: var(--accent); border-radius: 1px;
   }
-  .col-right .section-title { margin-top: 0; }
-  .col-right .section-title:not(:first-child) { margin-top: 14px; }
-
-  .job { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px dashed var(--border-soft); }
-  .job:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .bottom-right .section-title:not(:first-child) { margin-top: 14px; }
+  .bottom-left .section-title:not(:first-child) { margin-top: 14px; }
   .job-head {
     display: flex; justify-content: space-between; align-items: flex-start;
     gap: 10px; margin-bottom: 5px;
@@ -660,7 +670,7 @@ function buildHTML(data, title, summary, skillOrder) {
   .job-bullets li::marker { color: var(--accent); }
 
   .success-story {
-    margin-top: 8px; padding: 8px 11px;
+    padding: 8px 11px;
     background: var(--success-bg); border-left: 3px solid var(--gold);
     border-radius: 0 4px 4px 0; font-size: 8.8pt; color: var(--ink);
     line-height: 1.5; text-align: justify;
@@ -735,14 +745,14 @@ function buildHTML(data, title, summary, skillOrder) {
     </div>
   </header>
   <div class="summary">${summary}</div>
-  <div class="body-grid">
-    <div class="col-left">
-      <h2 class="section-title">${data.sections.experience}</h2>
-      ${jobsHTML}
-      <h2 class="section-title" style="margin-top: 14px;">${data.sections.education}</h2>
+  <h2 class="section-title">${data.sections.experience}</h2>
+  ${jobsHTML}
+  <div class="bottom-grid">
+    <div class="bottom-left">
+      <h2 class="section-title">${data.sections.education}</h2>
       ${eduHTML}
     </div>
-    <div class="col-right">
+    <div class="bottom-right">
       <h2 class="section-title">${data.sections.skills}</h2>
       ${skillsHTML}
       <h2 class="section-title">${data.sections.certifications}</h2>

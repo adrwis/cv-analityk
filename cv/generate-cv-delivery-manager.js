@@ -88,7 +88,7 @@ const cvData = {
     skillGroups: [
       { icon: '◆', name: 'Project execution & Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Risk management', 'Change & adoption management'] },
       { icon: '◆', name: 'PM Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Finance & financial result', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
+      { icon: '◆', name: 'Finance & financial result', items: ['IT P&L', 'People cost allocation', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Invoice reconciliation'] },
       { icon: '◆', name: 'Business Intelligence & reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       { icon: '◆', name: 'Power Platform & AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],
@@ -197,7 +197,7 @@ const cvData = {
     skillGroups: [
       { icon: '◆', name: 'Realizacja projektów i Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Zarządzanie ryzykiem', 'Zarządzanie zmianą i adopcją'] },
       { icon: '◆', name: 'Narzędzia PM', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Finanse i wynik finansowy', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
+      { icon: '◆', name: 'Finanse i wynik finansowy', items: ['Rachunek zysków i strat', 'Alokacja kosztów osobowych', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Rozliczenia faktur'] },
       { icon: '◆', name: 'Business Intelligence i raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
       { icon: '◆', name: 'Power Platform i AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],
@@ -254,16 +254,20 @@ function generateRainSVG(width, height) {
 
 function buildHTML(data) {
   const jobsHTML = data.jobs.map(j => `
-    <article class="job">
-      <header class="job-head">
-        <div class="job-title">
-          <h3 class="job-role">${j.role}</h3>
-          <div class="job-company">${j.company}${j.location ? ` · <span class="job-loc">${j.location}</span>` : ''}</div>
-        </div>
-        <span class="job-period">${j.period}</span>
-      </header>
-      <ul class="job-bullets">${j.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-      ${j.successStory ? `<div class="success-story"><span class="success-tag">★ ${data.successLabel}</span> ${j.successStory}</div>` : ''}
+    <article class="exp-row">
+      <div class="job-content">
+        <header class="job-head">
+          <div class="job-title">
+            <h3 class="job-role">${j.role}</h3>
+            <div class="job-company">${j.company}${j.location ? ` · <span class="job-loc">${j.location}</span>` : ''}</div>
+          </div>
+          <span class="job-period">${j.period}</span>
+        </header>
+        <ul class="job-bullets">${j.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      </div>
+      <div class="success-content">
+        ${j.successStory ? `<div class="success-story"><span class="success-tag">★ ${data.successLabel}</span> ${j.successStory}</div>` : ''}
+      </div>
     </article>
   `).join('');
 
@@ -403,12 +407,29 @@ function buildHTML(data) {
     line-height: 1.6;
   }
 
-  /* ---- Two-column body ---- */
-  .body-grid {
+  /* ---- Experience rows: job left, success right ---- */
+  .exp-row {
     display: grid;
-    grid-template-columns: minmax(0, 62%) minmax(0, 38%);
-    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: start;
+    margin-bottom: 11px;
+    padding-bottom: 9px;
+    border-bottom: 1px dashed var(--border-soft);
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
+  .exp-row:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .job-content, .success-content { position: relative; z-index: 2; }
+
+  /* ---- Bottom grid: education left, skills+certs+langs right ---- */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 14px;
+  }
+  .bottom-left, .bottom-right { position: relative; z-index: 2; }
 
   /* ---- Section titles ---- */
   .section-title {
@@ -433,16 +454,8 @@ function buildHTML(data) {
     background: var(--accent);
     border-radius: 1px;
   }
-  .col-right .section-title { margin-top: 0; }
-  .col-right .section-title:not(:first-child) { margin-top: 14px; }
-
-  /* ---- Jobs ---- */
-  .job {
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed var(--border-soft);
-  }
-  .job:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .bottom-left .section-title:not(:first-child),
+  .bottom-right .section-title:not(:first-child) { margin-top: 14px; }
   .job-head {
     display: flex;
     justify-content: space-between;
@@ -489,7 +502,6 @@ function buildHTML(data) {
   .job-bullets li::marker { color: var(--accent); }
 
   .success-story {
-    margin-top: 8px;
     padding: 8px 11px;
     background: var(--success-bg);
     border-left: 3px solid var(--gold);
@@ -636,16 +648,15 @@ function buildHTML(data) {
 
   <div class="summary">${data.summary}</div>
 
-  <div class="body-grid">
-    <div class="col-left">
-      <h2 class="section-title">${data.sections.experience}</h2>
-      ${jobsHTML}
+  <h2 class="section-title">${data.sections.experience}</h2>
+  ${jobsHTML}
 
-      <h2 class="section-title" style="margin-top: 14px;">${data.sections.education}</h2>
+  <div class="bottom-grid">
+    <div class="bottom-left">
+      <h2 class="section-title">${data.sections.education}</h2>
       ${eduHTML}
     </div>
-
-    <div class="col-right">
+    <div class="bottom-right">
       <h2 class="section-title">${data.sections.skills}</h2>
       ${skillsHTML}
 

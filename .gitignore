@@ -1,0 +1,10 @@
+# PDFy CV — generowane lokalnie, nie commitujemy
+cv/*.pdf
+
+# Helpers / temp
+cv/_*.py
+cv/_*.js
+
+# OS
+.DS_Store
+Thumbs.db

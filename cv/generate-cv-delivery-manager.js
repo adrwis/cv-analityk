@@ -13,7 +13,7 @@ const cvData = {
     linkedin: 'linkedin.com/in/adriana-gu',
     linkedinUrl: 'https://www.linkedin.com/in/adriana-gu',
     location: 'Remote · Poland',
-    summary: 'Delivery and project leader with 8+ years of experience in IT delivery, financial services and FinTech (HSBC, Trustwave). Proven track record of managing cross-functional teams up to 15 people, owning people cost allocation for ~40 IT projects with $15M annual budget, and orchestrating end-to-end delivery for international clients. Combining hands-on Agile/Scrum experience (Jira, Confluence) with PRINCE2 governance, P&L responsibility for assigned client accounts, and stakeholder management at C-level. Skilled in roadmap planning, capacity management, financial forecasting and risk mitigation across regulated banking and software environments.',
+    summary: 'Delivery and project leader with 8+ years of experience in IT delivery, financial services and FinTech (HSBC, Trustwave). Managed cross-functional teams up to 15 people and owned people cost allocation for ~40 IT projects with $15M annual budget. Combining PRINCE2 and Agile/Scrum (Jira, Confluence) with full P&L responsibility for assigned client accounts and stakeholder management at executive level. Skilled in financial forecasting, spend monitoring and risk mitigation across regulated banking and software environments.',
     sections: {
       experience: 'Work Experience',
       skills: 'Key Skills',
@@ -29,11 +29,11 @@ const cvData = {
         location: 'Warsaw / Remote',
         period: 'Oct 2024 - present',
         bullets: [
-          'Owning IT finance delivery cycle: budget vs actuals tracking, forecasting, variance analysis and burn rate monitoring for executive stakeholders (Financial Directors, CFO)',
-          'Building Power BI dashboards and Alteryx ETL pipelines used in monthly financial reviews and capacity planning',
-          'Coordinating cross-functional collaboration between finance, IT, and business stakeholders on standardized reporting templates',
+          'Analysing IT financial processes and producing dashboards: high-level for CFO and Financial Directors, and detailed views for department heads',
+          'Building Power BI dashboards and Alteryx ETL pipelines used in monthly financial reviews',
+          'Coordinating cross-functional collaboration between finance, IT and business stakeholders on standardized reporting templates',
         ],
-        successStory: 'Analysed FP&A and Performance Management processes for the finance team, diagnosed bottlenecks in monthly reporting, designed and implemented end-to-end automation, produced before/after process documentation and delivered hands-on training across the full toolchain (Excel, Power Query, Alteryx, SQL, Power BI).',
+        successStory: 'Analysed FP&A and Performance Management processes for the finance team: diagnosed bottlenecks in monthly reporting, designed and implemented improvements, produced before/after process documentation and delivered hands-on training across the full toolset (Excel, Power Query, Alteryx, SQL, Power BI).',
       },
       {
         role: 'Project Finance Analyst at HSBC',
@@ -41,13 +41,13 @@ const cvData = {
         location: 'Cracow / Remote',
         period: 'Jul 2022 - Apr 2024',
         bullets: [
-          'Coordinated a team of 5 analysts and owned people cost allocation for ~40 IT projects with $15M annual budget: headcount planning, resource cost forecasting, burn rate tracking and variance analysis',
-          'Worked in Agile/Scrum environment with global delivery teams: sprint planning, backlog grooming, daily stand-ups and release planning ceremonies',
-          'Day-to-day collaboration in Jira and Confluence: tracking deliverables, dependencies, RAID logs and stakeholder documentation',
-          'Built Power BI dashboards and Excel reports for budget tracking, profitability analysis and trend monitoring',
+          'Coordinated a team of 5 analysts and owned people cost allocation for ~40 IT projects with $15M annual budget: headcount planning, resource cost forecasting, spend monitoring, variance analysis',
+          'Worked in Agile/Scrum environment with global teams: sprint planning, backlog grooming, daily stand-ups',
+          'Day-to-day collaboration in Jira and Confluence: tracking project tasks, dependencies and RAID logs (risks, assumptions, issues, dependencies)',
+          'Built Power BI dashboards and Excel reports: budget, forecast',
           'Aligned reporting standards with Central Finance Controlling and ran training workshops for stakeholders',
         ],
-        successStory: 'Mapped the financial processes of every analyst in the coordinated team, diagnosed inefficiencies, proposed and implemented streamlined workflows, produced new process documentation and trained the team to confidently operate the upgraded toolset (Excel, Power Query).',
+        successStory: 'Analysed financial processes of every analyst in the coordinated team, diagnosed inefficiencies, proposed and implemented streamlined workflows, produced new process documentation and trained the team to confidently operate the upgraded toolset (Excel, Power Query).',
       },
       {
         role: 'Smartsheet Developer | Project Coordinator',
@@ -55,7 +55,7 @@ const cvData = {
         location: 'Warsaw',
         period: 'Jun 2021 - Jun 2022',
         bullets: [
-          'Led delivery for Global Transition Process across 14 departments, scope/timeline planning, milestone tracking, stakeholder updates',
+          'Led delivery of Global Transition Process across 14 departments: scope and timeline planning, milestone tracking, stakeholder progress reporting',
           'Organized and facilitated training workshops for global end users and Smartsheet developers',
           'Built a Continuous Improvement tracking application using PowerApps to standardize process change management',
         ],
@@ -68,11 +68,11 @@ const cvData = {
         period: 'Sep 2018 - May 2021',
         bullets: [
           'Managed cross-functional delivery teams (4-15 people) and held P&L responsibility for an assigned customer account: revenue tracking, cost control, margin optimization',
-          'End-to-end delivery for the assigned client: scope, timeline, budget, financial forecasting, monthly settlements and invoice reconciliation',
+          'Comprehensive end-to-end project execution for the assigned client: scope, timeline, budget, financial forecasting, monthly settlements, invoice reconciliation',
           'Conducted internal audits and risk reviews across active engagements',
-          'Delivered executive-ready Board reports with Power BI, translating complex data into actionable insights',
+          'Delivered executive Board reports with Power BI, translating complex data into business recommendations',
         ],
-        successStory: 'Owned the project to streamline invoice flow for a global banking client, designed and proposed the new process, implemented it end-to-end, produced full process documentation and trained both internal team and client stakeholders for efficient adoption (Power Automate, SharePoint, Excel). In parallel led the Novatorium initiative, rollout of a workflow for capturing new ideas and proven solutions across customer accounts in the Polish branch, owning communication and employee training (Power Automate, PowerApps, Power BI, SharePoint, Excel).',
+        successStory: 'Owned the project to streamline invoice flow for a global banking client: designed and proposed the new process, implemented it comprehensively, produced full process documentation and trained both internal team and client stakeholders for efficient adoption (Power Automate, SharePoint, Excel). In parallel led the Novatorium initiative: rollout of an internal workflow for capturing new ideas and proven solutions across customer accounts in the Polish branch, owning communication and employee training (Power Automate, PowerApps, Power BI, SharePoint, Excel).',
       },
       {
         role: 'Junior Project Manager · Management Trainee',
@@ -86,11 +86,11 @@ const cvData = {
       },
     ],
     skillGroups: [
-      { icon: '◆', name: 'Delivery & PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Roadmap planning', 'Capacity management', 'RAID tracking', 'Risk mitigation', 'Change & adoption'] },
+      { icon: '◆', name: 'Project execution & Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Risk management', 'Change & adoption management'] },
       { icon: '◆', name: 'PM Tools', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Financial & Commercial', items: ['IT P&L', 'Budget $15M+', 'Cost estimation', 'Burn rate tracking', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
-      { icon: '◆', name: 'BI & Reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
-      { icon: '◆', name: 'AI & Automation', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
+      { icon: '◆', name: 'Finance & financial result', items: ['IT P&L', 'Budget up to $15M', 'Cost estimation', 'Spend monitoring', 'Financial forecasting', 'Margin optimization', 'Invoice reconciliation'] },
+      { icon: '◆', name: 'Business Intelligence & reporting', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
+      { icon: '◆', name: 'Power Platform & AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],
     education: [
       { year: '2020-2021', title: 'Postgraduate: Quality Manager', school: 'SGH Warsaw School of Economics', desc: 'Lean Management, Six Sigma, Kaizen' },
@@ -122,7 +122,7 @@ const cvData = {
     linkedin: 'linkedin.com/in/adriana-gu',
     linkedinUrl: 'https://www.linkedin.com/in/adriana-gu',
     location: 'Zdalnie · Polska',
-    summary: 'Liderka dostarczania projektów z 8+ latami doświadczenia w IT, usługach finansowych i FinTech (HSBC, Trustwave). Udokumentowane osiągnięcia w zarządzaniu zespołami międzyfunkcyjnymi do 15 osób, alokacji kosztów osobowych dla ~40 projektów IT z budżetem rocznym 15M$ oraz dostarczaniu rozwiązań end-to-end dla klientów międzynarodowych. Łączę praktyczne doświadczenie Agile/Scrum (Jira, Confluence) z metodyką PRINCE2, odpowiedzialnością P&L za przypisany account klienta i zarządzaniem interesariuszami na poziomie C-level. Specjalizuję się w planowaniu roadmap, zarządzaniu pojemnością zespołów, prognozowaniu finansowym i mitygacji ryzyk w regulowanym środowisku bankowym i softwarehouse.',
+    summary: 'Liderka dostarczania projektów z 8+ latami doświadczenia w IT, usługach finansowych i FinTech (HSBC, Trustwave). Zarządzałam zespołami międzyfunkcyjnymi do 15 osób i odpowiadałam za alokację kosztów osobowych dla ~40 projektów IT z budżetem rocznym 15 milionów dolarów. Łączę certyfikat PRINCE2 i metodyki zwinne (Jira, Confluence) z odpowiedzialnością za rachunek zysków i strat przypisanych klientów oraz zarządzaniem interesariuszami na poziomie zarządu. Specjalizuję się w prognozowaniu finansowym, monitoringu wydatków i zarządzaniu ryzykiem w regulowanym środowisku bankowym i firm software house.',
     sections: {
       experience: 'Doświadczenie zawodowe',
       skills: 'Kluczowe umiejętności',
@@ -138,7 +138,7 @@ const cvData = {
         location: 'Warszawa / Zdalnie',
         period: 'paź 2024 - obecnie',
         bullets: [
-          'Prowadzenie cyklu finansowego delivery IT: budżet vs wykonanie, prognozowanie, analiza odchyleń i monitoring burn rate dla kadry zarządzającej (Financial Directors, CFO)',
+          'Analiza procesów finansowych w obszarze IT oraz przygotowywanie dashboardów: wysokopoziomowych dla CFO i dyrektorów finansowych oraz szczegółowych dla kierowników działowych',
           'Budowa dashboardów Power BI i pipeline\'ów ETL w Alteryx wykorzystywanych w miesięcznych przeglądach finansowych i planowaniu pojemności',
           'Koordynacja współpracy międzyfunkcyjnej (finanse, IT, biznes) nad standaryzowanymi szablonami raportowymi',
         ],
@@ -150,13 +150,13 @@ const cvData = {
         location: 'Kraków / Zdalnie',
         period: 'lip 2022 - kwi 2024',
         bullets: [
-          'Koordynacja zespołu 5 analityków i odpowiedzialność za alokację kosztów osobowych dla ~40 projektów IT z budżetem rocznym 15M$: planowanie headcount, prognozowanie kosztów zasobów, śledzenie burn rate i analiza odchyleń',
-          'Praca w środowisku Agile/Scrum z globalnymi zespołami delivery: sprint planning, backlog grooming, daily stand-up, release planning',
-          'Codzienna praca w Jira i Confluence: śledzenie deliverables, zależności, logów RAID i dokumentacji dla interesariuszy',
-          'Budowa dashboardów Power BI i raportów Excel: śledzenie budżetu, analiza rentowności, raporty odchyleń',
+          'Koordynacja zespołu 5 analityków oraz odpowiedzialność za alokację kosztów osobowych dla ~40 projektów IT z budżetem rocznym 15 milionów dolarów: planowanie obsady etatowej, prognozowanie kosztów zasobów, monitoring wydatków, analiza odchyleń',
+          'Praca w środowisku Agile/Scrum z globalnymi zespołami: planowanie sprintu, doprecyzowanie backlogu, daily stand-up',
+          'Codzienna praca w Jira i Confluence: śledzenie zadań projektowych, zależności i logów RAID (ryzyka, założenia, problemy, zależności)',
+          'Budowa dashboardów Power BI i raportów Excel: budżet, forecast',
           'Harmonizacja standardów raportowania z Central Finance Controlling i prowadzenie warsztatów szkoleniowych',
         ],
-        successStory: 'Przeanalizowałam procesy finansowe każdego specjalisty w koordynowanym zespole, zdiagnozowałam nieefektywności, zaproponowałam i wdrożyłam usprawnienia, stworzyłam dokumentację usprawnionego procesu i przeszkoliłam zespół do swobodnego korzystania z nowego toolsetu (Excel, Power Query).',
+        successStory: 'Analizowałam procesy finansowe każdego specjalisty w koordynowanym zespole, zdiagnozowałam nieefektywności, zaproponowałam i wdrożyłam usprawnienia, stworzyłam dokumentację usprawnionego procesu i przeszkoliłam zespół do swobodnego korzystania z nowego zestawu narzędzi (Excel, Power Query).',
       },
       {
         role: 'Deweloper Smartsheet | Koordynator Projektów',
@@ -164,11 +164,11 @@ const cvData = {
         location: 'Warszawa',
         period: 'cze 2021 - cze 2022',
         bullets: [
-          'Prowadzenie delivery procesu Global Transition dla 14 departamentów, planowanie zakresu/harmonogramu, śledzenie kamieni milowych, aktualizacje interesariuszy',
+          'Prowadzenie realizacji procesu Global Transition dla 14 departamentów: planowanie zakresu i harmonogramu, śledzenie kamieni milowych, raportowanie postępów do interesariuszy',
           'Organizacja i prowadzenie warsztatów szkoleniowych dla globalnych użytkowników i deweloperów Smartsheet',
           'Budowa aplikacji Continuous Improvement w PowerApps do standaryzacji zarządzania zmianami procesowymi',
         ],
-        successStory: 'Stworzyłam nową wersję dashboardów raportujących progres migracji Global Transition dla 14 departamentów, przeszkoliłam deweloperów Smartsheet (utrzymanie i rozwój) oraz end userów (uzupełnianie i konsumpcja), prowadziłam iteracyjny rozwój dashboardów oraz komunikację każdej zmiany (Smartsheet).',
+        successStory: 'Stworzyłam nową wersję dashboardów raportujących postęp migracji Global Transition dla 14 departamentów, przeszkoliłam deweloperów Smartsheet (utrzymanie i rozwój) oraz użytkowników końcowych (uzupełnianie i odczyt danych), prowadziłam iteracyjny rozwój dashboardów oraz komunikację każdej wprowadzanej zmiany (Smartsheet).',
       },
       {
         role: 'Analityk BI i Kierownik Projektu',
@@ -176,12 +176,12 @@ const cvData = {
         location: 'Warszawa',
         period: 'wrz 2018 - maj 2021',
         bullets: [
-          'Zarządzanie zespołami międzyfunkcyjnymi (4-15 osób) oraz odpowiedzialność P&L za przypisany account klienta: śledzenie przychodów, kontrola kosztów, optymalizacja marży',
-          'Delivery end-to-end dla przypisanego klienta: zakres, harmonogram, budżet, prognozowanie finansowe, miesięczne rozliczenia i uzgadnianie faktur',
+          'Zarządzanie zespołami międzyfunkcyjnymi (4-15 osób) oraz odpowiedzialność za rachunek zysków i strat przypisanego klienta: śledzenie przychodów, kontrola kosztów, optymalizacja marży',
+          'Kompleksowa realizacja projektów dla przypisanego klienta: zakres, harmonogram, budżet, prognozowanie finansowe, miesięczne rozliczenia, uzgadnianie faktur',
           'Przeprowadzanie audytów wewnętrznych i przeglądów ryzyk w aktywnych projektach',
-          'Przygotowywanie raportów dla Zarządu w Power BI, tłumaczenie złożonych danych na rekomendacje',
+          'Przygotowywanie raportów dla Zarządu w Power BI: tłumaczenie złożonych danych na rekomendacje biznesowe',
         ],
-        successStory: 'Odpowiadałam za projekt usprawnienia przepływu faktur dla globalnego klienta z segmentu bankowego, zaplanowałam i zaproponowałam nowy proces, wdrożyłam end-to-end, stworzyłam dokumentację oraz przeszkoliłam zespół wewnętrzny i klienta do efektywnej adopcji (Power Automate, SharePoint, Excel). Równolegle prowadziłam projekt Novatorium, wdrożenie workflow dla nowych pomysłów i sprawdzonych rozwiązań w polskim oddziale firmy, komunikacja procesu i szkolenia pracowników (Power Automate, PowerApps, Power BI, SharePoint, Excel).',
+        successStory: 'Odpowiadałam za projekt usprawnienia obiegu faktur dla globalnego klienta z sektora bankowego: zaplanowałam i zaproponowałam nowy proces, wdrożyłam go kompleksowo, stworzyłam dokumentację oraz przeszkoliłam zespół wewnętrzny i klienta do efektywnego korzystania z procesu (Power Automate, SharePoint, Excel). Równolegle prowadziłam projekt Novatorium: wdrożenie obiegu pomysłów innowacyjnych i sprawdzonych rozwiązań w polskim oddziale firmy, komunikację procesu oraz szkolenia pracowników (Power Automate, PowerApps, Power BI, SharePoint, Excel).',
       },
       {
         role: 'Młodszy Kierownik Projektu · Management Trainee',
@@ -195,11 +195,11 @@ const cvData = {
       },
     ],
     skillGroups: [
-      { icon: '◆', name: 'Delivery i PM', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Planowanie roadmap', 'Zarządzanie pojemnością', 'RAID', 'Mitygacja ryzyk', 'Change management'] },
+      { icon: '◆', name: 'Realizacja projektów i Project Management', items: ['PRINCE2 Foundation', 'Agile / Scrum', 'Zarządzanie ryzykiem', 'Zarządzanie zmianą i adopcją'] },
       { icon: '◆', name: 'Narzędzia PM', items: ['Jira', 'Confluence', 'Smartsheet', 'SharePoint', 'Power Automate', 'MS Project'] },
-      { icon: '◆', name: 'Finanse i Komercja', items: ['Odpowiedzialność P&L', 'Budżet 15M$+', 'Estymacja kosztów', 'Burn rate', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
-      { icon: '◆', name: 'BI i Raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
-      { icon: '◆', name: 'AI i Automatyzacja', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
+      { icon: '◆', name: 'Finanse i wynik finansowy', items: ['Rachunek zysków i strat', 'Budżet do 15 mln $', 'Estymacja kosztów', 'Monitoring wydatków', 'Prognozowanie', 'Optymalizacja marży', 'Rozliczenia faktur'] },
+      { icon: '◆', name: 'Business Intelligence i raportowanie', items: ['Power BI', 'DAX', 'Power Query', 'Excel (Power Pivot)', 'SQL', 'Alteryx', 'Cognos'] },
+      { icon: '◆', name: 'Power Platform i AI', items: ['Power Automate', 'PowerApps', 'Claude Code', 'Prompt Engineering'] },
     ],
     education: [
       { year: '2020-2021', title: 'Studia podyplomowe: Menedżer Jakości', school: 'Szkoła Główna Handlowa (SGH)', desc: 'Lean Management, Six Sigma, Kaizen' },
@@ -228,6 +228,29 @@ const cvData = {
 const photoPath = path.resolve(__dirname, '..', '..', 'adriana-gusciora-pl', 'zdjecia', 'ada2.jpg');
 const photoBase64 = fs.readFileSync(photoPath).toString('base64');
 const photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
+
+function generateRainSVG(width, height) {
+  // Static matrix-style numbers in subtle blue, fading toward bottom
+  const fontSize = 14;
+  const cols = Math.floor(width / fontSize);
+  const elems = [];
+  for (let col = 0; col < cols; col++) {
+    const depth = 0.25 + Math.random() * 0.75;
+    const bright = 0.35 + Math.random() * 0.65;
+    const startOffset = Math.floor(Math.random() * 8);
+    const endRow = Math.floor((depth * height) / fontSize);
+    for (let row = startOffset; row < endRow; row++) {
+      const y = row * fontSize + fontSize;
+      const yRatio = y / height;
+      const yFade = Math.max(0, 1 - yRatio * 1.15);
+      if (yFade < 0.02) continue;
+      const opacity = (0.32 * bright * yFade).toFixed(3);
+      const ch = Math.floor(Math.random() * 10);
+      elems.push('<text x="' + (col * fontSize) + '" y="' + y + '" fill="rgba(30,58,110,' + opacity + ')" font-family="JetBrains Mono, ui-monospace, monospace" font-size="' + fontSize + '">' + ch + '</text>');
+    }
+  }
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;">' + elems.join('') + '</svg>';
+}
 
 function buildHTML(data) {
   const jobsHTML = data.jobs.map(j => `
@@ -301,10 +324,17 @@ function buildHTML(data) {
     background: white;
   }
 
+  body { position: relative; min-height: 297mm; }
+  .rain-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
   .page {
+    position: relative;
+    z-index: 1;
     max-width: 210mm;
     margin: 0 auto;
     padding: 14mm 14mm 10mm;
+    background: rgba(255, 255, 255, 0.86);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   /* ---- Header ---- */
@@ -588,6 +618,7 @@ function buildHTML(data) {
 </style>
 </head>
 <body>
+<div class="rain-bg">${generateRainSVG(794, 1123)}</div>
 <div class="page">
 
   <header class="header">

@@ -288,6 +288,13 @@ function buildHTML(data) {
     </div>
   `).join('');
 
+  const skillsHTMLForGrid = data.skillGroups.map(g => `
+    <div class="skill-group">
+      <div class="skill-name">${g.name}</div>
+      <div class="skill-tags">${g.items.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
+    </div>
+  `).join('');
+
   const certsHTML = data.certs.map(c => `<li class="cert-item">${c}</li>`).join('');
   const langsHTML = data.languages.map(l => `<li class="lang-item"><span class="lang-name">${l.lang}</span><span class="lang-level">${l.level}</span></li>`).join('');
 
@@ -301,31 +308,36 @@ function buildHTML(data) {
 <meta charset="UTF-8">
 <title>${data.name},${data.title}</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --ink: #1a2332;
-    --ink-soft: #4a5568;
-    --ink-muted: #718096;
+    --ink: #0f1d35;
+    --ink-soft: #3a4a64;
+    --ink-mid: #56657c;
+    --ink-muted: #7c8aa1;
     --accent: #1e56a0;
     --accent-soft: #2a6fc8;
     --accent-bg: #eaf1fb;
-    --accent-bg-soft: #f4f8fd;
-    --border: #dce3eb;
-    --border-soft: #eef1f5;
+    --accent-bg-soft: #f6f9fd;
+    --rule: #d8dee8;
+    --rule-soft: #ebeef4;
     --gold: #b88a2c;
-    --success-bg: #f7f4ec;
-    --success-border: #b88a2c;
+    --gold-soft: #d4a851;
+    --gold-bg: #faf6ec;
+    --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   html, body {
-    font-family: 'Inter', - apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--sans);
     color: var(--ink);
-    line-height: 1.55;
-    font-size: 9.6pt;
+    line-height: 1.5;
+    font-size: 9.1pt;
     background: white;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
 
   body { position: relative; min-height: 297mm; }
@@ -335,58 +347,71 @@ function buildHTML(data) {
     z-index: 1;
     max-width: 210mm;
     margin: 0 auto;
-    padding: 14mm 14mm 10mm;
-    background: rgba(255, 255, 255, 0.86);
+    padding: 11mm 13mm 8mm;
+    background: rgba(255, 255, 255, 0.92);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* ---- Header ---- */
+  /* ---- Header (editorial masthead) ---- */
   .header {
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: 78px 1fr;
     gap: 16px;
     align-items: center;
-    padding-bottom: 14px;
-    border-bottom: 2.5px solid var(--accent);
-    margin-bottom: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 11px;
+    border-bottom: 0.75pt solid var(--rule);
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -1.5pt;
+    width: 60pt; height: 2pt;
+    background: var(--accent);
   }
   .header-photo {
-    width: 96px;
-    height: 96px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 0 0 1.5px var(--accent), 0 4px 10px rgba(30,86,160,0.15);
+    border: 1.5pt solid white;
+    box-shadow: 0 0 0 0.75pt var(--accent), 0 3px 10px rgba(15,29,53,0.10);
   }
   .header-text h1 {
-    font-size: 22pt;
-    font-weight: 800;
+    font-family: var(--serif);
+    font-size: 23pt;
+    font-weight: 600;
     color: var(--ink);
     letter-spacing: -0.6px;
-    line-height: 1.05;
+    line-height: 1.0;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
     margin-bottom: 3px;
   }
   .header-title {
-    font-size: 11.5pt;
-    font-weight: 600;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 10.5pt;
+    font-weight: 500;
     color: var(--accent);
-    margin-bottom: 8px;
+    letter-spacing: 0.05px;
+    margin-bottom: 6px;
   }
   .header-contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 14px;
-    font-size: 8.8pt;
-    color: var(--ink-soft);
+    gap: 4px 16px;
+    font-size: 8.6pt;
+    color: var(--ink-mid);
+    font-weight: 500;
   }
   .header-contact a {
-    color: var(--ink-soft);
+    color: var(--ink-mid);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    transition: color 0.15s;
   }
   .header-contact a:hover { color: var(--accent); }
   .header-contact .contact-static {
@@ -395,16 +420,41 @@ function buildHTML(data) {
     gap: 5px;
   }
 
-  /* ---- Summary ---- */
+  /* ---- Summary (editorial pull-quote) ---- */
   .summary {
-    background: linear-gradient(to right, var(--accent-bg-soft), white);
-    border-left: 3px solid var(--accent);
-    padding: 11px 14px;
-    margin-bottom: 16px;
+    position: relative;
+    padding: 8px 12px 8px 14px;
+    margin-bottom: 12px;
     text-align: justify;
-    font-size: 9.4pt;
+    hyphens: auto;
+    font-size: 9pt;
     color: var(--ink-soft);
-    line-height: 1.6;
+    line-height: 1.55;
+    font-weight: 400;
+    border-left: 2pt solid var(--accent);
+    background: linear-gradient(to right, var(--accent-bg-soft), transparent 70%);
+  }
+
+  /* ---- Section titles (editorial small-caps) ---- */
+  .section-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 2px;
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    border-bottom: 0.75pt solid var(--rule);
+    letter-spacing: 0.01em;
+    position: relative;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -1.25pt;
+    width: 28pt; height: 1.5pt;
+    background: var(--accent);
   }
 
   /* ---- Experience rows: job left, success right ---- */
@@ -413,217 +463,263 @@ function buildHTML(data) {
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     align-items: start;
-    margin-bottom: 11px;
-    padding-bottom: 9px;
-    border-bottom: 1px dashed var(--border-soft);
+    margin-bottom: 7px;
+    padding-bottom: 6px;
+    border-bottom: 0.5pt solid var(--rule-soft);
     page-break-inside: avoid;
     break-inside: avoid;
   }
   .exp-row:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
   .job-content, .success-content { position: relative; z-index: 2; }
 
-  /* ---- Bottom grid: education left, skills+certs+langs right ---- */
-  .bottom-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin-top: 14px;
+  .job-content {
+    padding-left: 10px;
+    border-left: 1.25pt solid var(--accent);
   }
-  .bottom-left, .bottom-right { position: relative; z-index: 2; }
-
-  /* ---- Section titles ---- */
-  .section-title {
-    font-size: 9.5pt;
-    font-weight: 700;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding-bottom: 4px;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    border-bottom: 1.5px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .section-title::before {
-    content: '';
-    display: inline-block;
-    width: 3px;
-    height: 11px;
-    background: var(--accent);
-    border-radius: 1px;
-  }
-  .bottom-left .section-title:not(:first-child),
-  .bottom-right .section-title:not(:first-child) { margin-top: 14px; }
-  .job-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 5px;
-  }
+  .job-head { margin-bottom: 4px; }
   .job-role {
-    font-size: 10pt;
-    font-weight: 700;
+    font-family: var(--serif);
+    font-size: 10.5pt;
+    font-weight: 600;
     color: var(--ink);
-    line-height: 1.3;
+    line-height: 1.18;
+    letter-spacing: -0.1px;
+    margin-bottom: 2px;
   }
   .job-company {
-    font-size: 8.8pt;
-    color: var(--ink-soft);
-    margin-top: 1px;
+    font-size: 8.4pt;
+    color: var(--ink-mid);
+    font-weight: 500;
+    line-height: 1.3;
   }
   .job-loc {
     color: var(--ink-muted);
-    font-style: italic;
+    font-weight: 400;
   }
   .job-period {
-    font-size: 8.5pt;
+    display: inline-block;
+    font-size: 7.6pt;
     color: var(--accent);
     font-weight: 600;
     white-space: nowrap;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     background: var(--accent-bg);
-    padding: 2px 8px;
-    border-radius: 10px;
-    flex-shrink: 0;
+    padding: 1px 7px;
+    border-radius: 2pt;
+    margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
   }
   .job-bullets {
-    padding-left: 16px;
-    margin-top: 4px;
+    padding-left: 13px;
+    margin-top: 3px;
+    list-style: none;
   }
   .job-bullets li {
-    margin-bottom: 3px;
-    font-size: 9.2pt;
+    position: relative;
+    margin-bottom: 2px;
+    font-size: 8.6pt;
     color: var(--ink-soft);
-    text-align: justify;
-    line-height: 1.5;
+    line-height: 1.42;
+    padding-left: 1px;
   }
-  .job-bullets li::marker { color: var(--accent); }
+  .job-bullets li::before {
+    content: '';
+    position: absolute;
+    left: -9px; top: 5.5px;
+    width: 4px; height: 1.25pt;
+    background: var(--accent);
+  }
 
+  /* ---- Success story (gold-accented narrative) ---- */
+  .success-content { padding-top: 1px; }
   .success-story {
-    padding: 8px 11px;
-    background: var(--success-bg);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 4px 4px 0;
-    font-size: 8.8pt;
-    color: var(--ink);
-    line-height: 1.5;
+    position: relative;
+    padding: 7px 11px 7px 13px;
+    background: var(--gold-bg);
+    border-left: 1.25pt solid var(--gold);
+    border-radius: 0;
+    font-size: 8.4pt;
+    color: var(--ink-soft);
+    line-height: 1.45;
     text-align: justify;
+    hyphens: auto;
   }
   .success-tag {
-    display: inline;
-    font-weight: 700;
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
     color: var(--gold);
-    margin-right: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 7.8pt;
+    letter-spacing: 0.18em;
+    font-size: 7.4pt;
+    margin-bottom: 2px;
   }
 
-  /* ---- Skills (right col) ---- */
-  .skill-group { margin-bottom: 9px; }
-  .skill-name {
-    font-size: 8.8pt;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 4px;
-    letter-spacing: 0.2px;
+  /* ---- Page 2 ---- */
+  .page-2 {
+    page-break-before: always;
+    break-before: page;
+    padding-top: 4mm;
   }
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px 4px;
-  }
-  .skill-tag {
-    background: var(--accent-bg);
-    color: var(--accent);
-    border-radius: 3px;
-    padding: 2px 7px;
-    font-size: 8.1pt;
-    font-weight: 500;
-    border: 1px solid transparent;
-    transition: background 0.15s;
-  }
+  .page-2 .section-title:first-child { margin-top: 0; }
 
-  /* ---- Education (left col) ---- */
+  /* ---- Education (full width, refined list) ---- */
+  .edu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 22px;
+    margin-bottom: 14px;
+  }
   .edu-item {
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 64pt 1fr;
     gap: 10px;
-    margin-bottom: 7px;
     align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 0.5pt solid var(--rule-soft);
   }
+  .edu-item:last-child,
+  .edu-item:nth-last-child(2) { border-bottom: none; }
   .edu-year {
-    font-size: 8.4pt;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 8.6pt;
     color: var(--accent);
-    font-weight: 600;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
   }
   .edu-title {
     font-size: 9.2pt;
     font-weight: 600;
     color: var(--ink);
-    line-height: 1.35;
+    line-height: 1.3;
   }
   .edu-school {
-    font-size: 8.6pt;
-    color: var(--ink-soft);
+    font-size: 8.4pt;
+    color: var(--ink-mid);
     line-height: 1.35;
     margin-top: 1px;
   }
+  .edu-school em { color: var(--ink-muted); font-style: italic; }
 
-  /* ---- Certs ---- */
-  .cert-list { list-style: none; }
+  /* ---- Skills grid (4 groups, 2x2) ---- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 22px;
+    margin-bottom: 16px;
+  }
+  .skill-group {
+    border-top: 1.25pt solid var(--accent);
+    padding-top: 7px;
+  }
+  .skill-name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 9.4pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 5px;
+    letter-spacing: 0.01em;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 5px;
+  }
+  .skill-tag {
+    color: var(--ink-soft);
+    font-size: 8.3pt;
+    font-weight: 500;
+    line-height: 1.45;
+    padding: 1.5px 0;
+  }
+  .skill-tag:not(:last-child)::after {
+    content: '·';
+    margin-left: 6px;
+    color: var(--ink-muted);
+  }
+
+  /* ---- Certs (full width, 2-col list) ---- */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 22px;
+    margin-bottom: 14px;
+    list-style: none;
+  }
   .cert-item {
     font-size: 8.5pt;
     color: var(--ink-soft);
-    padding: 4px 0 4px 14px;
-    border-bottom: 1px solid var(--border-soft);
+    padding: 4px 0 4px 16px;
     position: relative;
     line-height: 1.4;
+    border-bottom: 0.5pt solid var(--rule-soft);
   }
-  .cert-item:last-child { border-bottom: none; }
+  .cert-item:last-child,
+  .cert-item:nth-last-child(2) { border-bottom: none; }
   .cert-item::before {
-    content: '✓';
+    content: '';
     position: absolute;
-    left: 0;
-    top: 4px;
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 9pt;
+    left: 0; top: 8px;
+    width: 7px; height: 7px;
+    border: 1pt solid var(--accent);
+    border-radius: 50%;
+    background: var(--accent-bg);
   }
 
-  /* ---- Languages ---- */
-  .lang-list { list-style: none; }
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 4px 0;
-    border-bottom: 1px solid var(--border-soft);
-    font-size: 8.6pt;
+  /* ---- Languages (4-col elegant cards) ---- */
+  .lang-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+    list-style: none;
   }
-  .lang-item:last-child { border-bottom: none; }
-  .lang-name { font-weight: 600; color: var(--ink); }
-  .lang-level { color: var(--accent); font-weight: 500; }
+  .lang-item {
+    text-align: center;
+    padding: 8px 6px;
+    border: 0.5pt solid var(--rule);
+    border-radius: 3pt;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .lang-name {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 9.6pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1px;
+  }
+  .lang-level {
+    display: block;
+    font-size: 7.6pt;
+    color: var(--accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 
   /* ---- GDPR ---- */
   .gdpr {
-    margin-top: 18px;
+    margin-top: 14px;
     padding-top: 10px;
-    border-top: 1px solid var(--border-soft);
-    font-size: 6.8pt;
+    border-top: 0.5pt solid var(--rule-soft);
+    font-size: 6.6pt;
     color: var(--ink-muted);
     text-align: justify;
-    line-height: 1.45;
+    line-height: 1.5;
     font-style: italic;
+    hyphens: auto;
   }
 
   @page {
     size: A4;
     margin: 0;
   }
-
   @media print {
     .page { padding: 12mm 14mm 8mm; }
   }
@@ -651,24 +747,21 @@ function buildHTML(data) {
   <h2 class="section-title">${data.sections.experience}</h2>
   ${jobsHTML}
 
-  <div class="bottom-grid">
-    <div class="bottom-left">
-      <h2 class="section-title">${data.sections.education}</h2>
-      ${eduHTML}
-    </div>
-    <div class="bottom-right">
-      <h2 class="section-title">${data.sections.skills}</h2>
-      ${skillsHTML}
+  <div class="page-2">
+    <h2 class="section-title">${data.sections.education}</h2>
+    <div class="edu-list">${eduHTML}</div>
 
-      <h2 class="section-title">${data.sections.certifications}</h2>
-      <ul class="cert-list">${certsHTML}</ul>
+    <h2 class="section-title">${data.sections.skills}</h2>
+    <div class="skills-grid">${skillsHTMLForGrid}</div>
 
-      <h2 class="section-title">${data.sections.languages}</h2>
-      <ul class="lang-list">${langsHTML}</ul>
-    </div>
+    <h2 class="section-title">${data.sections.certifications}</h2>
+    <ul class="cert-grid">${certsHTML}</ul>
+
+    <h2 class="section-title">${data.sections.languages}</h2>
+    <ul class="lang-grid">${langsHTML}</ul>
+
+    <div class="gdpr">${data.gdpr}</div>
   </div>
-
-  <div class="gdpr">${data.gdpr}</div>
 
 </div>
 </body>

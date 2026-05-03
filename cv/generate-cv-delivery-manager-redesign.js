@@ -57,7 +57,7 @@ const html = `<!doctype html>
   .side{
     background: var(--navy);
     color: oklch(0.94 0.01 240);
-    padding: 38px 26px 38px 32px;
+    padding: 44px 30px 44px 38px;
     font-size: 9pt;
     line-height: 1.5;
     position: relative;
@@ -218,7 +218,7 @@ const html = `<!doctype html>
   }
 
   .main{
-    padding: 38px 38px 30px 36px;
+    padding: 44px 44px 38px 42px;
     color: var(--ink);
     font-size: 9.5pt;
     line-height: 1.5;
@@ -401,8 +401,8 @@ const html = `<!doctype html>
     font-family:"Inter",sans-serif;
   }
 
-  .page2 .side{ padding-top: 32px; }
-  .page2 .main{ padding-top: 32px; }
+  .page2 .side{ padding-top: 38px; }
+  .page2 .main{ padding-top: 38px; }
   .page2-name{
     font-family:"Cormorant Garamond", serif;
     font-style: italic;
@@ -535,9 +535,9 @@ const html = `<!doctype html>
     <section>
       <h3>Languages</h3>
       <div class="lang-row"><span>Polish</span><span class="lvl">Native</span></div>
-      <div class="lang-row"><span>English</span><span class="lvl">C1 · Fluent</span></div>
+      <div class="lang-row"><span>English</span><span class="lvl">Fluent</span></div>
       <div class="lang-row"><span>Portuguese</span><span class="lvl">CELPE-BRAS</span></div>
-      <div class="lang-row"><span>Italian</span><span class="lvl">A2</span></div>
+      <div class="lang-row"><span>Italian</span><span class="lvl">Basic</span></div>
     </section>
   </aside>
 
@@ -555,7 +555,7 @@ const html = `<!doctype html>
     </p>
 
     <div class="stat-row">
-      <div class="stat"><div class="num">8+</div><div class="lbl">Years<br>Delivery</div></div>
+      <div class="stat"><div class="num">8+</div><div class="lbl">Years<br>Experience</div></div>
       <div class="stat"><div class="num">$15M</div><div class="lbl">People-Cost<br>Pool Allocated</div></div>
       <div class="stat"><div class="num">~40</div><div class="lbl">IT Projects<br>Cost-Allocated</div></div>
       <div class="stat"><div class="num">15</div><div class="lbl">Team<br>Members Led</div></div>

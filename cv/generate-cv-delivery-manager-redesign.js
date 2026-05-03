@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 
 const outputDir = __dirname;
-const outputFile = 'AG_Delivery Manager_FinTech_Redesign_EN.pdf';
+const outputFile = 'AG_Delivery Manager.pdf';
 
 const photoPath = path.resolve(__dirname, '..', '..', 'adriana-gusciora-pl', 'zdjecia', 'ada2.jpg');
 const photoBase64 = fs.readFileSync(photoPath).toString('base64');
@@ -498,7 +498,6 @@ const html = `<!doctype html>
       <div class="contact-row"><span class="ico">&#9993;</span><a href="mailto:Gusciora.Ada@gmail.com">Gusciora.Ada@gmail.com</a></div>
       <div class="contact-row"><span class="ico">in</span><a href="https://linkedin.com/in/adriana-gu">linkedin.com/in/adriana-gu</a></div>
       <div class="contact-row"><span class="ico">&#9678;</span>Remote · Poland</div>
-      <div class="contact-row"><span class="ico">&#9872;</span>Open to FinTech &amp; Banking</div>
     </section>
 
     <section>
@@ -557,8 +556,8 @@ const html = `<!doctype html>
 
     <div class="stat-row">
       <div class="stat"><div class="num">8+</div><div class="lbl">Years<br>Delivery</div></div>
-      <div class="stat"><div class="num">$15M</div><div class="lbl">Annual<br>Budget Owned</div></div>
-      <div class="stat"><div class="num">~40</div><div class="lbl">IT Projects<br>Coordinated</div></div>
+      <div class="stat"><div class="num">$15M</div><div class="lbl">People-Cost<br>Pool Allocated</div></div>
+      <div class="stat"><div class="num">~40</div><div class="lbl">IT Projects<br>Cost-Allocated</div></div>
       <div class="stat"><div class="num">15</div><div class="lbl">Team<br>Members Led</div></div>
     </div>
 
@@ -669,7 +668,7 @@ const html = `<!doctype html>
       <ul>
         <li>Led delivery of the <b>Global Transition Process</b> across <b>14 departments</b>: scope, timeline, milestones and stakeholder progress reporting.</li>
         <li>Organised and facilitated training workshops for global end-users and Smartsheet developers.</li>
-        <li>Built a <b>Continuous Improvement</b> tracker in PowerApps to standardise process change management.</li>
+        <li>Built a <b>Continuous Improvement</b> tracker in PowerApps to capture new solutions and process improvements.</li>
       </ul>
       <div class="impact">
         <span class="tag">Impact ·</span>Designed and rolled out a new generation of dashboards reporting Global Transition migration progress for 14 departments, owned change communication around each release and trained both maintainers and end-users.
@@ -688,7 +687,7 @@ const html = `<!doctype html>
         <li>Conducted internal audits and risk reviews; delivered executive Board reports in Power BI translating data into business recommendations.</li>
       </ul>
       <div class="impact">
-        <span class="tag">Impact ·</span>Led the project to streamline invoice flow for a global banking client — designed, implemented and documented the new process, then trained internal team and client stakeholders for adoption (Power Automate, SharePoint, Excel). In parallel led the <b>Novatorium</b> initiative — an internal workflow for capturing new ideas across customer accounts (Power Automate, PowerApps, Power BI, SharePoint).
+        <span class="tag">Impact ·</span>Led the project to streamline invoice flow for a global banking client: designed, implemented and documented the new process, then trained internal team and client stakeholders for adoption (Power Automate, SharePoint, Excel). In parallel led the <b>Novatorium</b> initiative, an internal workflow for capturing new ideas across customer accounts (Power Automate, PowerApps, Power BI, SharePoint).
       </div>
     </article>
 

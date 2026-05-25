@@ -214,23 +214,23 @@ const CSS = `
   .cert-side .item b{ color: oklch(0.96 0.005 240); font-weight:500; }
   .cert-side .item .yr{ color: var(--gold); font-weight:500; font-size: 7.4pt; letter-spacing: 0.06em; margin-left: 4px; }
 
-  .main{ padding: 44px 44px 80px 42px; color: var(--ink); font-size: 9.5pt; line-height: 1.5; overflow: hidden; }
+  .main{ padding: 44px 44px 30px 42px; color: var(--ink); font-size: 9.5pt; line-height: 1.5; overflow: hidden; }
 
-  .name-block{ margin-bottom: 14px; }
+  .name-block{ margin-bottom: 8px; }
   .name{ font-family:"Cormorant Garamond", serif; font-weight: 500; font-size: 38pt; line-height: 1.0; letter-spacing: -0.005em; color: var(--navy-deep); margin: 0; }
   .name .last{ font-style: italic; color: var(--navy); font-weight: 500; }
   .role-line{ display:flex; align-items:center; gap: 12px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
   .role-line::before{ content:""; width: 28px; height: 2px; background: var(--gold); display:block; }
   .role{ font-family:"Inter", sans-serif; font-weight: 500; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.20em; color: var(--navy); }
 
-  .main h2{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.24em; color: var(--navy); margin: 18px 0 10px 0; padding-bottom: 6px; position: relative; display:flex; align-items:center; gap: 10px; }
+  .main h2{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.24em; color: var(--navy); margin: 12px 0 6px 0; padding-bottom: 6px; position: relative; display:flex; align-items:center; gap: 10px; }
   .main h2::after{ content:""; flex: 1; height: 1px; background: var(--rule); }
   .main h2 .ico{ width: 16px; height: 16px; display:inline-flex; align-items:center; justify-content:center; color: var(--gold); font-size: 12pt; line-height: 1; }
 
   .profile{ font-size: 9.4pt; line-height: 1.55; color: var(--ink); margin: 0; }
   .profile strong{ color: var(--navy-deep); font-weight: 600; }
 
-  .job{ margin-bottom: 13px; page-break-inside: avoid; break-inside: avoid; }
+  .job{ margin-bottom: 10px; page-break-inside: avoid; break-inside: avoid; }
   .job:last-child{ margin-bottom: 0; }
   .job-head{ display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 14px; margin-bottom: 4px; }
   .job-title{ font-family:"Cormorant Garamond", serif; font-weight: 600; font-size: 12.5pt; color: var(--navy-deep); line-height: 1.25; letter-spacing: -0.005em; padding-right: 2px; }

@@ -2,13 +2,13 @@
 // Focus: business analysis + data product, dimensional modelling, source-to-target mappings, stakeholder engagement, Microsoft ecosystem.
 
 const { chromium } = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/@playwright/test');
+const sharp = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/sharp');
 const path = require('path');
 const fs = require('fs');
 
 const outputDir = __dirname;
 const photoPath = path.resolve(__dirname, '..', 'ada2.jpg');
-const photoBase64 = fs.readFileSync(photoPath).toString('base64');
-const photoDataUrl = `data:image/jpeg;base64,${photoBase64}`;
+let photoDataUrl = '';
 
 const GDPR_EN = 'I hereby give consent for my personal data included in this document to be processed for the purposes of recruitment, in accordance with the Personal Data Protection Act of 10 May 2018 (Journal of Laws of 2018, item 1000) and the Regulation of the European Parliament and of the Council (EU) 2016/679 of 27 April 2016 (GDPR).';
 
@@ -423,6 +423,12 @@ function buildHTML() {
 }
 
 (async () => {
+  const photoBuffer = await sharp(photoPath)
+    .resize(300, 300, { fit: 'cover', position: 'center' })
+    .jpeg({ quality: 78 })
+    .toBuffer();
+  photoDataUrl = `data:image/jpeg;base64,${photoBuffer.toString('base64')}`;
+
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.setContent(buildHTML(), { waitUntil: 'networkidle' });

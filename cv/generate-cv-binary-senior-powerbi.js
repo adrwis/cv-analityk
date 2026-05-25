@@ -240,8 +240,8 @@ const CSS = `
   .job li::before{ content: ""; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border: 1px solid var(--gold); border-radius: 50%; background: transparent; }
   .job li b{ font-weight: 600; color: var(--navy-deep); }
 
-  .impact{ margin-top: 5px; padding: 6px 10px; background: var(--gold-soft); border-left: 2px solid var(--gold); font-size: 8.6pt; line-height: 1.45; color: var(--ink-soft); }
-  .impact .tag{ display: inline; font-family:"Inter", sans-serif; font-size: 6.8pt; letter-spacing: 0.20em; text-transform: uppercase; color: var(--gold-deep); margin-right: 4px; font-weight: 700; }
+  .impact{ margin-top: 5px; padding: 5px 9px; background: var(--gold-soft); border-left: 2px solid var(--gold); font-size: 7.8pt; line-height: 1.35; color: var(--ink-soft); }
+  .impact .tag{ display: inline; font-family:"Inter", sans-serif; font-size: 6.4pt; letter-spacing: 0.20em; text-transform: uppercase; color: var(--gold-deep); margin-right: 4px; font-weight: 700; }
   .impact b{ font-weight: 600; color: var(--navy-deep); }
 
   .pgnum{ position: absolute; bottom: 18px; right: 36px; font-family:"Inter", sans-serif; font-size: 7.5pt; letter-spacing: 0.18em; color: var(--ink-mute); text-transform: uppercase; }
@@ -255,8 +255,8 @@ const CSS = `
   .page2-tag{ font-size: 7.4pt; letter-spacing: 0.20em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 
   .tools-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px 14px; margin-top: 4px; }
-  .tool-cat h4{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 7.6pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); margin: 0 0 4px 0; }
-  .tool-cat p{ font-size: 8.6pt; color: var(--ink-soft); margin: 0; line-height: 1.45; }
+  .tool-cat h4{ font-family:"Inter", sans-serif; font-weight: 600; font-size: 7.2pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); margin: 0 0 3px 0; }
+  .tool-cat p{ font-size: 7.8pt; color: var(--ink-soft); margin: 0; line-height: 1.35; }
 
   .stat-row{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 4px; margin-bottom: 6px; }
   .stat{ text-align: center; padding: 6px 4px; background: oklch(0.97 0.008 250); border-top: 2px solid var(--gold); }
@@ -317,7 +317,7 @@ function buildHTML() {
 <html lang="${offer.lang}">
 <head>
 <meta charset="utf-8" />
-<title>${data.name} — ${offer.title}</title>
+<title>${data.name}, ${offer.title}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

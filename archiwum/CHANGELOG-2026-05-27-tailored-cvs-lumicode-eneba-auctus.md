@@ -20,14 +20,14 @@ Zgodnie z zasada "przed nowym generowaniem przenies cv/ -> cv/archiwum/":
   optymalizacja wydajnosci, hurtownie danych + ETL (Alteryx/Power Query), SQL Advanced,
   Python (uczciwie: poziom podstawowy, projekt REK - requests/BeautifulSoup pipeline),
   dashboardy zarzadcze, healthcare = plus (Zimmer wyroby medyczne + ISS klient farmaceutyczny)
-- Toolbox 6 kategorii (Rozwoj Power BI, Bazy/SQL, ETL, Bezpieczenstwo/nadzor, Wymagania, Python/automatyzacja)
+- Toolbox 6 kategorii (Rozwoj Power BI, Bazy/SQL, ETL, Nadzor i dokumentacja, Wymagania, Automatyzacja procesow)
 - Klauzula RODO PL
 
 ### 2. `generate-cv-eneba-data-analyst.js` -> `AG_Eneba_Data_Analyst.pdf` (594.9 KB)
 - **Jezyk: angielski** (wymagaja CV po EN)
 - USP pod oferte: **hands-on AI adoption** - codzienne uzycie Claude, budowa AI agents,
   scheduled tasks i automation pipelines we wlasnych projektach (uczciwie jako "independent projects":
-  Python job-market data pipeline = REK, relational assistant chatbot, daily-content agent = serynna)
+  job-market data pipeline = REK, relational assistant chatbot, daily-content agent = serynna; orkiestracja AI, NIE recznie pisany Python)
 - SQL + data modeling, single source of truth (HSBC 3 zrodla), dashboards/scorecards,
   stakeholder storytelling, praca z ambiguity
 - Psychologia kliniczna (SWPS) jako atut do People/Talent Analytics + "empathetic, adaptable"
@@ -43,9 +43,18 @@ Zgodnie z zasada "przed nowym generowaniem przenies cv/ -> cv/archiwum/":
 - Stat "15 Team Members Led (peak)" = oparte na realnym "teams of 4-15" z ISS
 - Toolbox 6 kategorii (Reporting Leadership, BI & Dashboards, SQL & Data, Automation & Process, Stakeholder & Delivery, Operational & Regulated)
 
+## Korekty po review Adriany (2026-05-27)
+- **Usuniety Python** ze wszystkich CV - pamiec mowi wprost "User NIE umie Python";
+  REK powstal z pomoca Claude, nie jest recznie pisanym kodem Adriany. Bylo zmyslanie -> usuniete.
+  (Lumicode: sidebar -> "Hurtownie danych · DWH", toolbox "Python" -> "Automatyzacja procesow";
+  Eneba: sidebar -> "Process Automation", opis projektow bez slowa "Python")
+- **Usuniety RLS (Row-Level Security)** z Lumicode (jedyne CV gdzie byl) - Adriana: "nie bardzo takie mam".
+  sidebar RLS -> "Hurtownie danych · DWH"; summary, method, toolbox bi + governance wyczyszczone z RLS.
+  UWAGA: oferta Lumicode JAWNIE wymaga RLS - to teraz luka, ktora trzeba zaadresowac inaczej (CL / rozmowa) lub odpuscic oferte.
+
 ## Wspolne / zasady przestrzegane
 - **Zero dlugich myslnikow** (em dash) - daty przez `-`, separatory przez `·`
-- **Zero zmyslania** - Python tylko jako podstawy (realny REK), AI agents jako projekty wlasne, brak medical billing
+- **Zero zmyslania** - bez Pythona, bez RLS, AI agents jako projekty wlasne (orkiestracja AI), brak medical billing
 - **Mieszczenie na stronie zweryfikowane** zrzutami PNG (tymczasowy tryb SHOT=1, potem usuniety):
   wszystkie 3 CV - str. 1 (profil + 4 statystyki + 2 stanowiska z impactem), str. 2 (3 stanowiska + 6 kategorii toolbox + RODO), nic nie uciete
 - **Foto**: `../ada2.jpg` resize sharp 300x300 q78 (PDFy <2 MB, zasada cv_pdf_max_2mb)

@@ -1,5 +1,5 @@
 // Dopasowane CV (PL) - Programista Power BI (Lumicode / Grupa Pentacomp, B2B zdalnie).
-// Akcent: Power BI/DAX/RLS/optymalizacja, hurtownie danych + ETL, SQL, Python, dashboardy zarzadcze, sektor ochrony zdrowia (Zimmer med-devices + ISS pharma).
+// Akcent: Power BI/DAX/optymalizacja, hurtownie danych + ETL, SQL, dashboardy zarzadcze, sektor ochrony zdrowia (Zimmer med-devices + ISS pharma).
 
 const { chromium } = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/@playwright/test');
 const sharp = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/sharp');
@@ -34,9 +34,9 @@ const data = {
     { name: 'DAX · Zaawansowane miary', lvl: 'Zaawansowany', pct: 92 },
     { name: 'SQL · Hurtownie danych', lvl: 'Zaawansowany', pct: 88 },
     { name: 'Power Query (M) · ETL', lvl: 'Zaawansowany', pct: 90 },
-    { name: 'RLS · Bezpieczeństwo danych', lvl: 'Zaawansowany', pct: 85 },
+    { name: 'Hurtownie danych · DWH', lvl: 'Zaawansowany', pct: 85 },
     { name: 'Optymalizacja wydajności', lvl: 'Zaawansowany', pct: 85 },
-    { name: 'Python · Skrypty i pipeline', lvl: 'Podstawowy', pct: 58 },
+    { name: 'Power Automate · PowerApps', lvl: 'Zaawansowany', pct: 82 },
   ],
   languages: [
     { lang: 'Polski', lvl: 'Ojczysty' },
@@ -124,18 +124,18 @@ const data = {
   method: [
     'Modelowanie semantyczne i DAX',
     'Transformacje Power Query (M)',
-    'RLS i nadzór nad obszarami roboczymi',
+    'Nadzór nad obszarami roboczymi',
     'Optymalizacja wydajności',
     'Wymagania biznesowe i KPI',
     'Dokumentacja i szkolenia',
   ],
   toolbox: {
-    bi: { title: 'Rozwój Power BI', items: 'Power BI Desktop i Service · modele semantyczne · zaawansowany DAX (tabele kalkulowane, miary, hierarchie) · Power Query (M) · row-level security · nadzór nad obszarami roboczymi · gotowość na Microsoft Fabric' },
+    bi: { title: 'Rozwój Power BI', items: 'Power BI Desktop i Service · modele semantyczne · zaawansowany DAX (tabele kalkulowane, miary, hierarchie) · Power Query (M) · nadzór nad obszarami roboczymi · gotowość na Microsoft Fabric' },
     db: { title: 'Bazy danych i SQL', items: 'SQL Advanced (LabMasters 2025) · relacyjne bazy danych · złożone zbiory korporacyjne · schemat gwiazdy · modelowanie wymiarowe · hurtownie danych · optymalizacja zapytań' },
     etl: { title: 'ETL i integracja', items: 'Alteryx · Power Query · procesy ETL · konsolidacja wielu źródeł (Clarity, GPDM, Cognos, SharePoint, Excel) · dane z systemów ERP · agregacja i przetwarzanie danych' },
-    governance: { title: 'Bezpieczeństwo i nadzór', items: 'row-level security (RLS) · kontrola dostępu do obszarów roboczych · uprawnienia użytkowników · dobre praktyki ochrony danych · zarządzanie wydaniami · standardy dokumentacji' },
+    governance: { title: 'Nadzór i dokumentacja', items: 'kontrola dostępu do obszarów roboczych · uprawnienia użytkowników · dobre praktyki ochrony danych · zarządzanie wydaniami · standardy dokumentacji · definicje metryk' },
     requirements: { title: 'Wymagania i analiza', items: 'zbieranie wymagań biznesowych · definiowanie KPI · warsztaty z interesariuszami · specyfikacje funkcjonalne i techniczne · projektowanie dashboardów zarządczych' },
-    automation: { title: 'Python i automatyzacja', items: 'Python (requests, BeautifulSoup, własne pipeline danych) · Power Automate · PowerApps · skrypty automatyzujące · analityka samoobsługowa' },
+    automation: { title: 'Automatyzacja procesów', items: 'Power Automate · PowerApps · SharePoint · Alteryx · automatyzacja obiegów (faktury, usprawnienia procesów) · analityka samoobsługowa' },
   },
   gdpr: GDPR_PL,
   nameContinued: 'Adriana Guściora, <em>ciąg dalszy</em>',
@@ -145,7 +145,7 @@ const offer = {
   fileName: 'AG_Lumicode_Programista_Power_BI_PL.pdf',
   lang: 'pl',
   title: 'Programista Power BI · Hurtownie Danych i Raportowanie',
-  summary: 'Specjalistka BI z <strong>ponad 8 latami w Business Intelligence i raportowaniu</strong> oraz <strong>ponad 5 latami praktycznej pracy w Power BI</strong> w regulowanych środowiskach międzynarodowych: bankowość (<strong>HSBC</strong>), cyberbezpieczeństwo (<strong>Trustwave</strong>), wyroby medyczne (Zimmer Biomet) i klient farmaceutyczny w ISS Facility Services. Mocne strony: <strong>modele semantyczne, zaawansowany DAX, Power Query (M), Row-Level Security i nadzór nad obszarami roboczymi</strong>. <strong>SQL Advanced</strong> (LabMasters 2025) i doświadczenie w budowie oraz utrzymaniu <strong>hurtowni danych</strong> i procesów <strong>ETL</strong> (Alteryx, Power Query) na wielu źródłach (Clarity, GPDM, Cognos, ERP). Tworzenie skryptów i pipeline danych w <strong>Pythonie</strong>. Doświadczenie w <strong>dashboardach zarządczych</strong> oraz w tłumaczeniu wymagań biznesowych na skalowalne rozwiązania Power BI. Gotowa do współpracy B2B, zdalnie.',
+  summary: 'Specjalistka BI z <strong>ponad 8 latami w Business Intelligence i raportowaniu</strong> oraz <strong>ponad 5 latami praktycznej pracy w Power BI</strong> w regulowanych środowiskach międzynarodowych: bankowość (<strong>HSBC</strong>), cyberbezpieczeństwo (<strong>Trustwave</strong>), wyroby medyczne (Zimmer Biomet) i klient farmaceutyczny w ISS Facility Services. Mocne strony: <strong>modele semantyczne, zaawansowany DAX, Power Query (M) i nadzór nad obszarami roboczymi</strong>. <strong>SQL Advanced</strong> (LabMasters 2025) i doświadczenie w budowie oraz utrzymaniu <strong>hurtowni danych</strong> i procesów <strong>ETL</strong> (Alteryx, Power Query) na wielu źródłach (Clarity, GPDM, Cognos, ERP). Doświadczenie w <strong>dashboardach zarządczych</strong> oraz w tłumaczeniu wymagań biznesowych na skalowalne rozwiązania Power BI. Gotowa do współpracy B2B, zdalnie.',
   skillOrder: ['bi', 'db', 'etl', 'governance', 'requirements', 'automation'],
 };
 

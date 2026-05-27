@@ -36,7 +36,7 @@ const data = {
     { name: 'AI Tools · Claude Agents', lvl: 'Advanced', pct: 85 },
     { name: 'Stakeholder Storytelling', lvl: 'Expert', pct: 90 },
     { name: 'Behavioral / People Insight', lvl: 'Advanced', pct: 82 },
-    { name: 'Python · Automation', lvl: 'Intermediate', pct: 62 },
+    { name: 'Process Automation', lvl: 'Advanced', pct: 80 },
   ],
   languages: [
     { lang: 'Polish', lvl: 'Native' },
@@ -133,7 +133,7 @@ const data = {
     analytics: { title: 'Analytics & Dashboards', items: 'Power BI semantic models · scorecards · KPI design · funnel and trend analysis · executive reporting · self-service analytics · data visualisation' },
     sql: { title: 'SQL & Data Modeling', items: 'SQL Advanced (LabMasters 2025) · joins and transformations across multiple systems · star schema · dimensional modelling · data warehouses · query optimisation' },
     pipelines: { title: 'Data Pipelines & Integration', items: 'multi-source consolidation into a single source of truth (Clarity, GPDM, Cognos, SharePoint, Excel, ERP) · Alteryx · Power Query (M) · recurring reporting' },
-    ai: { title: 'AI & Automation', items: 'daily hands-on use of LLM tools (Claude) · building AI agents, scheduled tasks and automation workflows in independent projects (Python job-market data pipeline, relational assistant chatbot, daily-content agent) · Power Automate' },
+    ai: { title: 'AI & Automation', items: 'daily hands-on use of LLM tools (Claude) · building AI agents, scheduled tasks and automation workflows in independent projects (job-market data pipeline, relational assistant chatbot, daily-content agent) · Power Automate' },
     comms: { title: 'Stakeholder & Insight', items: 'turning ambiguous requests into clear, business-friendly insight · stakeholder workshops · storytelling for leadership · proactive issue and opportunity spotting' },
     domain: { title: 'People & Behavioral', items: 'clinical psychology background (behavioral profiling, statistics, research methodology) · empathy and adaptability · cross-functional collaboration · fast ramp-up in new domains' },
   },
@@ -145,7 +145,7 @@ const offer = {
   fileName: 'AG_Eneba_Data_Analyst.pdf',
   lang: 'en',
   title: 'Data Analyst · Analytics & AI Automation',
-  summary: 'Data analyst with <strong>8+ years in BI, reporting and analytics</strong> across international environments (HSBC, Trustwave, Zimmer Biomet, ISS). Strong <strong>SQL and data modeling</strong>: I connect, join and transform data from multiple systems into a <strong>single source of truth</strong>, then turn it into <strong>dashboards, scorecards and recurring reporting</strong> that leadership actually uses. <strong>Hands-on AI adopter</strong>: I use LLM tools (Claude) daily and build <strong>AI agents, scheduled tasks and automation pipelines</strong> in my own projects, a Python job-market data pipeline, a relational assistant chatbot and a daily-content agent. Comfortable with ambiguity and <strong>stakeholder storytelling</strong>, with a <strong>clinical psychology</strong> background (SWPS) that brings genuine affinity for people and talent analytics. Proactive about spotting bottlenecks and improvement opportunities, not just answering questions.',
+  summary: 'Data analyst with <strong>8+ years in BI, reporting and analytics</strong> across international environments (HSBC, Trustwave, Zimmer Biomet, ISS). Strong <strong>SQL and data modeling</strong>: I connect, join and transform data from multiple systems into a <strong>single source of truth</strong>, then turn it into <strong>dashboards, scorecards and recurring reporting</strong> that leadership actually uses. <strong>Hands-on AI adopter</strong>: I use LLM tools (Claude) daily and build <strong>AI agents, scheduled tasks and automation pipelines</strong> in my own projects: a job-market data pipeline, a relational assistant chatbot and a daily-content agent. Comfortable with ambiguity and <strong>stakeholder storytelling</strong>, with a <strong>clinical psychology</strong> background (SWPS) that brings genuine affinity for people and talent analytics. Proactive about spotting bottlenecks and improvement opportunities, not just answering questions.',
   skillOrder: ['analytics', 'sql', 'pipelines', 'ai', 'comms', 'domain'],
 };
 

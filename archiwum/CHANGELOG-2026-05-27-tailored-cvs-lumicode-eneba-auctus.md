@@ -49,8 +49,15 @@ Zgodnie z zasada "przed nowym generowaniem przenies cv/ -> cv/archiwum/":
   (Lumicode: sidebar -> "Hurtownie danych · DWH", toolbox "Python" -> "Automatyzacja procesow";
   Eneba: sidebar -> "Process Automation", opis projektow bez slowa "Python")
 - **Usuniety RLS (Row-Level Security)** z Lumicode (jedyne CV gdzie byl) - Adriana: "nie bardzo takie mam".
-  sidebar RLS -> "Hurtownie danych · DWH"; summary, method, toolbox bi + governance wyczyszczone z RLS.
-  UWAGA: oferta Lumicode JAWNIE wymaga RLS - to teraz luka, ktora trzeba zaadresowac inaczej (CL / rozmowa) lub odpuscic oferte.
+  summary, method, toolbox bi + governance wyczyszczone z RLS.
+- **Usuniete hurtownie danych / DWH / data warehouses / dimensional modelling / star schema** ze wszystkich 3 CV
+  - Adriana: "hurtowni danych tez nie mam". Lumicode: tytul "Hurtownie Danych" -> "Modele Danych", 2x sidebar
+  ("SQL · Hurtownie danych" -> "SQL · Zapytania i analiza"; usuniety slot DWH), summary, job bullet, toolbox db.
+  Eneba + Auctus: toolbox SQL "star schema · dimensional modelling · data warehouses" -> "Power BI data models · relationships and measures".
+- **Podbite Power Automate / PowerApps + automatyzacja** (realny skill, Adriana o to poprosila):
+  Lumicode sidebar 2 sloty ("Power Automate · PowerApps" + "Automatyzacja procesow") + wzmianka w summary.
+  UWAGA: oferta Lumicode JAWNIE wymaga RLS + Python + hurtowni danych - to teraz 3 realne luki
+  (do zaadresowania w CL/rozmowie albo odpuszczenie oferty).
 
 ## Wspolne / zasady przestrzegane
 - **Zero dlugich myslnikow** (em dash) - daty przez `-`, separatory przez `·`

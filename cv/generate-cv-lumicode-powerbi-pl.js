@@ -1,5 +1,5 @@
 // Dopasowane CV (PL) - Programista Power BI (Lumicode / Grupa Pentacomp, B2B zdalnie).
-// Akcent: Power BI/DAX/optymalizacja, hurtownie danych + ETL, SQL, dashboardy zarzadcze, sektor ochrony zdrowia (Zimmer med-devices + ISS pharma).
+// Akcent: Power BI/DAX/optymalizacja, ETL (Alteryx/Power Query), SQL, Power Automate/PowerApps + automatyzacja, dashboardy zarzadcze, sektor ochrony zdrowia (Zimmer med-devices + ISS pharma).
 
 const { chromium } = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/@playwright/test');
 const sharp = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-gusciora-pl/node_modules/sharp');
@@ -32,11 +32,11 @@ const data = {
   sidebarSkills: [
     { name: 'Power BI · Modele semantyczne', lvl: 'Ekspert', pct: 95 },
     { name: 'DAX · Zaawansowane miary', lvl: 'Zaawansowany', pct: 92 },
-    { name: 'SQL · Hurtownie danych', lvl: 'Zaawansowany', pct: 88 },
+    { name: 'SQL · Zapytania i analiza', lvl: 'Zaawansowany', pct: 88 },
     { name: 'Power Query (M) · ETL', lvl: 'Zaawansowany', pct: 90 },
-    { name: 'Hurtownie danych · DWH', lvl: 'Zaawansowany', pct: 85 },
-    { name: 'Optymalizacja wydajności', lvl: 'Zaawansowany', pct: 85 },
-    { name: 'Power Automate · PowerApps', lvl: 'Zaawansowany', pct: 82 },
+    { name: 'Power Automate · PowerApps', lvl: 'Zaawansowany', pct: 85 },
+    { name: 'Automatyzacja procesów', lvl: 'Zaawansowany', pct: 84 },
+    { name: 'Dashboardy zarządcze', lvl: 'Zaawansowany', pct: 88 },
   ],
   languages: [
     { lang: 'Polski', lvl: 'Ojczysty' },
@@ -57,7 +57,7 @@ const data = {
       period: 'Paź 2024 - Mar 2026',
       bullets: [
         'Projektowałam i utrzymywałam <b>modele semantyczne Power BI, dashboardy i raporty</b> dla CFO i Dyrektorów Finansowych: <b>miary DAX</b>, relacje, drill-through, hierarchie KPI.',
-        'Tworzyłam transformacje <b>Power Query (M)</b> oraz procesy <b>ETL w Alteryx</b> do konsolidacji wielu źródeł; pisałam zapytania <b>SQL</b> do hurtowni danych; optymalizowałam cykle odświeżania.',
+        'Tworzyłam transformacje <b>Power Query (M)</b> oraz procesy <b>ETL w Alteryx</b> do konsolidacji wielu źródeł; pisałam zapytania <b>SQL</b> do korporacyjnych źródeł danych; optymalizowałam cykle odświeżania.',
         'Zbierałam wymagania biznesowe, definiowałam KPI i przekładałam je na <b>modele danych i miary</b>; dokumentowałam definicje metryk i kryteria akceptacji.',
         'Wsparcie bieżące: diagnozowanie problemów, strojenie wydajności, szkolenia z Power BI i analityki samoobsługowej dla użytkowników biznesowych.',
       ],
@@ -131,7 +131,7 @@ const data = {
   ],
   toolbox: {
     bi: { title: 'Rozwój Power BI', items: 'Power BI Desktop i Service · modele semantyczne · zaawansowany DAX (tabele kalkulowane, miary, hierarchie) · Power Query (M) · nadzór nad obszarami roboczymi · gotowość na Microsoft Fabric' },
-    db: { title: 'Bazy danych i SQL', items: 'SQL Advanced (LabMasters 2025) · relacyjne bazy danych · złożone zbiory korporacyjne · schemat gwiazdy · modelowanie wymiarowe · hurtownie danych · optymalizacja zapytań' },
+    db: { title: 'Bazy danych i SQL', items: 'SQL Advanced (LabMasters 2025) · relacyjne bazy danych · złożone zbiory korporacyjne · łączenie i przekształcanie danych · agregacja i przetwarzanie danych · optymalizacja zapytań' },
     etl: { title: 'ETL i integracja', items: 'Alteryx · Power Query · procesy ETL · konsolidacja wielu źródeł (Clarity, GPDM, Cognos, SharePoint, Excel) · dane z systemów ERP · agregacja i przetwarzanie danych' },
     governance: { title: 'Nadzór i dokumentacja', items: 'kontrola dostępu do obszarów roboczych · uprawnienia użytkowników · dobre praktyki ochrony danych · zarządzanie wydaniami · standardy dokumentacji · definicje metryk' },
     requirements: { title: 'Wymagania i analiza', items: 'zbieranie wymagań biznesowych · definiowanie KPI · warsztaty z interesariuszami · specyfikacje funkcjonalne i techniczne · projektowanie dashboardów zarządczych' },
@@ -144,8 +144,8 @@ const data = {
 const offer = {
   fileName: 'AG_Lumicode_Programista_Power_BI_PL.pdf',
   lang: 'pl',
-  title: 'Programista Power BI · Hurtownie Danych i Raportowanie',
-  summary: 'Specjalistka BI z <strong>ponad 8 latami w Business Intelligence i raportowaniu</strong> oraz <strong>ponad 5 latami praktycznej pracy w Power BI</strong> w regulowanych środowiskach międzynarodowych: bankowość (<strong>HSBC</strong>), cyberbezpieczeństwo (<strong>Trustwave</strong>), wyroby medyczne (Zimmer Biomet) i klient farmaceutyczny w ISS Facility Services. Mocne strony: <strong>modele semantyczne, zaawansowany DAX, Power Query (M) i nadzór nad obszarami roboczymi</strong>. <strong>SQL Advanced</strong> (LabMasters 2025) i doświadczenie w budowie oraz utrzymaniu <strong>hurtowni danych</strong> i procesów <strong>ETL</strong> (Alteryx, Power Query) na wielu źródłach (Clarity, GPDM, Cognos, ERP). Doświadczenie w <strong>dashboardach zarządczych</strong> oraz w tłumaczeniu wymagań biznesowych na skalowalne rozwiązania Power BI. Gotowa do współpracy B2B, zdalnie.',
+  title: 'Programista Power BI · Modele Danych i Raportowanie',
+  summary: 'Specjalistka BI z <strong>ponad 8 latami w Business Intelligence i raportowaniu</strong> oraz <strong>ponad 5 latami praktycznej pracy w Power BI</strong> w regulowanych środowiskach międzynarodowych: bankowość (<strong>HSBC</strong>), cyberbezpieczeństwo (<strong>Trustwave</strong>), wyroby medyczne (Zimmer Biomet) i klient farmaceutyczny w ISS Facility Services. Mocne strony: <strong>modele semantyczne, zaawansowany DAX, Power Query (M) i nadzór nad obszarami roboczymi</strong>. <strong>SQL Advanced</strong> (LabMasters 2025) i doświadczenie w procesach <strong>ETL</strong> (Alteryx, Power Query) oraz konsolidacji danych z wielu źródeł (Clarity, GPDM, Cognos, ERP). Automatyzacja procesów w <strong>Power Automate i PowerApps</strong>. Doświadczenie w <strong>dashboardach zarządczych</strong> oraz w tłumaczeniu wymagań biznesowych na skalowalne rozwiązania Power BI. Gotowa do współpracy B2B, zdalnie.',
   skillOrder: ['bi', 'db', 'etl', 'governance', 'requirements', 'automation'],
 };
 

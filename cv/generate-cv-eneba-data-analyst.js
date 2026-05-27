@@ -131,7 +131,7 @@ const data = {
   ],
   toolbox: {
     analytics: { title: 'Analytics & Dashboards', items: 'Power BI semantic models · scorecards · KPI design · funnel and trend analysis · executive reporting · self-service analytics · data visualisation' },
-    sql: { title: 'SQL & Data Modeling', items: 'SQL Advanced (LabMasters 2025) · joins and transformations across multiple systems · star schema · dimensional modelling · data warehouses · query optimisation' },
+    sql: { title: 'SQL & Data Modeling', items: 'SQL Advanced (LabMasters 2025) · joins and transformations across multiple systems · Power BI data models · relationships and measures · query optimisation' },
     pipelines: { title: 'Data Pipelines & Integration', items: 'multi-source consolidation into a single source of truth (Clarity, GPDM, Cognos, SharePoint, Excel, ERP) · Alteryx · Power Query (M) · recurring reporting' },
     ai: { title: 'AI & Automation', items: 'daily hands-on use of LLM tools (Claude) · building AI agents, scheduled tasks and automation workflows in independent projects (job-market data pipeline, relational assistant chatbot, daily-content agent) · Power Automate' },
     comms: { title: 'Stakeholder & Insight', items: 'turning ambiguous requests into clear, business-friendly insight · stakeholder workshops · storytelling for leadership · proactive issue and opportunity spotting' },

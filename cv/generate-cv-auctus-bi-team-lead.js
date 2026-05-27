@@ -132,7 +132,7 @@ const data = {
   toolbox: {
     leadership: { title: 'Reporting Leadership', items: 'leading and mentoring reporting and BI work · reporting standards and documentation · QA and validation processes · release management · onboarding and training' },
     bi: { title: 'BI & Dashboards', items: 'Power BI semantic models · advanced DAX · scorecards · operational and financial KPIs · executive reporting · self-service analytics' },
-    sql: { title: 'SQL & Data', items: 'SQL Advanced (LabMasters 2025) · relational databases · star schema · dimensional modelling · data warehouses · query optimisation' },
+    sql: { title: 'SQL & Data', items: 'SQL Advanced (LabMasters 2025) · relational databases · Power BI data models · relationships and measures · data aggregation · query optimisation' },
     automation: { title: 'Automation & Process', items: 'Power Automate · Power Query (M) · Alteryx · invoice-flow automation · process improvement · workflow optimisation · Six Sigma' },
     comms: { title: 'Stakeholder & Delivery', items: 'translating business requirements into reporting solutions · cross-functional work with finance, operations and technology · communicating findings to executives' },
     domain: { title: 'Operational & Regulated', items: 'cost budgeting, forecasting and reconciliation · operational KPIs · internal audits · regulated and healthcare-adjacent environments (medical devices, pharmaceutical client)' },

@@ -33,3 +33,12 @@ Zmiana systemu fontów dla czytelności:
 
 ## Archiwizacja
 Przed generowaniem: `cv/*` -> `cv/archiwum/` (3 generatory + 3 PDFy: Auctus, Eneba, Adriana Guściora_CV).
+
+## Iteracja (po review Adriany)
+1. **Data Systems Analyst:** usuniete wszystkie wystapienia "data health" (summary, 3 bullety Trustwave/HSBC/ISS, toolbox quality+reporting) -> zastapione "KPIs" / "data quality" / "cost allocation".
+2. **Wszystkie 3 CV — zmniejszone czcionki** (tekst ucinalo na str. 1 i 2 przez `overflow:hidden` przy stalej wysokosci A4):
+   - main body 10->9.2pt, profile 10->9.1pt, bullety 9.5->8.8pt, job-title 13->11.8pt, name 34->30pt, impact 8.4->7.8pt, toolbox 8.4->8pt, stat num 18->16pt
+   - sidebar: skille 9->8.3pt, jezyki 9.4->8.6pt, edu 11.5->10.5pt, cert 8.8->8.2pt
+   - sciasniete paddingi/marginesy/line-height; main padding 42/76 -> 36/52
+   - Weryfikacja: `SHOT=1 node ...` -> screenshot, potwierdzony zapas bialej przestrzeni na obu stronach (zero przyciecia). Blok SHOT zostawiony jako gated helper.
+   - Fonty Fraunces+IBM Plex Sans bez zmian — przy 8.8-9.2pt nadal duzo czytelniejsze niz stary Cormorant.

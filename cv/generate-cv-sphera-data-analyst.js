@@ -117,6 +117,7 @@ const data = {
     { yr: '2009-2010', deg: 'Rotary Youth Exchange · Brazil', inst: 'ANGLO High School, Penápolis' },
   ],
   certs: [
+    { name: 'Using AI in Business Development', org: 'Google / SGH', yr: '2026' },
     { name: 'SQL Advanced', org: 'LabMasters', yr: '2025' },
     { name: 'SQL Basics & Intermediate', org: 'LabMasters', yr: '2023' },
     { name: 'Business Analytics in Power BI', org: 'LabMasters', yr: '2022' },

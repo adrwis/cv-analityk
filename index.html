@@ -345,6 +345,7 @@
       </div>
 
       <div class="cv-analyst__tags cv-analyst__tags--certs">
+        <button type="button" id="cert-ai-skills" class="cv-analyst__tag cv-analyst__tag--link" data-i18n="cert_ai" data-lightbox="edukacja/umiejetnosci jutra AI.pdf">Wykorzystanie AI w rozwoju firmy: Google / SGH, 2026</button>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/sql-zaawansowany.pdf">SQL Advanced: LabMasters, 2025</button>
         <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
         <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/powerbi-base.pdf">Business Analytics in Power BI: LabMasters, 2022</button>
@@ -483,6 +484,7 @@ var translations = {
     edu4_school: 'Liceum ANGLO, Penapolis',
     cert_title: 'Certyfikaty i szkolenia',
     cert_diploma: 'Dyplom',
+    cert_ai: 'Wykorzystanie AI w rozwoju firmy: Google / SGH, 2026',
     lang_title: 'J\u0119zyki',
     lang_pl: 'Polski', lang_pl_lvl: 'ojczysty',
     lang_en: 'Angielski', lang_en_lvl: 'zaawansowany',
@@ -561,6 +563,7 @@ var translations = {
     edu4_school: 'ANGLO High School, Penapolis',
     cert_title: 'Certifications & Training',
     cert_diploma: 'Diploma',
+    cert_ai: 'Using AI in Business Development: Google / SGH, 2026',
     lang_title: 'Languages',
     lang_pl: 'Polish', lang_pl_lvl: 'native',
     lang_en: 'English', lang_en_lvl: 'advanced',
@@ -593,6 +596,8 @@ function setLang(lang) {
   if (certEng) certEng.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/inzynier-pl.jpg' : 'edukacja/inzynier-en.jpg');
   var certMaster = document.getElementById('cert-master');
   if (certMaster) certMaster.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/magister-psychologii.jpg' : 'edukacja/psychology-master-degree.jpg');
+  var certAi = document.getElementById('cert-ai-skills');
+  if (certAi) certAi.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/umiejetnosci jutra AI.pdf' : 'edukacja/umiejetnosci jutra AI_eng.pdf');
   startTyping();
 }
 

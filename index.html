@@ -1,54 +1,1562 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>CV - Adriana Gusciora, Data Analytics Manager</title>
-  <meta name="description" content="Curriculum Vitae - Adriana Gusciora, Data Analytics Manager | FinTech & Financial Services">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>CV — Adriana Guściora · Senior Analyst, Finance Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>/* ===========================================
+   CV Analityk — professional blue/navy design
+   Dark/light mode, PL/EN toggle
+   Clean, refined, with flower background
+   =========================================== */
 
-  <!-- Inter font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+/* --- Color System (Blue / Navy) --- */
+.cv-analyst {
+  --ca-bg: #f8fafb;
+  --ca-bg-alt: #eef1f5;
+  --ca-surface: #ffffff;
+  --ca-text: #1a2332;
+  --ca-text-muted: #4a5a6a;
+  --ca-accent: #1e56a0;
+  --ca-accent-light: #2a6fc8;
+  --ca-accent-hover: #174283;
+  --ca-accent-glow: rgba(30, 86, 160, 0.10);
+  --ca-gradient: linear-gradient(135deg, #0d2137, #1e56a0, #2a6fc8);
+  --ca-border: #dce3eb;
+  --ca-tag-bg: #eaf1fb;
+  --ca-tag-text: #1e40af;
+  --ca-card-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.03);
+  --ca-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ca-font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234c583e'/%3E%3Ctext x='16' y='22' font-family='Georgia, serif' font-size='16' font-weight='600' fill='%23f6f6f5' text-anchor='middle' letter-spacing='-0.5'%3EAG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-  <link rel="canonical" href="https://adrwis.github.io/cv-analityk/">
-  <link rel="stylesheet" href="cv-analityk.css">
+  font-family: var(--ca-font);
+  background: var(--ca-bg);
+  color: var(--ca-text);
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* --- Dark mode --- */
+.cv-analyst[data-mode="dark"] {
+  --ca-bg: #0a1628;
+  --ca-bg-alt: #0f1d32;
+  --ca-surface: #132238;
+  --ca-text: #e2e8f0;
+  --ca-text-muted: #9cb2c8;
+  --ca-accent: #5b9bd5;
+  --ca-accent-light: #7ab3e8;
+  --ca-accent-hover: #93c5fd;
+  --ca-accent-glow: rgba(91, 155, 213, 0.15);
+  --ca-gradient: linear-gradient(135deg, #3a7ab2, #5b9bd5, #7ab3e8);
+  --ca-border: #1e3350;
+  --ca-tag-bg: rgba(30, 86, 160, 0.20);
+  --ca-tag-text: #a8d4ff;
+  --ca-card-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Binary rain background (Matrix-style) --- */
+.cv-analyst__binary-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Top bar --- */
+.cv-analyst__topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(248, 250, 251, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ca-border);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__topbar {
+  background: rgba(10, 22, 40, 0.85);
+}
+
+.cv-analyst__toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 0.8125rem;
+  font-family: var(--ca-font);
+  font-weight: 500;
+  background: var(--ca-surface);
+  color: var(--ca-text-muted);
+  border: 1px solid var(--ca-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.cv-analyst__toggle-btn:hover {
+  color: var(--ca-accent);
+  border-color: var(--ca-accent);
+}
+
+.cv-analyst__toggle-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cv-analyst__toggle-btn--active {
+  background: var(--ca-accent);
+  color: #fff;
+  border-color: var(--ca-accent);
+}
+
+.cv-analyst__toggle-btn--active:hover {
+  color: #fff;
+  background: var(--ca-accent-hover);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__toggle-btn--active {
+  background: #2563a8;
+  border-color: #2563a8;
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__toggle-btn--active:hover {
+  background: #1e56a0;
+}
+
+/* --- Top bar title --- */
+.cv-analyst__topbar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ca-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cv-analyst__topbar-spacer {
+  flex: 1;
+}
+
+/* --- Top bar divider --- */
+.cv-analyst__topbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ca-border);
+  margin: 0 0.25rem;
+}
+
+/* --- Layout container --- */
+.cv-analyst__container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Hero --- */
+.cv-analyst__hero {
+  padding: 3rem 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.cv-analyst__hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-analyst__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--ca-accent-glow);
+  color: var(--ca-accent);
+  border: 1px solid rgba(30, 86, 160, 0.25);
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__hero-badge {
+  border-color: rgba(91, 155, 213, 0.3);
+}
+
+.cv-analyst__hero-badge .pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--ca-accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.cv-analyst__name {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--ca-accent);
+  background: var(--ca-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.cv-analyst__tagline {
+  font-size: 1.0625rem;
+  color: var(--ca-text-muted);
+  max-width: 600px;
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+}
+
+/* --- Typing animation --- */
+.cv-analyst__typing {
+  font-family: var(--ca-font-mono);
+  font-size: 0.9375rem;
+  color: var(--ca-accent);
+  min-height: 1.5em;
+}
+
+.cv-analyst__typing .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--ca-accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* --- Contact row --- */
+.cv-analyst__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.cv-analyst__contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ca-text-muted);
+}
+
+.cv-analyst__contact-item svg {
+  width: 15px;
+  height: 15px;
+  color: var(--ca-accent);
+  flex-shrink: 0;
+}
+
+.cv-analyst__contact-item a {
+  color: var(--ca-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--ca-border);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.cv-analyst__contact-item a:hover {
+  color: var(--ca-accent);
+  text-decoration-color: var(--ca-accent);
+}
+
+/* --- Sections --- */
+.cv-analyst__section {
+  padding: 2rem 0;
+}
+
+.cv-analyst__section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cv-analyst__section-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ca-accent-glow);
+  color: var(--ca-accent);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.cv-analyst__section-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cv-analyst__section-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--ca-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* --- Experience cards --- */
+.cv-analyst__exp-card {
+  background: var(--ca-surface);
+  border: 1px solid var(--ca-border);
+  border-left: 3px solid var(--ca-accent);
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--ca-card-shadow);
+}
+
+.cv-analyst__exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.cv-analyst__exp-role {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ca-text);
+  margin: 0;
+}
+
+.cv-analyst__exp-period {
+  font-size: 0.8125rem;
+  color: var(--ca-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cv-analyst__exp-company {
+  font-size: 0.9375rem;
+  color: var(--ca-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cv-analyst__exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cv-analyst__exp-bullets li {
+  font-size: 0.9375rem;
+  color: var(--ca-text);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.cv-analyst__exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ca-accent);
+  opacity: 0.5;
+}
+
+/* --- Skills --- */
+.cv-analyst__skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .cv-analyst__skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cv-analyst__skill-group {
+  background: var(--ca-surface);
+  border: 1px solid var(--ca-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: var(--ca-card-shadow);
+}
+
+.cv-analyst__skill-group--ai {
+  border-color: rgba(30, 86, 160, 0.35);
+  background: rgba(234, 241, 251, 0.5);
+  grid-column: 1 / -1;
+  border-left: 3px solid var(--ca-accent);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__skill-group--ai {
+  border-color: rgba(91, 155, 213, 0.35);
+  background: rgba(30, 86, 160, 0.08);
+}
+
+.cv-analyst__skill-group h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ca-text);
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cv-analyst__skill-group h3 svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ca-accent);
+}
+
+/* --- Skill bars --- */
+.cv-analyst__skill-bar {
+  margin-bottom: 0.75rem;
+}
+
+.cv-analyst__skill-bar:last-of-type {
+  margin-bottom: 0;
+}
+
+.cv-analyst__skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  margin-bottom: 0.3rem;
+  color: var(--ca-text);
+}
+
+.cv-analyst__skill-track {
+  height: 6px;
+  background: #d5dde5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__skill-track {
+  background: #1e3350;
+}
+
+/* Skill levels: expert (90+), advanced (80-89), proficient (70-79) */
+.cv-analyst__skill-fill {
+  height: 100%;
+  border-radius: 3px;
+  width: 0;
+  background: var(--ca-gradient);
+}
+
+.cv-analyst__skill-fill[data-level="expert"] {
+  background: linear-gradient(90deg, #0d2137, #1e56a0, #2a6fc8);
+  transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cv-analyst__skill-fill[data-level="advanced"] {
+  background: linear-gradient(90deg, #1e56a0, #3b82c8);
+  transition: width 1.0s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cv-analyst__skill-fill[data-level="proficient"] {
+  background: linear-gradient(90deg, #3b6fa0, #6ba3d6);
+  transition: width 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__skill-fill[data-level="expert"] {
+  background: linear-gradient(90deg, #1e3a5f, #5b9bd5, #7ab3e8);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__skill-fill[data-level="advanced"] {
+  background: linear-gradient(90deg, #2a5a8f, #5b9bd5);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__skill-fill[data-level="proficient"] {
+  background: linear-gradient(90deg, #3a6a8f, #7ab3d5);
+}
+
+/* --- Tags --- */
+.cv-analyst__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cv-analyst__tag {
+  font-size: 0.8125rem;
+  padding: 0.3rem 0.7rem;
+  background: var(--ca-tag-bg);
+  color: var(--ca-tag-text);
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.cv-analyst__tags--spaced {
+  margin-top: 0.75rem;
+}
+
+.cv-analyst__tags--certs {
+  gap: 0.5rem;
+}
+
+.cv-analyst__tag--link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.cv-analyst__tag--link:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.cv-analyst__cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--ca-accent);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.cv-analyst__cert-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.cv-analyst__cert-link svg {
+  width: 12px;
+  height: 12px;
+}
+
+button.cv-analyst__cert-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cv-analyst__lang-cert {
+  font-size: 0.8125rem;
+  color: var(--ca-accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  margin-left: 0.25rem;
+}
+
+.cv-analyst__lang-cert:hover {
+  text-decoration: underline;
+}
+
+button.cv-analyst__tag--link {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Clickable AI project tiles */
+.cv-analyst__ai-project--link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cv-analyst__ai-project--link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Lightbox (cert gallery) --- */
+.cv-cert-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-cert-lightbox[hidden] {
+  display: none;
+}
+
+.cv-cert-lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.cv-cert-lightbox__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-cert-lightbox__img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
+
+.cv-cert-lightbox__pdf {
+  width: 80vw;
+  height: 85vh;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+
+.cv-cert-lightbox__close,
+.cv-cert-lightbox__prev,
+.cv-cert-lightbox__next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.cv-cert-lightbox__close:hover,
+.cv-cert-lightbox__prev:hover,
+.cv-cert-lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.cv-cert-lightbox__close {
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.cv-cert-lightbox__prev,
+.cv-cert-lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.cv-cert-lightbox__prev { left: 1rem; }
+.cv-cert-lightbox__next { right: 1rem; }
+
+.cv-cert-lightbox__counter {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.cv-analyst__tag--ai {
+  background: var(--ca-accent-glow);
+  color: var(--ca-accent);
+  border: 1px solid rgba(30, 86, 160, 0.2);
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__tag--ai {
+  border-color: rgba(91, 155, 213, 0.25);
+}
+
+/* --- Terminal snippet --- */
+.cv-analyst__terminal {
+  background: #1a2332;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  box-shadow: var(--ca-card-shadow);
+  font-family: var(--ca-font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+.cv-analyst__terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #0f1a28;
+}
+
+.cv-analyst__terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.cv-analyst__terminal-dot--red { background: #f38ba8; }
+.cv-analyst__terminal-dot--yellow { background: #f9e2af; }
+.cv-analyst__terminal-dot--green { background: #a6e3a1; }
+
+.cv-analyst__terminal-title {
+  font-size: 0.75rem;
+  color: #7a9ab4;
+  margin-left: 0.5rem;
+}
+
+.cv-analyst__terminal-body {
+  padding: 1rem 1.25rem;
+  color: #c8d6e0;
+  overflow-x: auto;
+}
+
+.cv-analyst__terminal-body .prompt { color: #5b9bd5; }
+.cv-analyst__terminal-body .comment { color: #7a9ab4; }
+.cv-analyst__terminal-body .keyword { color: #7ab3e8; }
+.cv-analyst__terminal-body .string { color: #a6e3a1; }
+.cv-analyst__terminal-body .function { color: #93c5fd; }
+.cv-analyst__terminal-body .output { color: #f9e2af; }
+
+/* --- AI project cards --- */
+.cv-analyst__ai-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .cv-analyst__ai-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .cv-analyst__ai-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.cv-analyst__ai-project {
+  padding: 1rem;
+  background: var(--ca-surface);
+  border: 1px solid var(--ca-border);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.cv-analyst__ai-project-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ca-accent);
+  margin: 0 0 0.25rem;
+}
+
+.cv-analyst__ai-project-desc {
+  font-size: 0.8125rem;
+  color: var(--ca-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Education --- */
+.cv-analyst__edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cv-analyst__edu-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--ca-surface);
+  border: 1px solid var(--ca-border);
+  border-left: 3px solid var(--ca-accent);
+  border-radius: 8px;
+  box-shadow: var(--ca-card-shadow);
+}
+
+.cv-analyst__edu-year {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ca-accent);
+}
+
+.cv-analyst__edu-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ca-text);
+  margin: 0;
+}
+
+.cv-analyst__edu-school {
+  font-size: 0.875rem;
+  color: var(--ca-text-muted);
+  margin: 0;
+}
+
+.cv-analyst__edu-desc {
+  font-size: 0.8125rem;
+  color: var(--ca-text-muted);
+  margin: 0;
+}
+
+/* --- Languages --- */
+.cv-analyst__lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.cv-analyst__lang-card {
+  background: var(--ca-surface);
+  border: 1px solid var(--ca-border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--ca-card-shadow);
+}
+
+.cv-analyst__lang-name {
+  font-weight: 700;
+  color: var(--ca-text);
+  font-size: 0.9375rem;
+}
+
+.cv-analyst__lang-level {
+  font-size: 0.8125rem;
+  color: var(--ca-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* --- Photo --- */
+.cv-analyst__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ca-accent);
+  box-shadow: 0 4px 20px rgba(30, 86, 160, 0.15);
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__photo {
+  box-shadow: 0 4px 20px rgba(91, 155, 213, 0.2);
+}
+
+/* --- Footer --- */
+.cv-analyst__footer {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  font-size: 0.8125rem;
+  color: var(--ca-text-muted);
+}
+
+.cv-analyst__gdpr {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--ca-text-muted);
+  opacity: 0.7;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.cv-analyst__ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--ca-accent-glow);
+  color: var(--ca-accent);
+  border: 1px solid rgba(30, 86, 160, 0.2);
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.cv-analyst[data-mode="dark"] .cv-analyst__ai-badge {
+  border-color: rgba(91, 155, 213, 0.25);
+}
+
+.cv-analyst__ai-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* --- Print button --- */
+.cv-analyst__print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  font-size: 0.8125rem;
+  font-family: var(--ca-font);
+  font-weight: 500;
+  background: var(--ca-surface);
+  color: var(--ca-text-muted);
+  border: 1px solid var(--ca-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  margin-top: 1rem;
+}
+
+.cv-analyst__print-btn:hover {
+  color: var(--ca-accent);
+  border-color: var(--ca-accent);
+}
+
+.cv-analyst__print-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* --- Skip link --- */
+.cv-analyst__skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--ca-accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+
+.cv-analyst__skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+/* --- Focus styles (WCAG) --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ca-accent);
+  outline-offset: 2px;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .cv-analyst__hero-badge .pulse { animation: none; }
+  .cv-analyst__typing .cursor { animation: none; }
+  .cv-analyst__skill-fill,
+  .cv-analyst__skill-fill[data-level="expert"],
+  .cv-analyst__skill-fill[data-level="advanced"],
+  .cv-analyst__skill-fill[data-level="proficient"] {
+    transition: none;
+  }
+  .cv-analyst__binary-rain { display: none; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .cv-analyst__hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .cv-analyst__hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-analyst__contact {
+    justify-content: center;
+  }
+
+  .cv-analyst__edu-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .cv-analyst__topbar {
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cv-analyst__topbar-title,
+  .cv-analyst__topbar-spacer {
+    display: none;
+  }
+
+  .cv-analyst__exp-header {
+    flex-direction: column;
+  }
+
+  .cv-analyst__container {
+    padding: 0 1rem;
+  }
+
+  .cv-analyst__exp-card {
+    padding: 1rem 1rem 1rem 1.25rem;
+  }
+}
+
+/* =============================================
+   PRINT — Professional CV layout for PDF/paper
+   Editorial minimal: navy accents, tight grid,
+   optimized for A4 (2 pages max)
+   ============================================= */
+
+@page {
+  size: A4;
+  margin: 1.2cm 1.5cm;
+}
+
+@media print {
+
+  /* --- Reset to clean white --- */
+  .cv-analyst {
+    --ca-bg: #fff;
+    --ca-surface: #fff;
+    --ca-text: #1a1a1a;
+    --ca-text-muted: #4a4a4a;
+    --ca-border: #d0d5dd;
+    --ca-accent: #1e3a6e;
+    --ca-tag-bg: #eef2f7;
+    --ca-tag-text: #1e3a6e;
+    --ca-card-shadow: none;
+    background: #fff;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+
+  /* --- Hide web-only elements --- */
+  .cv-analyst__topbar,
+  .cv-analyst__binary-rain,
+  .cv-analyst__print-btn,
+  .cv-analyst__ai-badge,
+  .cv-analyst__typing,
+  .cv-analyst__skip-link,
+  .cv-analyst__terminal,
+  .cv-analyst__hero-badge {
+    display: none !important;
+  }
+
+  /* --- Container: full width for print --- */
+  .cv-analyst__container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* ==========================================
+     HERO — Compact header with accent bar
+     ========================================== */
+  .cv-analyst__hero {
+    padding: 0 0 0.6cm;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 72pt 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0 0.5cm;
+    align-items: start;
+    border-bottom: 2.5pt solid #1e3a6e;
+    margin-bottom: 0.4cm;
+  }
+
+  .cv-analyst__photo {
+    grid-row: 1 / 4;
+    width: 72pt;
+    height: 72pt;
+    border: 2pt solid #1e3a6e;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .cv-analyst__name {
+    font-size: 18pt;
+    font-weight: 800;
+    -webkit-text-fill-color: #1e3a6e;
+    color: #1e3a6e;
+    margin: 0;
+    line-height: 1.2;
+    padding-top: 0.1cm;
+  }
+
+  .cv-analyst__tagline {
+    font-size: 9pt;
+    color: #4a4a4a;
+    margin: 0.1cm 0 0;
+    line-height: 1.4;
+    max-width: none;
+  }
+
+  .cv-analyst__contact {
+    margin-top: 0.15cm;
+    gap: 0.3cm;
+    justify-content: flex-start;
+    font-size: 8.5pt;
+  }
+
+  .cv-analyst__contact-item svg {
+    width: 10pt;
+    height: 10pt;
+    color: #1e3a6e;
+  }
+
+  .cv-analyst__contact-item a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+
+  .cv-analyst__contact-item a::after {
+    content: none;
+  }
+
+  /* ==========================================
+     SECTIONS — Tight spacing
+     ========================================== */
+  .cv-analyst__section {
+    padding: 0.25cm 0;
+  }
+
+  .cv-analyst__section-header {
+    margin-bottom: 0.3cm;
+    gap: 0.3cm;
+    break-after: avoid;
+    border-bottom: 0.75pt solid #d0d5dd;
+    padding-bottom: 0.15cm;
+  }
+
+  .cv-analyst__section-icon {
+    width: 20pt;
+    height: 20pt;
+    background: none;
+    border-radius: 0;
+  }
+
+  .cv-analyst__section-icon svg {
+    width: 14pt;
+    height: 14pt;
+    color: #1e3a6e;
+  }
+
+  .cv-analyst__section-title {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #1e3a6e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ==========================================
+     EXPERIENCE — Dense cards
+     ========================================== */
+  .cv-analyst__exp-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: none;
+    border-left: 2pt solid #1e3a6e;
+    border-radius: 0;
+    padding: 0.2cm 0 0.2cm 0.4cm;
+    margin-bottom: 0.25cm;
+    background: none;
+  }
+
+  .cv-analyst__exp-header {
+    margin-bottom: 0.05cm;
+    gap: 0.2cm;
+  }
+
+  .cv-analyst__exp-role {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .cv-analyst__exp-period {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #1e3a6e;
+  }
+
+  .cv-analyst__exp-company {
+    font-size: 8.5pt;
+    color: #4a4a4a;
+    margin-bottom: 0.1cm;
+  }
+
+  .cv-analyst__exp-bullets {
+    gap: 0.05cm;
+  }
+
+  .cv-analyst__exp-bullets li {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    padding-left: 0.35cm;
+  }
+
+  .cv-analyst__exp-bullets li::before {
+    width: 3pt;
+    height: 3pt;
+    top: 0.55em;
+    background: #1e3a6e;
+    opacity: 0.6;
+  }
+
+  /* ==========================================
+     SKILLS — Compact 2-column grid
+     ========================================== */
+  .cv-analyst__skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3cm;
+  }
+
+  .cv-analyst__skill-group {
+    break-inside: avoid;
+    box-shadow: none;
+    border: none;
+    border-left: 2pt solid #1e3a6e;
+    border-radius: 0;
+    padding: 0.15cm 0 0.15cm 0.3cm;
+    background: none;
+  }
+
+  .cv-analyst__skill-group--ai {
+    grid-column: 1 / -1;
+    border-left: 2pt solid #1e3a6e;
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .cv-analyst__skill-group h3 {
+    font-size: 9pt;
+    font-weight: 700;
+    margin-bottom: 0.15cm;
+    color: #1e3a6e;
+  }
+
+  .cv-analyst__skill-group h3 svg {
+    width: 11pt;
+    height: 11pt;
+  }
+
+  /* --- Skill bars — compact for print --- */
+  .cv-analyst__skill-bar {
+    margin-bottom: 0.1cm;
+  }
+
+  .cv-analyst__skill-label {
+    font-size: 8pt;
+    margin-bottom: 0.03cm;
+  }
+
+  .cv-analyst__skill-track {
+    height: 4pt;
+    background: #e5e7eb;
+    border-radius: 2pt;
+  }
+
+  .cv-analyst__skill-fill {
+    border-radius: 2pt;
+    transition: none;
+    background: #1e3a6e !important;
+  }
+
+  .cv-analyst__skill-fill[data-width="95"] { width: 95% !important; }
+  .cv-analyst__skill-fill[data-width="90"] { width: 90% !important; }
+  .cv-analyst__skill-fill[data-width="85"] { width: 85% !important; }
+  .cv-analyst__skill-fill[data-width="80"] { width: 80% !important; }
+  .cv-analyst__skill-fill[data-width="75"] { width: 75% !important; }
+
+  /* --- AI projects — inline in print --- */
+  .cv-analyst__ai-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.2cm;
+    margin-top: 0.2cm;
+  }
+
+  .cv-analyst__ai-project {
+    padding: 0.15cm 0.25cm;
+    border: 0.5pt solid #d0d5dd;
+    border-radius: 0;
+    background: #f8f9fb;
+  }
+
+  .cv-analyst__ai-project-name {
+    font-size: 8pt;
+    color: #1e3a6e;
+    margin-bottom: 0.05cm;
+  }
+
+  .cv-analyst__ai-project-desc {
+    font-size: 6.5pt;
+    line-height: 1.3;
+  }
+
+  /* --- Tags — compact pills --- */
+  .cv-analyst__tags {
+    gap: 0.1cm;
+  }
+
+  .cv-analyst__tag {
+    font-size: 7.5pt;
+    padding: 0.05cm 0.2cm;
+    background: #eef2f7;
+    color: #1e3a6e;
+    border-radius: 2pt;
+    border: 0.5pt solid #d0d5dd;
+  }
+
+  /* ==========================================
+     EDUCATION — Compact list
+     ========================================== */
+  .cv-analyst__edu-list {
+    gap: 0.15cm;
+  }
+
+  .cv-analyst__edu-item {
+    break-inside: avoid;
+    box-shadow: none;
+    border: none;
+    border-left: 2pt solid #1e3a6e;
+    border-radius: 0;
+    padding: 0.1cm 0 0.1cm 0.4cm;
+    background: none;
+    grid-template-columns: 70pt 1fr;
+    gap: 0.3cm;
+  }
+
+  .cv-analyst__edu-year {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #1e3a6e;
+  }
+
+  .cv-analyst__edu-title {
+    font-size: 9pt;
+    font-weight: 600;
+  }
+
+  .cv-analyst__edu-school {
+    font-size: 8pt;
+  }
+
+  .cv-analyst__edu-desc {
+    font-size: 7.5pt;
+  }
+
+  /* ==========================================
+     LANGUAGES — Inline row
+     ========================================== */
+  .cv-analyst__lang-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2cm;
+  }
+
+  .cv-analyst__lang-card {
+    box-shadow: none;
+    border: none;
+    border-left: 2pt solid #1e3a6e;
+    border-radius: 0;
+    padding: 0.05cm 0 0.05cm 0.3cm;
+    text-align: left;
+    background: none;
+  }
+
+  .cv-analyst__lang-name {
+    font-size: 9pt;
+    font-weight: 700;
+  }
+
+  .cv-analyst__lang-level {
+    font-size: 7.5pt;
+  }
+
+  /* ==========================================
+     FOOTER — Compact GDPR line
+     ========================================== */
+  .cv-analyst__footer {
+    padding: 0.3cm 0 0;
+    border-top: 0.5pt solid #d0d5dd;
+    margin-top: 0.2cm;
+  }
+
+  .cv-analyst__gdpr {
+    font-size: 7pt;
+    color: #888;
+    opacity: 1;
+    margin-top: 0;
+    max-width: none;
+    text-align: center;
+  }
+}
+</style>
+<style>
+  /* dark site look kept on PDF (we render screen media, not the white print CSS) */
+  html, body { background: #0a1628; }
+  .cv-analyst__topbar { position: static; }
+
+  /* role line under the name, as a link to the web CV */
+  .cv-analyst__role-link{
+    display:inline-flex; align-items:center; gap:.5rem; margin:.35rem 0 .15rem;
+    font-family: var(--ca-font-mono); font-weight:500; font-size:.95rem; letter-spacing:.01em;
+    color: var(--ca-accent-light); text-decoration:none;
+    border-bottom:1px dashed rgba(122,179,232,.5); padding-bottom:2px;
+  }
+  .cv-analyst__role-link::before{ content:"▸"; color: var(--ca-accent); }
+  .cv-analyst__role-link:hover{ color:#bfe0ff; border-bottom-color:#bfe0ff; }
+
+  /* ---- readability: subtle, EVEN rain like cv1 + a faint veil behind content ---- */
+  .cv-analyst__container{ position:relative; z-index:1; }
+  .cv-analyst__container::before{
+    content:""; position:absolute; inset:0; z-index:-1;
+    background: linear-gradient(180deg, rgba(10,22,40,.55), rgba(10,22,40,.68));
+    pointer-events:none;
+  }
+
+  /* ===== COMPACT mode (toggled only for the 2-page PDF) ===== */
+  .cv-analyst.compact{ font-size:8pt !important; line-height:1.3 !important; }
+  .cv-analyst.compact .cv-analyst__container{ max-width:790px !important; padding:6px 28px 14px !important; }
+  .cv-analyst.compact .cv-analyst__hero{ padding:4px 0 8px !important; gap:16px !important; margin-bottom:4px !important; }
+  .cv-analyst.compact .cv-analyst__name{ font-size:22pt !important; line-height:1.05 !important; }
+  .cv-analyst.compact .cv-analyst__role-link{ font-size:8.6pt !important; margin:3px 0 !important; }
+  .cv-analyst.compact .cv-analyst__tagline{ font-size:8.2pt !important; line-height:1.32 !important; margin:4px 0 !important; max-width:66ch !important; }
+  .cv-analyst.compact .cv-analyst__typing{ font-size:8pt !important; min-height:1.1em !important; margin-bottom:3px !important; }
+  .cv-analyst.compact .cv-analyst__hero-badge{ font-size:7pt !important; padding:2px 8px !important; margin-bottom:4px !important; }
+  .cv-analyst.compact .cv-analyst__photo{ width:96px !important; height:96px !important; }
+  .cv-analyst.compact .cv-analyst__contact{ gap:4px 16px !important; font-size:7.6pt !important; margin-top:6px !important; }
+  .cv-analyst.compact .cv-analyst__contact-item svg{ width:13px !important; height:13px !important; }
+  .cv-analyst.compact #target-role{ display:none !important; }
+  .cv-analyst.compact .cv-analyst__ai-projects{ display:none !important; }
+  .cv-analyst.compact .cv-analyst__terminal{ display:none !important; }
+  .cv-analyst.compact .cv-analyst__section{ margin:8px 0 !important; padding:0 !important; }
+  .cv-analyst.compact .cv-analyst__section-header{ margin-bottom:5px !important; gap:8px !important; }
+  .cv-analyst.compact .cv-analyst__section-title{ font-size:9pt !important; }
+  .cv-analyst.compact .cv-analyst__section-icon{ width:22px !important; height:22px !important; }
+  .cv-analyst.compact .cv-analyst__section-icon svg{ width:13px !important; height:13px !important; }
+  .cv-analyst.compact .cv-analyst__exp-card{ margin-bottom:6px !important; padding:7px 11px !important; break-inside:avoid; page-break-inside:avoid; }
+  .cv-analyst.compact .cv-analyst__exp-header{ margin-bottom:1px !important; }
+  .cv-analyst.compact .cv-analyst__exp-role{ font-size:9.2pt !important; }
+  .cv-analyst.compact .cv-analyst__exp-period{ font-size:7.2pt !important; }
+  .cv-analyst.compact .cv-analyst__exp-company{ font-size:7.6pt !important; margin:1px 0 3px !important; }
+  .cv-analyst.compact .cv-analyst__exp-bullets li{ font-size:7.8pt !important; line-height:1.3 !important; margin-bottom:1.5px !important; padding-left:15px !important; }
+  .cv-analyst.compact .cv-analyst__skills-grid{ gap:10px !important; }
+  .cv-analyst.compact .cv-analyst__skill-group{ padding:8px 12px !important; break-inside:avoid; }
+  .cv-analyst.compact .cv-analyst__skill-group h3{ font-size:8.2pt !important; margin-bottom:5px !important; }
+  .cv-analyst.compact .cv-analyst__skill-bar{ margin-bottom:4px !important; }
+  .cv-analyst.compact .cv-analyst__skill-label{ font-size:7.4pt !important; margin-bottom:2px !important; }
+  .cv-analyst.compact .cv-analyst__skill-track{ height:4px !important; }
+  .cv-analyst.compact .cv-analyst__edu-list{ gap:5px !important; }
+  .cv-analyst.compact .cv-analyst__edu-item{ margin-bottom:3px !important; }
+  .cv-analyst.compact .cv-analyst__edu-title{ font-size:8.4pt !important; }
+  .cv-analyst.compact .cv-analyst__edu-school,.cv-analyst.compact .cv-analyst__edu-desc{ font-size:7.4pt !important; }
+  .cv-analyst.compact .cv-analyst__tag{ font-size:7.2pt !important; padding:2px 7px !important; }
+  .cv-analyst.compact .cv-analyst__lang-card{ padding:5px 9px !important; }
+  .cv-analyst.compact .cv-analyst__lang-name{ font-size:8pt !important; }
+  .cv-analyst.compact .cv-analyst__lang-level{ font-size:7.2pt !important; }
+  .cv-analyst.compact .cv-analyst__footer{ margin-top:8px !important; padding-top:8px !important; }
+  .cv-analyst.compact .cv-analyst__gdpr{ font-size:6.5pt !important; }
+  .cv-analyst.compact .cv-analyst__ai-badge{ font-size:7pt !important; }
+</style>
 </head>
 <body>
-<div class="cv-analyst" id="cv-analyst" data-mode="light">
-
-  <a href="#cv-name" class="cv-analyst__skip-link" data-i18n="skip">Przejdź do treści</a>
-
-  <!-- Binary rain background (Matrix-style) -->
+<div class="cv-analyst" id="cv-analyst" data-mode="dark">
   <canvas class="cv-analyst__binary-rain" id="rain-canvas" aria-hidden="true"></canvas>
 
-  <!-- Top bar: lang + theme toggles -->
-  <nav class="cv-analyst__topbar" aria-label="Language and theme controls">
-    <span class="cv-analyst__topbar-title" data-i18n="topbar_title">Adriana Guściora | Data Analytics Manager</span>
+  <nav class="cv-analyst__topbar" aria-label="bar">
+    <span class="cv-analyst__topbar-title">Adriana Guściora | Senior Analyst · Finance Operations</span>
     <span class="cv-analyst__topbar-spacer" aria-hidden="true"></span>
-    <button type="button" class="cv-analyst__toggle-btn cv-analyst__toggle-btn--active" id="btn-pl" aria-label="Polski" aria-pressed="true">PL</button>
-    <button type="button" class="cv-analyst__toggle-btn" id="btn-en" aria-label="English" aria-pressed="false">EN</button>
-    <span class="cv-analyst__topbar-divider" aria-hidden="true"></span>
-    <button type="button" class="cv-analyst__toggle-btn" id="btn-theme" aria-label="Toggle dark/light mode">
-      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-      <span data-i18n="theme">Tryb</span>
-    </button>
+    <button type="button" class="cv-analyst__toggle-btn cv-analyst__toggle-btn--active">EN</button>
   </nav>
 
   <main class="cv-analyst__container">
 
-    <!-- Hero -->
-    <section class="cv-analyst__hero" aria-labelledby="cv-name">
+    <!-- Hero (matches cv1) -->
+    <section class="cv-analyst__hero">
       <div class="cv-analyst__hero-content">
         <div class="cv-analyst__hero-badge">
           <span class="pulse" aria-hidden="true"></span>
-          <span data-i18n="badge">Otwarta na nowe możliwości</span>
+          <span>Open to new opportunities · Remote · CET</span>
         </div>
-        <h1 id="cv-name" class="cv-analyst__name">Adriana Gusciora</h1>
-        <p class="cv-analyst__tagline" data-i18n="tagline">Data Analytics Manager z&nbsp;8+ latami doświadczenia w&nbsp;sektorze finansowym. Przekształcam dane w&nbsp;strategie biznesowe i&nbsp;dashboardy dla C-level.</p>
+        <h1 id="cv-name" class="cv-analyst__name">Adriana Guściora</h1>
+        <a class="cv-analyst__role-link" href="https://adrwis.github.io/cv-analityk/" target="_blank" rel="noopener">Senior Analyst · Finance Operations (Cost Controlling)</a>
+        <p class="cv-analyst__tagline">8+ years in <strong>cost controlling, reconciliation and FP&amp;A</strong> across banking, cybersecurity and facilities (HSBC, Trustwave, ISS). I turn messy, multi-source financial data into <strong>validated, decision-ready reporting</strong> — and automate the repetitive.</p>
         <div class="cv-analyst__typing" id="typing-area" aria-live="polite"></div>
 
         <div class="cv-analyst__contact">
@@ -62,810 +1570,297 @@
           </span>
           <span class="cv-analyst__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span data-i18n="location">zdalnie</span>
+            <span>Remote · Poland / Europe (CET)</span>
           </span>
           <span class="cv-analyst__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 016 14v1H2v-1a6 6 0 016-6z"/><circle cx="12" cy="7" r="4"/></svg>
-            <a href="https://www.linkedin.com/in/adriana-gu/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/adriana-gu/">LinkedIn</a>
           </span>
         </div>
       </div>
-      <img src="ada2.jpg" alt="Adriana Gusciora" class="cv-analyst__photo" width="180" height="180" loading="eager">
+      <img src="data:image/jpeg;base64,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" alt="Adriana Guściora" class="cv-analyst__photo" width="180" height="180">
+    </section>
+
+    <!-- Target role (web only) -->
+    <section class="cv-analyst__section" id="target-role">
+      <div class="cv-analyst__section-header">
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h2 class="cv-analyst__section-title">Target role · Senior Analyst, Finance Operations (Cost Controlling)</h2>
+      </div>
+      <p style="color:var(--ca-text-muted);max-width:72ch">Strong fit on <strong>cost controlling, reconciliation and FP&amp;A</strong> in a multinational, fully-remote setup (CET). Advanced Excel/Sheets, process improvement (Lean / Six Sigma) and automation; Power BI for the reporting layer. Source-system experience (Cognos, Clarity, GPDM) maps directly onto ERP-style consolidation.</p>
     </section>
 
     <!-- Experience -->
-    <section class="cv-analyst__section" aria-labelledby="sec-exp">
+    <section class="cv-analyst__section">
       <div class="cv-analyst__section-header">
-        <div class="cv-analyst__section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-        </div>
-        <h2 id="sec-exp" class="cv-analyst__section-title" data-i18n="exp_title">Doświadczenie zawodowe</h2>
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+        <h2 class="cv-analyst__section-title">Work Experience</h2>
       </div>
 
-      <!-- Trustwave -->
       <div class="cv-analyst__exp-card">
         <div class="cv-analyst__exp-header">
-          <h3 class="cv-analyst__exp-role" data-i18n="exp1_role">Starszy Analityk Finansowy</h3>
-          <span class="cv-analyst__exp-period" data-i18n="exp1_period">paź 2024 - obecnie</span>
+          <h3 class="cv-analyst__exp-role">Senior Finance Analyst · Performance Management</h3>
+          <span class="cv-analyst__exp-period">Oct 2024 – Mar 2026</span>
         </div>
-        <p class="cv-analyst__exp-company" data-i18n="exp1_company">Trustwave Sp. z o.o. · Performance Management · Warszawa</p>
+        <p class="cv-analyst__exp-company">Trustwave Sp. z o.o. · Cybersecurity · Warsaw / Remote</p>
         <ul class="cv-analyst__exp-bullets" role="list">
-          <li data-i18n="exp1_b1">Projektowanie dashboardów finansowych dla Financial Directors i CFO: dostarczanie insightów "at-a-glance" w Power BI</li>
-          <li data-i18n="exp1_b2">Translacja złożonych danych finansowych na rekomendacje biznesowe dla stakeholderów</li>
-          <li data-i18n="exp1_b3">Automatyzacja raportowania finansowego: Power Query, Alteryx: redukcja pracy manualnej</li>
-          <li data-i18n="exp1_b4">Analizy SQL i modelowanie danych wspierające decyzje strategiczne</li>
-          <li data-i18n="exp1_b5">Budowanie i utrzymywanie pipeline'ów ETL w Alteryx</li>
+          <li>Consolidated and <strong>reconciled financial and cost data from multiple sources</strong> into one validated reporting layer used daily by Financial Directors and the CFO (advanced Excel / Power Query, SQL, Power BI).</li>
+          <li>Owned recurring <strong>cost, KPI and budget-vs-actuals reporting</strong>; safeguarded data accuracy through validation, reconciliation and discrepancy checks.</li>
+          <li><strong>Automated repetitive month-end and reporting work</strong> with Power Query, Power Automate and AI tools — cutting manual effort and errors.</li>
         </ul>
       </div>
 
-      <!-- HSBC/Alten -->
       <div class="cv-analyst__exp-card">
         <div class="cv-analyst__exp-header">
-          <h3 class="cv-analyst__exp-role" data-i18n="exp2_role">Analityk Finansowy w HSBC</h3>
-          <span class="cv-analyst__exp-period" data-i18n="exp2_period">lip 2022 - kwi 2024</span>
+          <h3 class="cv-analyst__exp-role">Finance Analyst at HSBC · Cost Controlling</h3>
+          <span class="cv-analyst__exp-period">Jul 2022 – Apr 2024</span>
         </div>
-        <p class="cv-analyst__exp-company" data-i18n="exp2_company">Alten Polska Sp. z o.o. · Kraków / zdalnie</p>
+        <p class="cv-analyst__exp-company">Alten Polska Sp. z o.o. · Banking · Cracow / Remote</p>
         <ul class="cv-analyst__exp-bullets" role="list">
-          <li data-i18n="exp2_b1">Koordynacja zespołu 5 analityków w globalnym banku (HSBC)</li>
-          <li data-i18n="exp2_b2">Zarządzanie procesami finansowymi dla ~40 projektów o wartości 15M$: budżetowanie, prognozowanie, alokacja zasobów</li>
-          <li data-i18n="exp2_b3">Projektowanie raportów i dashboardów BI: SQL, Power Query, Power BI, Cognos</li>
-          <li data-i18n="exp2_b4">Prezentacja wyników analiz stakeholderom i rekomendowanie działań optymalizacyjnych</li>
-          <li data-i18n="exp2_b5">Automatyzacja raportowania z wielu źródeł danych: Power Query</li>
-          <li data-i18n="exp2_b6">Szkolenia zespołów z narzędzi analitycznych (Power BI, Power Query, Excel)</li>
+          <li>Owned the controlling view of a <strong>$15M people-cost pool across ~40 projects</strong>: headcount and cost <strong>budget vs actuals</strong>, forecasting, allocation, trends and outliers for finance stakeholders.</li>
+          <li>Built a <strong>single source of truth</strong> for a 5-analyst team by reconciling <strong>3 enterprise systems</strong> (Clarity, GPDM, Cognos) with SQL, Power Query and Power BI.</li>
+          <li>Maintained <strong>data definitions, documentation and training</strong>, keeping the close and reporting consistent and self-service.</li>
         </ul>
       </div>
 
-      <!-- Zimmer Biomet -->
       <div class="cv-analyst__exp-card">
         <div class="cv-analyst__exp-header">
-          <h3 class="cv-analyst__exp-role" data-i18n="exp3_role">Deweloper Smartsheet</h3>
-          <span class="cv-analyst__exp-period" data-i18n="exp3_period">cze 2021 - cze 2022</span>
+          <h3 class="cv-analyst__exp-role">Operations / Data Analyst · Global Transition</h3>
+          <span class="cv-analyst__exp-period">Jun 2021 – Jun 2022</span>
         </div>
-        <p class="cv-analyst__exp-company" data-i18n="exp3_company">Zimmer Biomet Polska · Global Business Support · Warszawa</p>
+        <p class="cv-analyst__exp-company">Zimmer Biomet Polska · Medical Devices · Warsaw</p>
         <ul class="cv-analyst__exp-bullets" role="list">
-          <li data-i18n="exp3_b1">Raportowanie w procesie Global Transition dla 14 departamentów</li>
-          <li data-i18n="exp3_b2">Szkolenia narzędziowe dla globalnych użytkowników i developerów Smartsheet</li>
-          <li data-i18n="exp3_b3">Stworzenie aplikacji Continuous Improvement: PowerApps</li>
+          <li><strong>Reconciled data flows across 14 departments</strong> into shared definitions, structured data governance and KPI dashboards during a Global Transition.</li>
+          <li>Built spreadsheet- and SharePoint-based workflows (PowerApps + Power Automate); validated data across global teams and removed manual steps.</li>
         </ul>
       </div>
 
-      <!-- ISS -->
       <div class="cv-analyst__exp-card">
         <div class="cv-analyst__exp-header">
-          <h3 class="cv-analyst__exp-role" data-i18n="exp4_role">Programista BI i Analityk</h3>
-          <span class="cv-analyst__exp-period" data-i18n="exp4_period">wrz 2018 - maj 2021</span>
+          <h3 class="cv-analyst__exp-role">BI / Finance Analyst · Controlling &amp; Operations</h3>
+          <span class="cv-analyst__exp-period">Sep 2018 – May 2021</span>
         </div>
-        <p class="cv-analyst__exp-company" data-i18n="exp4_company">ISS Facility Services · Project Management · Warszawa</p>
+        <p class="cv-analyst__exp-company">ISS Facility Services · Project Management · Warsaw</p>
         <ul class="cv-analyst__exp-bullets" role="list">
-          <li data-i18n="exp4_b1">Zarządzanie zespołami (4-15 osób) i audyty wewnętrzne</li>
-          <li data-i18n="exp4_b2">Globalna współpraca z klientem z sektora bankowego: analiza procesu przepływu faktur, zaplanowanie i wdrożenie usprawnienia procesu</li>
-          <li data-i18n="exp4_b3">Dashboardy i raporty dla Zarządu: Power BI i SharePoint</li>
-          <li data-i18n="exp4_b4">Automatyzacja procesów: Power Automate, SharePoint, Power BI</li>
-          <li data-i18n="exp4_b5">Budżetowanie, prognozowanie i analizy niefinansowe</li>
-          <li data-i18n="exp4_b6">Projekt Novatorium: implementacja innowacji za pomocą Power Platform</li>
+          <li><strong>Cost budgeting, forecasting and financial reconciliation</strong> for a regulated pharmaceutical client: controlling reporting, variance analysis and internal audits; <strong>managed teams of 4–15</strong>.</li>
+          <li>Board-level <strong>cost and operational KPI dashboards</strong> (Power BI + SharePoint); <strong>automated</strong> invoice-flow data for a global banking client (Power Automate + SharePoint).</li>
         </ul>
       </div>
 
-      <!-- Earlier roles -->
       <div class="cv-analyst__exp-card">
         <div class="cv-analyst__exp-header">
-          <h3 class="cv-analyst__exp-role" data-i18n="exp5_role">Młodszy Kierownik Projektu &middot; Management Trainee</h3>
-          <span class="cv-analyst__exp-period" data-i18n="exp5_period">lut 2016 - sie 2018</span>
+          <h3 class="cv-analyst__exp-role">Junior Project Manager · Operations · Management Trainee</h3>
+          <span class="cv-analyst__exp-period">Feb 2016 – Aug 2018</span>
         </div>
-        <p class="cv-analyst__exp-company" data-i18n="exp5_company">Jeronimo Martins (Lizbona i Warszawa) · Robert BOSCH (Warszawa)</p>
+        <p class="cv-analyst__exp-company">Jeronimo Martins (Lisbon &amp; Warsaw) · Robert Bosch (Warsaw)</p>
         <ul class="cv-analyst__exp-bullets" role="list">
-          <li data-i18n="exp5_b1">Employer Branding, Store Excellence, Customer Service & Logistics</li>
-          <li data-i18n="exp5_b2">Międzynarodowe doświadczenie: Portugalia i Polska</li>
+          <li>International operations experience in <strong>Portugal and Poland</strong>: Store Excellence, Customer Service, logistics and Employer Branding.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Skills & AI -->
-    <section class="cv-analyst__section" aria-labelledby="sec-skills">
+    <!-- Skills -->
+    <section class="cv-analyst__section">
       <div class="cv-analyst__section-header">
-        <div class="cv-analyst__section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h2 id="sec-skills" class="cv-analyst__section-title" data-i18n="skills_title">Umiejętności techniczne</h2>
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h2 class="cv-analyst__section-title">Core Skills</h2>
       </div>
 
       <div class="cv-analyst__skills-grid">
 
-        <!-- AI & Automation — highlighted -->
         <div class="cv-analyst__skill-group cv-analyst__skill-group--ai">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
-            <span data-i18n="ai_title">AI & Automatyzacja</span>
-          </h3>
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Finance &amp; Controlling</span></h3>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>Claude Code</span><span>90%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Claude Code"><div class="cv-analyst__skill-fill" data-width="90" data-level="expert"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Cost Controlling &amp; Reconciliation</span><span>92%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="92" data-level="expert" style="width:92%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>Prompt Engineering</span><span>85%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Prompt Engineering"><div class="cv-analyst__skill-fill" data-width="85" data-level="advanced"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Budgeting &amp; Forecasting (FP&amp;A)</span><span>88%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="88" data-level="advanced" style="width:88%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>AI Chatbot Development</span><span>80%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="AI Chatbot Development"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Month-end Close &amp; Variance Analysis</span><span>86%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="86" data-level="advanced" style="width:86%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>Power Automate / Workflow AI</span><span>80%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Power Automate"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Advanced Excel / Google Sheets</span><span>95%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert" style="width:95%"></div></div>
+  </div>
 
-          <!-- AI Project showcase -->
           <div class="cv-analyst__ai-projects">
             <a href="https://adriana.gusciora.pl" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
-              <h4 class="cv-analyst__ai-project-name" data-i18n="proj1_name">adriana.gusciora.pl</h4>
-              <p class="cv-analyst__ai-project-desc" data-i18n="proj1_desc">Strona psychologa: dwujęzyczna, 3 motywy, WCAG AA, SEO. Zbudowana z Claude Code.</p>
+              <h4 class="cv-analyst__ai-project-name">adriana.gusciora.pl</h4>
+              <p class="cv-analyst__ai-project-desc">Bilingual site: 3 themes, WCAG AA, SEO. Built with Claude Code.</p>
             </a>
             <a href="https://adrwis.github.io/polskatsanddogs/" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
-              <h4 class="cv-analyst__ai-project-name" data-i18n="proj2_name">Portfolio Portretów</h4>
-              <p class="cv-analyst__ai-project-desc" data-i18n="proj2_desc">Portfolio artystyczne: galeria, formularz zamówień, responsywny design.</p>
+              <h4 class="cv-analyst__ai-project-name">Portrait Portfolio</h4>
+              <p class="cv-analyst__ai-project-desc">Art portfolio: gallery, order form, responsive design.</p>
             </a>
             <a href="https://adriana.gusciora.pl/asystent/" target="_blank" rel="noopener" class="cv-analyst__ai-project cv-analyst__ai-project--link">
-              <h4 class="cv-analyst__ai-project-name" data-i18n="proj3_name">AI Chatbot</h4>
-              <p class="cv-analyst__ai-project-desc" data-i18n="proj3_desc">Asystent relacyjny: detekcja kryzysu, ochrona przed atakami, baza wiedzy.</p>
+              <h4 class="cv-analyst__ai-project-name">AI Chatbot</h4>
+              <p class="cv-analyst__ai-project-desc">Relationship assistant: crisis detection, injection protection, knowledge base.</p>
             </a>
           </div>
         </div>
 
-        <!-- BI & Analytics -->
         <div class="cv-analyst__skill-group">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span data-i18n="bi_title">BI & Analytics</span>
-          </h3>
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><span>BI &amp; Analytics</span></h3>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>Power BI</span><span>95%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Power BI</span><span>95%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert" style="width:95%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>DAX / Power Query (M)</span><span>90%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="DAX / Power Query"><div class="cv-analyst__skill-fill" data-width="90" data-level="expert"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Power Query (M)</span><span>90%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="90" data-level="expert" style="width:90%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span data-i18n="skill_excel">Excel zaawansowany (formuły, Power Query)</span><span>95%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Excel"><div class="cv-analyst__skill-fill" data-width="95" data-level="expert"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>SQL</span><span>80%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced" style="width:80%"></div></div>
+  </div>
         </div>
 
-        <!-- Data & ETL -->
         <div class="cv-analyst__skill-group">
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg>
-            <span data-i18n="data_title">Data & ETL</span>
-          </h3>
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M21 5v14c0 1.66-4 3-9 3s-9-1.34-9-3V5"/></svg><span>Automation &amp; AI</span></h3>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>SQL</span><span>80%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced"></div></div>
-          </div>
+    <div class="cv-analyst__skill-label"><span>Process Improvement (Lean / Six Sigma)</span><span>88%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="88" data-level="advanced" style="width:88%"></div></div>
+  </div>
           <div class="cv-analyst__skill-bar">
-            <div class="cv-analyst__skill-label"><span>Alteryx (ETL)</span><span>75%</span></div>
-            <div class="cv-analyst__skill-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Alteryx"><div class="cv-analyst__skill-fill" data-width="75" data-level="proficient"></div></div>
-          </div>
-          <div class="cv-analyst__tags cv-analyst__tags--spaced">
-            <span class="cv-analyst__tag">Jira</span>
-            <span class="cv-analyst__tag">Confluence</span>
-            <span class="cv-analyst__tag">Smartsheet</span>
-            <span class="cv-analyst__tag">Cognos</span>
-            <span class="cv-analyst__tag">SharePoint</span>
-            <span class="cv-analyst__tag">PowerApps</span>
+    <div class="cv-analyst__skill-label"><span>Power Automate · Power Platform</span><span>80%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="80" data-level="advanced" style="width:80%"></div></div>
+  </div>
+          <div class="cv-analyst__skill-bar">
+    <div class="cv-analyst__skill-label"><span>AI Tools (Claude) for reporting</span><span>85%</span></div>
+    <div class="cv-analyst__skill-track"><div class="cv-analyst__skill-fill" data-width="85" data-level="advanced" style="width:85%"></div></div>
+  </div>
+          <div class="cv-analyst__tags cv-analyst__tags--spaced" style="margin-top:.75rem">
+            <span class="cv-analyst__tag">Cognos</span><span class="cv-analyst__tag">Clarity</span><span class="cv-analyst__tag">Alteryx</span>
+            <span class="cv-analyst__tag">SharePoint</span><span class="cv-analyst__tag">PowerApps</span><span class="cv-analyst__tag">Jira</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Terminal showcase -->
+      <!-- Terminal showcase (web only / cv2) -->
       <div class="cv-analyst__terminal">
         <div class="cv-analyst__terminal-header">
           <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--red" aria-hidden="true"></span>
           <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--yellow" aria-hidden="true"></span>
           <span class="cv-analyst__terminal-dot cv-analyst__terminal-dot--green" aria-hidden="true"></span>
-          <span class="cv-analyst__terminal-title">claude-code</span>
+          <span class="cv-analyst__terminal-title">finance-ops</span>
         </div>
         <div class="cv-analyst__terminal-body">
-          <div><span class="prompt">$</span> <span class="function">claude</span> <span class="string">"Build a bilingual website with 3 themes"</span></div>
+          <div><span class="prompt">$</span> <span class="function">close</span> <span class="string">"month-end reconciliation"</span></div>
           <div>&nbsp;</div>
-          <div><span class="comment">&gt; Scaffolding Astro project...</span></div>
-          <div><span class="comment">&gt; Creating 26 pages (PL + EN)...</span></div>
-          <div><span class="comment">&gt; Adding light / dark / sepia modes...</span></div>
+          <div><span class="comment">&gt; Consolidating 3 source systems...</span></div>
+          <div><span class="comment">&gt; Matching budget vs actuals...</span></div>
+          <div><span class="comment">&gt; Flagging variances and outliers...</span></div>
           <div>&nbsp;</div>
-          <div><span class="output">&#10003; Responsive design ready</span></div>
-          <div><span class="output">&#10003; WCAG AA accessible</span></div>
-          <div><span class="output">&#10003; Lighthouse SEO: 100/100</span></div>
+          <div><span class="output">&#10003; $15M people-cost pool reconciled</span></div>
+          <div><span class="output">&#10003; Validated, audit-ready numbers</span></div>
+          <div><span class="output">&#10003; Manual steps automated</span></div>
           <div>&nbsp;</div>
-          <div><span class="output">&gt;&gt;&gt; adriana.gusciora.pl deployed</span></div>
+          <div><span class="output">&gt;&gt;&gt; close-ready pack delivered</span></div>
         </div>
       </div>
     </section>
 
     <!-- Education -->
-    <section class="cv-analyst__section" aria-labelledby="sec-edu">
+    <section class="cv-analyst__section">
       <div class="cv-analyst__section-header">
-        <div class="cv-analyst__section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
-        </div>
-        <h2 id="sec-edu" class="cv-analyst__section-title" data-i18n="edu_title">Wykształcenie</h2>
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></div>
+        <h2 class="cv-analyst__section-title">Education</h2>
       </div>
-
       <div class="cv-analyst__edu-list">
-        <div class="cv-analyst__edu-item">
-          <span class="cv-analyst__edu-year">2020 - 2021</span>
-          <div>
-            <p class="cv-analyst__edu-title" data-i18n="edu1_title">Studia podyplomowe: Menedżer Jakości</p>
-            <p class="cv-analyst__edu-school" data-i18n="edu1_school">Szkoła Główna Handlowa (SGH)</p>
-            <p class="cv-analyst__edu-desc" data-i18n="edu1_desc">Lean Management, Six Sigma, Kaizen</p>
-            <button type="button" class="cv-analyst__cert-link" data-lightbox="edukacja/manager-jakosci.jpg">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span data-i18n="cert_diploma">Dyplom</span>
-            </button>
-          </div>
-        </div>
-        <div class="cv-analyst__edu-item">
-          <span class="cv-analyst__edu-year">2012 - 2017</span>
-          <div>
-            <p class="cv-analyst__edu-title" data-i18n="edu2_title">Magister Psychologii Klinicznej</p>
-            <p class="cv-analyst__edu-school" data-i18n="edu2_school">Uniwersytet SWPS</p>
-            <button type="button" id="cert-master" class="cv-analyst__cert-link" data-lightbox="edukacja/magister-psychologii.jpg">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span data-i18n="cert_diploma">Dyplom</span>
-            </button>
-          </div>
-        </div>
-        <div class="cv-analyst__edu-item">
-          <span class="cv-analyst__edu-year">2012 - 2016</span>
-          <div>
-            <p class="cv-analyst__edu-title" data-i18n="edu3_title">Inżynier: Zarządzanie i Inżynieria Produkcji</p>
-            <p class="cv-analyst__edu-school" data-i18n="edu3_school">Politechnika Warszawska</p>
-            <button type="button" id="cert-engineer" class="cv-analyst__cert-link" data-lightbox="edukacja/inzynier-pl.jpg">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span data-i18n="cert_diploma">Dyplom</span>
-            </button>
-          </div>
-        </div>
-        <div class="cv-analyst__edu-item">
-          <span class="cv-analyst__edu-year">2009 - 2010</span>
-          <div>
-            <p class="cv-analyst__edu-title" data-i18n="edu4_title">Rotary Youth Exchange: Brazylia</p>
-            <p class="cv-analyst__edu-school" data-i18n="edu4_school">Liceum ANGLO, Penapolis</p>
-          </div>
-        </div>
+        <div class="cv-analyst__edu-item"><span class="cv-analyst__edu-year">2020 – 2021</span><div><p class="cv-analyst__edu-title">Postgraduate · Quality Manager</p><p class="cv-analyst__edu-school">SGH Warsaw School of Economics</p><p class="cv-analyst__edu-desc">Lean Management · Six Sigma · Kaizen</p></div></div>
+        <div class="cv-analyst__edu-item"><span class="cv-analyst__edu-year">2012 – 2017</span><div><p class="cv-analyst__edu-title">Master's · Clinical Psychology</p><p class="cv-analyst__edu-school">SWPS University</p><p class="cv-analyst__edu-desc">statistics · research methodology</p></div></div>
+        <div class="cv-analyst__edu-item"><span class="cv-analyst__edu-year">2012 – 2016</span><div><p class="cv-analyst__edu-title">Engineering · Management &amp; Production Engineering</p><p class="cv-analyst__edu-school">Warsaw University of Technology</p></div></div>
       </div>
     </section>
 
     <!-- Certifications -->
-    <section class="cv-analyst__section" aria-labelledby="sec-cert">
+    <section class="cv-analyst__section">
       <div class="cv-analyst__section-header">
-        <div class="cv-analyst__section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
-        </div>
-        <h2 id="sec-cert" class="cv-analyst__section-title" data-i18n="cert_title">Certyfikaty i szkolenia</h2>
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg></div>
+        <h2 class="cv-analyst__section-title">Certifications</h2>
       </div>
-
       <div class="cv-analyst__tags cv-analyst__tags--certs">
-        <button type="button" id="cert-ai-skills" class="cv-analyst__tag cv-analyst__tag--link" data-i18n="cert_ai" data-lightbox="edukacja/umiejetnosci jutra AI.pdf">Wykorzystanie AI w rozwoju firmy: Google / SGH, 2026</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/sql-zaawansowany.pdf">SQL Advanced: LabMasters, 2025</button>
-        <span class="cv-analyst__tag">SQL Basics & Intermediate, 2023</span>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/powerbi-base.pdf">Business Analytics in Power BI: LabMasters, 2022</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/six-sigma.jpg">Metoda Six Sigma w zarządzaniu jakością: SGH, 05.2020</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/prince2-1.jpg,edukacja/prince2-2.jpg">PRINCE2 Foundation: AXELOS, 2020</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience.jpg">User Experience I: USWPS, 01-02.2017</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/user-experience-1.jpg,edukacja/user-experience-2.jpg">User Experience II: USWPS, 04.2017</button>
-        <button type="button" class="cv-analyst__tag cv-analyst__tag--link" data-lightbox="edukacja/incodo-project-management.jpg">Project Management: INCODO, 2016</button>
+        <span class="cv-analyst__tag">Using AI in Business Development · Google / SGH, 2026</span>
+        <span class="cv-analyst__tag">SQL Advanced · LabMasters, 2025</span>
+        <span class="cv-analyst__tag">Business Analytics in Power BI · LabMasters, 2022</span>
+        <span class="cv-analyst__tag">Six Sigma in Quality Management · SGH, 2020</span>
+        <span class="cv-analyst__tag">PRINCE2 Foundation · AXELOS, 2020</span>
       </div>
     </section>
 
     <!-- Languages -->
-    <section class="cv-analyst__section" aria-labelledby="sec-langs">
+    <section class="cv-analyst__section">
       <div class="cv-analyst__section-header">
-        <div class="cv-analyst__section-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        </div>
-        <h2 id="sec-langs" class="cv-analyst__section-title" data-i18n="lang_title">Języki</h2>
+        <div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h2 class="cv-analyst__section-title">Languages</h2>
       </div>
-
       <div class="cv-analyst__lang-grid">
-        <div class="cv-analyst__lang-card">
-          <div class="cv-analyst__lang-name" data-i18n="lang_pl">Polski</div>
-          <div class="cv-analyst__lang-level" data-i18n="lang_pl_lvl">ojczysty</div>
-        </div>
-        <div class="cv-analyst__lang-card">
-          <div class="cv-analyst__lang-name" data-i18n="lang_en">Angielski</div>
-          <div class="cv-analyst__lang-level" data-i18n="lang_en_lvl">zaawansowany</div>
-        </div>
-        <div class="cv-analyst__lang-card">
-          <div class="cv-analyst__lang-name" data-i18n="lang_pt">Portugalski</div>
-          <div class="cv-analyst__lang-level">
-            <span data-i18n="lang_pt_lvl">średniozaawansowany</span>
-            <button type="button" class="cv-analyst__lang-cert" data-lightbox="edukacja/celpe.jpg">(CELPE-Bras)</button>
-          </div>
-        </div>
-        <div class="cv-analyst__lang-card">
-          <div class="cv-analyst__lang-name" data-i18n="lang_it">Włoski</div>
-          <div class="cv-analyst__lang-level" data-i18n="lang_it_lvl">podstawowy</div>
-        </div>
+        <div class="cv-analyst__lang-card"><div class="cv-analyst__lang-name">Polish</div><div class="cv-analyst__lang-level">native</div></div>
+        <div class="cv-analyst__lang-card"><div class="cv-analyst__lang-name">English</div><div class="cv-analyst__lang-level">fluent (C1)</div></div>
+        <div class="cv-analyst__lang-card"><div class="cv-analyst__lang-name">Portuguese</div><div class="cv-analyst__lang-level">intermediate (CELPE-Bras)</div></div>
+        <div class="cv-analyst__lang-card"><div class="cv-analyst__lang-name">Italian</div><div class="cv-analyst__lang-level">basic</div></div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="cv-analyst__footer">
-      <div class="cv-analyst__ai-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/></svg>
-        <span data-i18n="ai_built">Zbudowane z pomocą AI: Claude Code</span>
-      </div>
-      <button type="button" class="cv-analyst__print-btn" id="print-btn" aria-label="Drukuj CV">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        <span data-i18n="print">Drukuj CV</span>
-      </button>
-      <p class="cv-analyst__gdpr" data-i18n="gdpr">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu rekrutacji.</p>
+      <div class="cv-analyst__ai-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg><span>Built with AI: Claude Code</span></div>
+      <p class="cv-analyst__gdpr">I consent to the processing of my personal data for recruitment purposes (GDPR, Regulation (EU) 2016/679).</p>
     </footer>
 
   </main>
 </div>
 
-<!-- Lightbox -->
-<div class="cv-cert-lightbox" id="cert-lightbox" hidden aria-modal="true" role="dialog" aria-label="Podgląd certyfikatu">
-  <div class="cv-cert-lightbox__overlay" id="lb-overlay"></div>
-  <button type="button" class="cv-cert-lightbox__close" id="lb-close" aria-label="Zamknij">&times;</button>
-  <button type="button" class="cv-cert-lightbox__prev" id="lb-prev" aria-label="Poprzedni">&lsaquo;</button>
-  <div class="cv-cert-lightbox__content" id="lb-content"></div>
-  <button type="button" class="cv-cert-lightbox__next" id="lb-next" aria-label="Następny">&rsaquo;</button>
-  <div class="cv-cert-lightbox__counter" id="lb-counter"></div>
-</div>
-
 <script>
-// ===== i18n =====
-var translations = {
-  pl: {
-    badge: 'Otwarta na nowe mo\u017Cliwo\u015Bci',
-    tagline: 'Data Analytics Manager z\u00a08+ latami do\u015Bwiadczenia w\u00a0sektorze finansowym. Przekszta\u0142cam dane w\u00a0strategie biznesowe i\u00a0dashboardy dla C-level.',
-    location: 'zdalnie',
-    theme: 'Tryb',
-    topbar_title: 'Adriana Gu\u015Bciora | Data Analytics Manager',
-    present: 'obecnie',
-    exp_title: 'Do\u015Bwiadczenie zawodowe',
-    exp1_role: 'Starszy Analityk Finansowy',
-    exp1_period: 'pa\u017A 2024 - obecnie',
-    exp1_company: 'Trustwave Sp. z o.o. \u00B7 Performance Management \u00B7 Warszawa',
-    exp1_b1: 'Projektowanie dashboard\u00F3w finansowych dla Financial Directors i CFO: dostarczanie insight\u00F3w "at-a-glance" w Power BI',
-    exp1_b2: 'Translacja z\u0142o\u017Conych danych finansowych na rekomendacje biznesowe dla stakeholder\u00F3w',
-    exp1_b3: 'Automatyzacja raportowania finansowego: Power Query, Alteryx: redukcja pracy manualnej',
-    exp1_b4: 'Analizy SQL i modelowanie danych wspieraj\u0105ce decyzje strategiczne',
-    exp1_b5: 'Budowanie i utrzymywanie pipeline\u2019\u00F3w ETL w Alteryx',
-    exp2_role: 'Analityk Finansowy w HSBC',
-    exp2_period: 'lip 2022 - kwi 2024',
-    exp2_company: 'Alten Polska Sp. z o.o. \u00B7 Krak\u00F3w / zdalnie',
-    exp2_b1: 'Koordynacja zespo\u0142u 5 analityk\u00F3w w globalnym banku (HSBC)',
-    exp2_b2: 'Zarz\u0105dzanie procesami finansowymi dla ~40 projekt\u00F3w o warto\u015Bci 15M$: bud\u017Cetowanie, prognozowanie, alokacja zasob\u00F3w',
-    exp2_b3: 'Projektowanie raport\u00F3w i dashboard\u00F3w BI: SQL, Power Query, Power BI, Cognos',
-    exp2_b4: 'Prezentacja wynik\u00F3w analiz stakeholderom i rekomendowanie dzia\u0142a\u0144 optymalizacyjnych',
-    exp2_b5: 'Automatyzacja raportowania z wielu \u017Ar\u00F3de\u0142 danych: Power Query',
-    exp2_b6: 'Szkolenia zespo\u0142\u00F3w z narz\u0119dzi analitycznych (Power BI, Power Query, Excel)',
-    exp3_role: 'Deweloper Smartsheet',
-    exp3_period: 'cze 2021 - cze 2022',
-    exp3_company: 'Zimmer Biomet Polska \u00B7 Global Business Support \u00B7 Warszawa',
-    exp3_b1: 'Raportowanie w procesie Global Transition dla 14 departament\u00F3w',
-    exp3_b2: 'Szkolenia narz\u0119dziowe dla globalnych u\u017Cytkownik\u00F3w i developer\u00F3w Smartsheet',
-    exp3_b3: 'Stworzenie aplikacji Continuous Improvement: PowerApps',
-    exp4_role: 'Programista BI i Analityk',
-    exp4_period: 'wrz 2018 - maj 2021',
-    exp4_company: 'ISS Facility Services \u00B7 Project Management \u00B7 Warszawa',
-    exp4_b1: 'Zarz\u0105dzanie zespo\u0142ami (4-15 os\u00F3b) i audyty wewn\u0119trzne',
-    exp4_b2: 'Globalna wsp\u00F3\u0142praca z klientem z sektora bankowego: analiza procesu przep\u0142ywu faktur, zaplanowanie i wdro\u017Cenie usprawnienia procesu',
-    exp4_b3: 'Dashboardy i raporty dla Zarz\u0105du: Power BI i SharePoint',
-    exp4_b4: 'Automatyzacja proces\u00F3w: Power Automate, SharePoint, Power BI',
-    exp4_b5: 'Bud\u017Cetowanie, prognozowanie i analizy niefinansowe',
-    exp4_b6: 'Projekt Novatorium: implementacja innowacji za pomoc\u0105 Power Platform',
-    exp5_role: 'M\u0142odszy Kierownik Projektu \u00B7 Management Trainee',
-    exp5_period: 'lut 2016 - sie 2018',
-    exp5_company: 'Jeronimo Martins (Lizbona i Warszawa) \u00B7 Robert BOSCH (Warszawa)',
-    exp5_b1: 'Employer Branding, Store Excellence, Customer Service & Logistics',
-    exp5_b2: 'Mi\u0119dzynarodowe do\u015Bwiadczenie: Portugalia i Polska',
-    skills_title: 'Umiej\u0119tno\u015Bci techniczne',
-    ai_title: 'AI & Automatyzacja',
-    skill_excel: 'Excel zaawansowany (formu\u0142y, Power Query)',
-    proj1_name: 'adriana.gusciora.pl',
-    proj1_desc: 'Strona psychologa: dwuj\u0119zyczna, 3 motywy, WCAG AA, SEO. Zbudowana z Claude Code.',
-    proj2_name: 'Portfolio Portret\u00F3w',
-    proj2_desc: 'Portfolio artystyczne: galeria, formularz zam\u00F3wie\u0144, responsywny design.',
-    proj3_name: 'AI Chatbot',
-    proj3_desc: 'Asystent relacyjny: detekcja kryzysu, ochrona przed atakami, baza wiedzy.',
-    edu_title: 'Wykszta\u0142cenie',
-    edu1_title: 'Studia podyplomowe: Mened\u017Cer Jako\u015Bci',
-    edu1_desc: 'Lean Management, Six Sigma, Kaizen',
-    edu1_school: 'Szko\u0142a G\u0142\u00F3wna Handlowa (SGH)',
-    edu2_title: 'Magister Psychologii Klinicznej',
-    edu2_school: 'Uniwersytet SWPS',
-    edu3_title: 'In\u017Cynier: Zarz\u0105dzanie i In\u017Cynieria Produkcji',
-    edu3_school: 'Politechnika Warszawska',
-    edu4_title: 'Rotary Youth Exchange: Brazylia',
-    edu4_school: 'Liceum ANGLO, Penapolis',
-    cert_title: 'Certyfikaty i szkolenia',
-    cert_diploma: 'Dyplom',
-    cert_ai: 'Wykorzystanie AI w rozwoju firmy: Google / SGH, 2026',
-    lang_title: 'J\u0119zyki',
-    lang_pl: 'Polski', lang_pl_lvl: 'ojczysty',
-    lang_en: 'Angielski', lang_en_lvl: 'zaawansowany',
-    lang_pt: 'Portugalski', lang_pt_lvl: '\u015Brednio\u00ADzaawansowany',
-    lang_it: 'W\u0142oski', lang_it_lvl: 'podstawowy',
-    bi_title: 'BI & Analityka',
-    data_title: 'Dane & ETL',
-    ai_built: 'Zbudowane z pomoc\u0105 AI: Claude Code',
-    print: 'Drukuj CV',
-    gdpr: 'Wyra\u017Cam zgod\u0119 na przetwarzanie moich danych osobowych w celu rekrutacji.',
-    skip: 'Przejd\u017A do tre\u015Bci',
-  },
-  en: {
-    badge: 'Open to new opportunities',
-    tagline: 'Data Analytics Manager with 8+ years in Financial Services. Bridging complex data landscapes and executive-level decision-making.',
-    location: 'remote',
-    theme: 'Theme',
-    topbar_title: 'Adriana Gu\u015Bciora | Data Analytics Manager',
-    present: 'present',
-    exp_title: 'Work Experience',
-    exp1_role: 'Senior Finance Analyst',
-    exp1_period: 'Oct 2024 \u2013 present',
-    exp1_company: 'Trustwave Sp. z o.o. \u00B7 Performance Management \u00B7 Warsaw',
-    exp1_b1: 'Designing financial dashboards for Financial Directors and CFO: delivering "at-a-glance" insights in Power BI',
-    exp1_b2: 'Translating complex financial data into actionable business recommendations for stakeholders',
-    exp1_b3: 'Automating financial reporting: Power Query, Alteryx: reducing manual workload',
-    exp1_b4: 'SQL analytics and data modeling supporting strategic decision-making',
-    exp1_b5: 'Building and maintaining ETL pipelines in Alteryx',
-    exp2_role: 'Finance Analyst at HSBC',
-    exp2_period: 'Jul 2022 - Apr 2024',
-    exp2_company: 'Alten Polska Sp. z o.o. \u00B7 Cracow / remote',
-    exp2_b1: 'Coordinating a team of 5 analysts at a global bank (HSBC)',
-    exp2_b2: 'Managing finance processes for ~40 projects worth $15M: budgeting, forecasting, resource allocation',
-    exp2_b3: 'Designing BI reports and dashboards: SQL, Power Query, Power BI, Cognos',
-    exp2_b4: 'Presenting analytical findings to stakeholders and recommending optimization actions',
-    exp2_b5: 'Automating multi-source reporting: Power Query',
-    exp2_b6: 'Training teams on analytical tools (Power BI, Power Query, Excel)',
-    exp3_role: 'Smartsheet Developer',
-    exp3_period: 'Jun 2021 - Jun 2022',
-    exp3_company: 'Zimmer Biomet Polska \u00B7 Global Business Support \u00B7 Warsaw',
-    exp3_b1: 'Reporting for Global Transition Process across 14 departments',
-    exp3_b2: 'Tool training for global end users and Smartsheet developers',
-    exp3_b3: 'Creating Continuous Improvement app: PowerApps',
-    exp4_role: 'BI Developer & Analyst',
-    exp4_period: 'Sep 2018 - May 2021',
-    exp4_company: 'ISS Facility Services \u00B7 Project Management \u00B7 Warsaw',
-    exp4_b1: 'Managing teams (4-15 people) and conducting internal audits',
-    exp4_b2: 'Global collaboration with a banking sector client: invoice flow process analysis, planning and implementing process improvements',
-    exp4_b3: 'Dashboards and board-level reports: Power BI and SharePoint',
-    exp4_b4: 'Process automation: Power Automate, SharePoint, Power BI',
-    exp4_b5: 'Budgeting, forecasting and non-financial analysis',
-    exp4_b6: 'Novatorium Project: innovation implementation using Power Platform',
-    exp5_role: 'Junior Project Manager \u00B7 Management Trainee',
-    exp5_period: 'Feb 2016 - Aug 2018',
-    exp5_company: 'Jeronimo Martins (Lisbon & Warsaw) \u00B7 Robert BOSCH (Warsaw)',
-    exp5_b1: 'Employer Branding, Store Excellence, Customer Service & Logistics',
-    exp5_b2: 'International experience: Portugal and Poland',
-    skills_title: 'Technical Skills',
-    ai_title: 'AI & Automation',
-    skill_excel: 'Excel advanced (formulas, Power Query)',
-    proj1_name: 'adriana.gusciora.pl',
-    proj1_desc: 'Psychologist website: bilingual, 3 themes, WCAG AA, SEO. Built with Claude Code.',
-    proj2_name: 'Portrait Portfolio',
-    proj2_desc: 'Art portfolio: gallery, order form, responsive design.',
-    proj3_name: 'AI Chatbot',
-    proj3_desc: 'Relationship assistant: crisis detection, injection protection, knowledge base.',
-    edu_title: 'Education',
-    edu1_title: 'Postgraduate: Quality Manager',
-    edu1_desc: 'Lean Management, Six Sigma, Kaizen',
-    edu1_school: 'SGH Warsaw School of Economics',
-    edu2_title: "Master's in Clinical Psychology",
-    edu2_school: 'University of Social Sciences and Humanities (SWPS)',
-    edu3_title: 'Engineering: Management & Production Engineering',
-    edu3_school: 'Warsaw University of Technology',
-    edu4_title: 'Rotary Youth Exchange: Brazil',
-    edu4_school: 'ANGLO High School, Penapolis',
-    cert_title: 'Certifications & Training',
-    cert_diploma: 'Diploma',
-    cert_ai: 'Using AI in Business Development: Google / SGH, 2026',
-    lang_title: 'Languages',
-    lang_pl: 'Polish', lang_pl_lvl: 'native',
-    lang_en: 'English', lang_en_lvl: 'advanced',
-    lang_pt: 'Portuguese', lang_pt_lvl: 'intermediate',
-    lang_it: 'Italian', lang_it_lvl: 'basic',
-    bi_title: 'BI & Analytics',
-    data_title: 'Data & ETL',
-    ai_built: 'Built with AI: Claude Code',
-    print: 'Print CV',
-    gdpr: 'I consent to the processing of my personal data for recruitment purposes.',
-    skip: 'Skip to content',
-  }
-};
-
-var currentLang = 'pl';
-
-function setLang(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  var t = translations[lang];
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.textContent = t[key];
-  });
-  document.getElementById('btn-pl').classList.toggle('cv-analyst__toggle-btn--active', lang === 'pl');
-  document.getElementById('btn-en').classList.toggle('cv-analyst__toggle-btn--active', lang === 'en');
-  document.getElementById('btn-pl').setAttribute('aria-pressed', lang === 'pl');
-  document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
-  var certEng = document.getElementById('cert-engineer');
-  if (certEng) certEng.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/inzynier-pl.jpg' : 'edukacja/inzynier-en.jpg');
-  var certMaster = document.getElementById('cert-master');
-  if (certMaster) certMaster.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/magister-psychologii.jpg' : 'edukacja/psychology-master-degree.jpg');
-  var certAi = document.getElementById('cert-ai-skills');
-  if (certAi) certAi.setAttribute('data-lightbox', lang === 'pl' ? 'edukacja/umiejetnosci jutra AI.pdf' : 'edukacja/umiejetnosci jutra AI_eng.pdf');
-  startTyping();
-}
-
-// ===== Dark/Light mode =====
-function toggleTheme() {
-  var root = document.getElementById('cv-analyst');
-  var isDark = root.getAttribute('data-mode') === 'dark';
-  root.setAttribute('data-mode', isDark ? 'light' : 'dark');
-  document.getElementById('icon-sun').style.display = isDark ? 'block' : 'none';
-  document.getElementById('icon-moon').style.display = isDark ? 'none' : 'block';
-  document.getElementById('btn-theme').setAttribute('aria-label',
-    isDark
-      ? (currentLang === 'pl' ? 'Przełącz na tryb ciemny' : 'Switch to dark mode')
-      : (currentLang === 'pl' ? 'Przełącz na tryb jasny' : 'Switch to light mode')
-  );
-  localStorage.setItem('cv-analyst-theme', isDark ? 'light' : 'dark');
-}
-
-// Apply saved theme (or respect prefers-color-scheme)
-(function() {
-  var saved = localStorage.getItem('cv-analyst-theme');
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (saved === 'dark' || (!saved && prefersDark)) {
-    document.getElementById('cv-analyst').setAttribute('data-mode', 'dark');
-    document.getElementById('icon-sun').style.display = 'none';
-    document.getElementById('icon-moon').style.display = 'block';
-  }
-})();
-
-// ===== Event listeners (no inline onclick) =====
-document.getElementById('btn-pl').addEventListener('click', function() { setLang('pl'); });
-document.getElementById('btn-en').addEventListener('click', function() { setLang('en'); });
-document.getElementById('btn-theme').addEventListener('click', toggleTheme);
-document.getElementById('print-btn').addEventListener('click', function() {
-  document.querySelectorAll('.cv-analyst__skill-fill').forEach(function(bar) {
-    bar.style.width = bar.getAttribute('data-width') + '%';
-  });
-  setTimeout(function() { window.print(); }, 100);
-});
-
-// ===== Typing animation =====
-var typingPhrases = {
-  pl: [
-    'Dane \u2192 strategia \u2192 wzrost',
-    'Dashboardy, kt\u00F3re m\u00F3wi\u0105 do C-level',
-    '5+ lat w sektorze finansowym',
-    'SQL + Power BI = szybsze decyzje',
-    'Automatyzuj\u0119 to, co powtarzalne'
-  ],
-  en: [
-    'Data \u2192 Strategy \u2192 Growth',
-    'Dashboards that speak to C-level',
-    '5+ years in Financial Services',
-    'SQL + Power BI = faster decisions',
-    'I automate the repetitive stuff'
-  ]
-};
-
-var typingTimeout;
-function startTyping() {
-  var el = document.getElementById('typing-area');
-  if (!el) return;
-  if (typingTimeout) clearTimeout(typingTimeout);
-
-  var phrases = typingPhrases[currentLang] || typingPhrases.pl;
-
-  // Respect reduced motion preference
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    el.textContent = phrases[0];
-    return;
-  }
-
-  var phraseIdx = 0;
-  var charIdx = 0;
-  var deleting = false;
-
-  function tick() {
-    var phrase = phrases[phraseIdx];
-    if (!deleting) {
-      charIdx++;
-      el.innerHTML = phrase.substring(0, charIdx) + '<span class="cursor"></span>';
-      if (charIdx === phrase.length) {
-        typingTimeout = setTimeout(function() { deleting = true; tick(); }, 2000);
-        return;
-      }
-      typingTimeout = setTimeout(tick, 50 + Math.random() * 40);
-    } else {
-      charIdx--;
-      el.innerHTML = phrase.substring(0, charIdx) + '<span class="cursor"></span>';
-      if (charIdx === 0) {
-        deleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-        typingTimeout = setTimeout(tick, 400);
-        return;
-      }
-      typingTimeout = setTimeout(tick, 25);
-    }
-  }
-  tick();
-}
-startTyping();
-
-// ===== Skill bar animation =====
-(function() {
-  var bars = document.querySelectorAll('.cv-analyst__skill-fill');
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        var w = entry.target.getAttribute('data-width');
-        entry.target.style.width = w + '%';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  bars.forEach(function(bar) { observer.observe(bar); });
-})();
-
-// ===== Binary rain (Matrix-style, blue/navy, dense top → sparse bottom) =====
-(function() {
+// ---- Binary rain — subtle & even (like cv1), with static full-height render for PDF ----
+(function(){
   var canvas = document.getElementById('rain-canvas');
-  if (!canvas) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var ctx = canvas.getContext('2d');
-  var root = document.getElementById('cv-analyst');
-
-  var fontSize = 14;
+  var fontSize = 16;
   var columns, drops, speeds, brightness, maxDepth;
   var chars = '0123456789';
-  var prevMode = '';
-
-  function init() {
+  function init(fullHeight){
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = fullHeight ? document.documentElement.scrollHeight : window.innerHeight;
+    if (fullHeight){ canvas.style.position='absolute'; canvas.style.height=canvas.height+'px'; }
     columns = Math.floor(canvas.width / fontSize);
-    drops = [];
-    speeds = [];
-    brightness = [];
-    maxDepth = [];
-    for (var i = 0; i < columns; i++) {
-      drops.push(Math.random() * canvas.height / fontSize);
-      speeds.push(0.15 + Math.random() * 0.55);
-      brightness.push(0.4 + Math.random() * 0.6);
-      maxDepth.push(0.3 + Math.random() * 0.7);
-    }
-    var mode = root.getAttribute('data-mode');
-    ctx.fillStyle = mode === 'dark' ? '#0a1628' : '#f8fafb';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    prevMode = mode;
+    drops=[];speeds=[];brightness=[];maxDepth=[];
+    for(var i=0;i<columns;i++){ drops.push(Math.random()*canvas.height/fontSize); speeds.push(0.15+Math.random()*0.5); brightness.push(0.4+Math.random()*0.6); maxDepth.push(0.5+Math.random()*0.5); }
+    ctx.fillStyle = '#0a1628'; ctx.fillRect(0,0,canvas.width,canvas.height);
   }
-  init();
-  window.addEventListener('resize', init);
-
-  function draw() {
-    var mode = root.getAttribute('data-mode');
-
-    if (mode !== prevMode) {
-      ctx.fillStyle = mode === 'dark' ? '#0a1628' : '#f8fafb';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      prevMode = mode;
+  function step(fade){
+    if(fade){ ctx.fillStyle='rgba(10,22,40,0.05)'; ctx.fillRect(0,0,canvas.width,canvas.height); }
+    ctx.font = fontSize+'px "JetBrains Mono", monospace';
+    for(var i=0;i<columns;i++){
+      var ch=chars[Math.floor(Math.random()*chars.length)];
+      var x=i*fontSize, y=Math.floor(drops[i])*fontSize, b=brightness[i];
+      var yRatio=y/canvas.height, yFade=Math.max(0.35, 1-yRatio*0.5); // even, never fully fades
+      if(y>=0 && y<=canvas.height){ ctx.fillStyle='rgba(91,155,213,'+(0.20*b*yFade).toFixed(3)+')'; ctx.fillText(ch,x,y); }
+      drops[i]+=speeds[i];
+      var limit=canvas.height*maxDepth[i];
+      if(drops[i]*fontSize>limit && Math.random()>0.95){ drops[i]=Math.random()*-15; speeds[i]=0.15+Math.random()*0.5; brightness[i]=0.4+Math.random()*0.6; maxDepth[i]=0.5+Math.random()*0.5; }
     }
-
-    ctx.fillStyle = mode === 'dark'
-      ? 'rgba(10, 22, 40, 0.04)'
-      : 'rgba(248, 250, 251, 0.03)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.font = fontSize + 'px "JetBrains Mono", monospace';
-
-    for (var i = 0; i < columns; i++) {
-      var ch = chars[Math.floor(Math.random() * chars.length)];
-      var x = i * fontSize;
-      var y = Math.floor(drops[i]) * fontSize;
-      var b = brightness[i];
-      var yRatio = y / canvas.height;
-      var yFade = Math.max(0, 1 - yRatio * 1.3);
-
-      if (y >= 0 && y <= canvas.height && yFade > 0.01) {
-        var opD = (0.35 * b * yFade).toFixed(3);
-        var opL = (0.14 * b * yFade).toFixed(3);
-        ctx.fillStyle = mode === 'dark'
-          ? 'rgba(91, 155, 213, ' + opD + ')'
-          : 'rgba(30, 86, 160, ' + opL + ')';
-        ctx.fillText(ch, x, y);
-      }
-
-      drops[i] += speeds[i];
-
-      var limit = canvas.height * maxDepth[i];
-      if (drops[i] * fontSize > limit && Math.random() > 0.95) {
-        drops[i] = Math.random() * -15;
-        speeds[i] = 0.15 + Math.random() * 0.55;
-        brightness[i] = 0.4 + Math.random() * 0.6;
-        maxDepth[i] = 0.3 + Math.random() * 0.7;
-      }
-    }
-
-    requestAnimationFrame(draw);
   }
-  draw();
+  var raf;
+  window.__startRain = function(){ init(false); (function loop(){ step(true); raf=requestAnimationFrame(loop); })(); };
+  window.__renderRainStatic = function(frames){ if(raf) cancelAnimationFrame(raf); init(true); for(var f=0; f<frames; f++) step(false); };
+  window.__startRain();
 })();
-
-// ===== Lightbox (images + PDFs) =====
-(function() {
-  var lb = document.getElementById('cert-lightbox');
-  var content = document.getElementById('lb-content');
-  var counter = document.getElementById('lb-counter');
-  var items = [];
-  var idx = 0;
-
-  function isPdf(url) { return url.toLowerCase().endsWith('.pdf'); }
-
-  function show(i) {
-    idx = i;
-    var url = items[i];
-    content.innerHTML = '';
-    if (isPdf(url)) {
-      var iframe = document.createElement('iframe');
-      iframe.src = url;
-      iframe.className = 'cv-cert-lightbox__pdf';
-      iframe.title = 'Certyfikat PDF';
-      content.appendChild(iframe);
-    } else {
-      var img = document.createElement('img');
-      img.src = url;
-      img.alt = 'Certyfikat';
-      img.className = 'cv-cert-lightbox__img';
-      content.appendChild(img);
-    }
-    counter.textContent = items.length > 1 ? (i + 1) + ' / ' + items.length : '';
-    document.getElementById('lb-prev').style.display = items.length > 1 ? '' : 'none';
-    document.getElementById('lb-next').style.display = items.length > 1 ? '' : 'none';
-  }
-
-  function open(list) {
-    items = list;
-    show(0);
-    lb.hidden = false;
-    document.body.style.overflow = 'hidden';
-    document.getElementById('lb-close').focus();
-  }
-
-  function close() {
-    lb.hidden = true;
-    document.body.style.overflow = '';
-    content.innerHTML = '';
-  }
-
-  document.getElementById('lb-close').addEventListener('click', close);
-  document.getElementById('lb-overlay').addEventListener('click', close);
-  document.getElementById('lb-prev').addEventListener('click', function() { show((idx - 1 + items.length) % items.length); });
-  document.getElementById('lb-next').addEventListener('click', function() { show((idx + 1) % items.length); });
-
-  document.addEventListener('keydown', function(e) {
-    if (lb.hidden) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show((idx - 1 + items.length) % items.length);
-    if (e.key === 'ArrowRight') show((idx + 1) % items.length);
-  });
-
-  document.addEventListener('click', function(e) {
-    var btn = e.target.closest('[data-lightbox]');
-    if (btn) {
-      e.preventDefault();
-      open(btn.getAttribute('data-lightbox').split(','));
-    }
-  });
+// ---- Typing line ----
+(function(){
+  var el = document.getElementById('typing-area');
+  var phrases = ['Cost controlling & reconciliation','Budget vs actuals, clean','$15M people-cost pool (HSBC)','Advanced Excel + Power Query','I automate the repetitive'];
+  var pi=0, ci=0, del=false;
+  (function tick(){
+    var p=phrases[pi];
+    if(!del){ ci++; el.innerHTML=p.substring(0,ci)+'<span class="cursor"></span>'; if(ci===p.length){ setTimeout(function(){del=true;tick();},1600); return; } setTimeout(tick,55+Math.random()*40); }
+    else { ci--; el.innerHTML=p.substring(0,ci)+'<span class="cursor"></span>'; if(ci===0){ del=false; pi=(pi+1)%phrases.length; setTimeout(tick,350); return; } setTimeout(tick,25); }
+  })();
 })();
 </script>
-
 </body>
 </html>

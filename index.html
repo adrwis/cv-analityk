@@ -1468,10 +1468,12 @@ button:focus-visible {
 }
 </style>
 <style>
-  /* slightly lighter base so content doesn't blend into near-black */
-  html, body { background: #0e1f38; }
-  .cv-analyst[data-mode="dark"]{ --ca-bg:#0e1f38; --ca-surface:#16294310; }
+  /* lighter navy base; full-bleed -> kill the 1.2cm white @page margins from cv-analityk.css */
+  @page { margin: 0 !important; }
+  html, body { background: #1a2f52 !important; }
+  .cv-analyst, .cv-analyst[data-mode="dark"]{ --ca-bg:#1a2f52; background:#1a2f52 !important; }
   .cv-analyst__topbar { position: static; }
+  .cv-analyst__success-tag{ display:inline-block; color:var(--ca-accent-light); font-weight:700; font-size:.78rem; letter-spacing:.02em; margin-right:6px; }
 
   /* role line under the name -> links to the cv-analityk site */
   .cv-analyst__role-link{ display:inline-flex; align-items:center; gap:.5rem; margin:.35rem 0 .15rem;
@@ -1489,13 +1491,28 @@ button:focus-visible {
     color:#cfe6ff; background:rgba(91,155,213,.12); border-left:2px solid var(--ca-accent); border-radius:4px; }
   .cv-analyst__exp-success span{ color:var(--ca-accent); font-weight:700; margin-right:5px; }
 
+  /* ===== HERO readability: calm darker panel behind the hero so text separates from the rain ===== */
+  .cv-analyst__hero{ position:relative; z-index:1; }
+  .cv-analyst__hero::before{ content:""; position:absolute; z-index:-1;
+    inset:-14px -22px -16px -22px; border-radius:18px;
+    background: linear-gradient(160deg, rgba(13,24,46,.92) 0%, rgba(16,30,56,.88) 55%, rgba(20,38,70,.82) 100%);
+    border:1px solid rgba(132,182,234,.30);
+    box-shadow: 0 10px 34px rgba(6,14,30,.45), inset 0 1px 0 rgba(160,200,245,.10);
+    pointer-events:none; }
+  /* hero text pops over the (now darker) panel */
+  .cv-analyst__name{ text-shadow:0 1px 14px rgba(5,12,26,.6); }
+  .cv-analyst__role-link, .cv-analyst__headline, .cv-analyst__tagline,
+  .cv-analyst__contact-item, .cv-analyst__hero-badge{ text-shadow:0 1px 6px rgba(5,12,26,.55); }
+  .cv-analyst__tagline{ color:#dcebff !important; }
+  .cv-analyst__tagline strong{ color:#eaf3ff; }
+
   /* readability: faint, EVEN rain + light veil; cards get a visible edge so they don't blend */
   .cv-analyst__container{ position:relative; z-index:1; }
   .cv-analyst__container::before{ content:""; position:absolute; inset:0; z-index:-1;
-    background: linear-gradient(180deg, rgba(12,26,48,.34), rgba(12,26,48,.44)); pointer-events:none; }
+    background: linear-gradient(180deg, rgba(20,36,64,.16), rgba(20,36,64,.26)); pointer-events:none; }
   .cv-analyst__exp-card, .cv-analyst__skill-group, .cv-analyst__terminal,
   .cv-analyst__lang-card, .cv-analyst__edu-item{
-    background: rgba(22,40,67,.78) !important; border:1px solid rgba(122,179,232,.16) !important; }
+    background: rgba(33,54,90,.82) !important; border:1px solid rgba(140,185,235,.22) !important; }
 
   /* ===== COMPACT mode (only for the 2-page PDF) ===== */
   .cv-analyst.compact{ font-size:7.4pt !important; line-height:1.26 !important; }
@@ -1597,6 +1614,40 @@ button:focus-visible {
   .cv-analyst.compact .cv-analyst__lang-level{ font-size:7.9pt !important; }
   .cv-analyst.compact .cv-analyst__footer{ margin-top:8px !important; padding-top:8px !important; }
   .cv-analyst.compact .cv-analyst__gdpr{ font-size:7pt !important; }
+  .cv-analyst.compact #core-skills{ break-before:page !important; page-break-before:always !important; }
+  .cv-analyst.compact .cv-analyst__success-tag{ font-size:6.9pt !important; display:block !important; margin:0 0 1px !important; }
+
+  /* fit page 1 (hero + experience) within a single page so the break is clean */
+  .cv-analyst.compact .cv-analyst__hero{ padding:2px 0 7px !important; gap:14px !important; margin-bottom:3px !important; }
+  .cv-analyst.compact .cv-analyst__name{ font-size:21pt !important; }
+  .cv-analyst.compact .cv-analyst__photo{ width:90px !important; height:90px !important; }
+  .cv-analyst.compact .cv-analyst__headline{ font-size:8pt !important; margin:4px 0 3px !important; }
+  .cv-analyst.compact .cv-analyst__tagline{ font-size:7.8pt !important; line-height:1.3 !important; margin:4px 0 !important; }
+  .cv-analyst.compact .cv-analyst__contact{ font-size:7.4pt !important; margin-top:6px !important; gap:4px 14px !important; }
+  .cv-analyst.compact .cv-analyst__exp-card{ margin-bottom:6px !important; padding:7px 11px !important; }
+  .cv-analyst.compact .cv-analyst__exp-role{ font-size:9.4pt !important; }
+  .cv-analyst.compact .cv-analyst__exp-company{ font-size:7.6pt !important; margin:1px 0 3px !important; }
+  .cv-analyst.compact .cv-analyst__exp-bullets li{ font-size:7.5pt !important; line-height:1.28 !important; margin-bottom:1.5px !important; }
+  .cv-analyst.compact .cv-analyst__exp-success{ font-size:6.9pt !important; line-height:1.3 !important; padding:4px 9px !important; margin-top:4px !important; }
+  /* shrink the page-2 cluster (skills + terminal + edu + certs + langs) to fit one page */
+  .cv-analyst.compact #core-skills{ margin-top:0 !important; }
+  .cv-analyst.compact .cv-analyst__skill-group{ padding:8px 11px !important; }
+  .cv-analyst.compact .cv-analyst__skill-group h3{ margin-bottom:6px !important; }
+  .cv-analyst.compact .cv-analyst__skill-bar{ margin-bottom:3px !important; }
+  .cv-analyst.compact .cv-analyst__skill-track{ height:4px !important; }
+  .cv-analyst.compact .cv-analyst__ai-projects{ margin-top:6px !important; gap:7px !important; }
+  .cv-analyst.compact .cv-analyst__ai-project{ padding:6px 8px !important; }
+  .cv-analyst.compact .cv-analyst__terminal{ margin-top:6px !important; }
+  .cv-analyst.compact .cv-analyst__terminal-body{ padding:7px 12px !important; font-size:7.7pt !important; line-height:1.32 !important; }
+  .cv-analyst.compact .cv-analyst__edu-item{ padding:5px 10px !important; }
+  .cv-analyst.compact .cv-analyst__lang-card{ padding:5px 10px !important; }
+  .cv-analyst.compact section.cv-analyst__section{ margin:5px 0 !important; }
+  .cv-analyst.compact .cv-analyst__footer{ margin-top:5px !important; padding-top:6px !important; }
+  .cv-analyst.compact .cv-analyst__certs .cv-analyst__tag, .cv-analyst.compact .cv-analyst__tags--certs .cv-analyst__tag{ margin:2px 3px 0 0 !important; }
+
+  /* hero backdrop panel sized for the compact PDF layout */
+  .cv-analyst.compact .cv-analyst__hero{ padding:10px 0 11px !important; }
+  .cv-analyst.compact .cv-analyst__hero::before{ inset:0 -16px 2px -16px !important; border-radius:14px !important; }
 </style>
 </head>
 <body>
@@ -1615,8 +1666,8 @@ button:focus-visible {
       <div class="cv-analyst__hero-content">
         <div class="cv-analyst__hero-badge"><span class="pulse" aria-hidden="true"></span><span>Open to new opportunities · Remote · CET</span></div>
         <h1 id="cv-name" class="cv-analyst__name">Adriana Guściora</h1>
-        <a class="cv-analyst__role-link" href="https://adrwis.github.io/cv-analityk/" target="_blank" rel="noopener">Senior Analyst · Finance Operations (Cost Controlling)</a>
-        <p class="cv-analyst__headline" id="headline">$15M people-cost pool reconciled across ~40 projects — budget vs actuals, audit-ready.</p>
+        <a class="cv-analyst__role-link" href="https://adrwis.github.io/cv-analityk/" target="_blank" rel="noopener">Senior Data Analyst</a>
+        <p class="cv-analyst__headline" id="headline">$15M people-cost pool reconciled across ~40 projects — budget vs actuals, <span style="white-space:nowrap">audit-ready</span>.</p>
         <p class="cv-analyst__tagline">8+ years in <strong>cost controlling, reconciliation and FP&amp;A</strong> across banking, cybersecurity and facilities (HSBC, Trustwave, ISS). I turn messy, multi-source financial data into <strong>validated, decision-ready reporting</strong> — and automate the repetitive.</p>
         <div class="cv-analyst__typing" id="typing-area" aria-live="polite"></div>
 
@@ -1641,25 +1692,25 @@ button:focus-visible {
     <div class="cv-analyst__exp-header"><h3 class="cv-analyst__exp-role">Senior Finance Analyst · Performance Management</h3><span class="cv-analyst__exp-period">Oct 2024 – Mar 2026</span></div>
     <p class="cv-analyst__exp-company">Trustwave Sp. z o.o. · Cybersecurity · Warsaw / Remote</p>
     <ul class="cv-analyst__exp-bullets" role="list"><li>Consolidated and <strong>reconciled financial and cost data from multiple sources</strong> into one validated reporting layer used daily by Financial Directors and the CFO (advanced Excel / Power Query, SQL, Power BI).</li><li>Owned recurring <strong>cost, KPI and budget-vs-actuals reporting</strong>; safeguarded data accuracy through validation, reconciliation and discrepancy checks.</li><li><strong>Automated repetitive month-end and reporting work</strong> with Power Query, Power Automate and AI tools.</li></ul>
-    <p class="cv-analyst__exp-success"><span aria-hidden="true">★</span>Replaced fragmented spreadsheets with one validated reporting layer adopted daily at C-level.</p>
+    <p class="cv-analyst__exp-success"><span class="cv-analyst__success-tag">★ Success story</span>Analysed FP&amp;A and Performance Management processes for the finance team: diagnosed bottlenecks in monthly reporting, designed and implemented improvements, produced before/after process documentation and delivered hands-on training across the full toolset (Excel, Power Query, Alteryx, SQL, Power BI).</p>
   </div>
       <div class="cv-analyst__exp-card">
     <div class="cv-analyst__exp-header"><h3 class="cv-analyst__exp-role">Finance Analyst at HSBC · Cost Controlling</h3><span class="cv-analyst__exp-period">Jul 2022 – Apr 2024</span></div>
     <p class="cv-analyst__exp-company">Alten Polska Sp. z o.o. · Banking · Cracow / Remote</p>
     <ul class="cv-analyst__exp-bullets" role="list"><li>Owned the controlling view of a <strong>$15M people-cost pool across ~40 projects</strong>: headcount and cost <strong>budget vs actuals</strong>, forecasting, allocation, trends and outliers.</li><li>Built a <strong>single source of truth</strong> for a 5-analyst team by reconciling <strong>3 enterprise systems</strong> (Clarity, GPDM, Cognos) with SQL, Power Query and Power BI.</li><li>Maintained <strong>data definitions, documentation and training</strong>, keeping the close consistent and self-service.</li></ul>
-    <p class="cv-analyst__exp-success"><span aria-hidden="true">★</span>Reconciled a $15M people-cost pool across ~40 projects — budget vs actuals, audit-ready.</p>
+    <p class="cv-analyst__exp-success"><span class="cv-analyst__success-tag">★ Success story</span>Analysed financial processes of every analyst in the coordinated team, diagnosed inefficiencies, proposed and implemented streamlined workflows, produced new process documentation and trained the team to confidently operate the upgraded toolset (Excel, Power Query).</p>
   </div>
       <div class="cv-analyst__exp-card">
     <div class="cv-analyst__exp-header"><h3 class="cv-analyst__exp-role">Operations / Data Analyst · Global Transition</h3><span class="cv-analyst__exp-period">Jun 2021 – Jun 2022</span></div>
     <p class="cv-analyst__exp-company">Zimmer Biomet Polska · Medical Devices · Warsaw / Remote</p>
     <ul class="cv-analyst__exp-bullets" role="list"><li><strong>Reconciled data flows across 14 departments</strong> into shared definitions, structured data governance and KPI dashboards.</li><li>Built spreadsheet- and SharePoint-based workflows (PowerApps + Power Automate); validated data across global teams.</li></ul>
-    <p class="cv-analyst__exp-success"><span aria-hidden="true">★</span>Unified scattered data across 14 departments into one governed source of truth.</p>
+    <p class="cv-analyst__exp-success"><span class="cv-analyst__success-tag">★ Success story</span>Designed and rolled out a new generation of dashboards reporting Global Transition migration progress for 14 departments, trained Smartsheet developers (maintenance &amp; roadmap) and end users (data input &amp; consumption), drove iterative dashboard improvements and owned change communication around each release (Smartsheet).</p>
   </div>
       <div class="cv-analyst__exp-card">
     <div class="cv-analyst__exp-header"><h3 class="cv-analyst__exp-role">BI / Finance Analyst · Controlling &amp; Operations</h3><span class="cv-analyst__exp-period">Sep 2018 – May 2021</span></div>
     <p class="cv-analyst__exp-company">ISS Facility Services · Project Management · Warsaw · On-site / Remote</p>
     <ul class="cv-analyst__exp-bullets" role="list"><li><strong>Cost budgeting, forecasting and financial reconciliation</strong> for a regulated pharmaceutical client: controlling reporting, variance analysis and internal audits; <strong>managed teams of 4–15</strong>.</li><li>Board-level <strong>cost and operational KPI dashboards</strong> (Power BI + SharePoint); <strong>automated</strong> invoice-flow data for a global banking client.</li></ul>
-    <p class="cv-analyst__exp-success"><span aria-hidden="true">★</span>Invoice-flow automation and service-budget forecasting removed recurring manual effort.</p>
+    <p class="cv-analyst__exp-success"><span class="cv-analyst__success-tag">★ Success story</span>Owned the project to streamline invoice flow for a global banking client: designed and proposed the new process, implemented it end-to-end, produced full process documentation and trained both internal team and client stakeholders for efficient adoption (Power Automate, SharePoint, Excel). In parallel led the Novatorium initiative across the Polish branch — owning communication and employee training (PowerApps, Power BI, SharePoint, Excel).</p>
   </div>
       <div class="cv-analyst__exp-card">
     <div class="cv-analyst__exp-header"><h3 class="cv-analyst__exp-role">Junior Project Manager · Operations · Management Trainee</h3><span class="cv-analyst__exp-period">Feb 2016 – Aug 2018</span></div>
@@ -1669,7 +1720,7 @@ button:focus-visible {
   </div>
     </section>
 
-    <section class="cv-analyst__section">
+    <section class="cv-analyst__section" id="core-skills">
       <div class="cv-analyst__section-header"><div class="cv-analyst__section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h2 class="cv-analyst__section-title">Core Skills</h2></div>
       <div class="cv-analyst__skills-grid">
         <div class="cv-analyst__skill-group cv-analyst__skill-group--ai">
@@ -1798,10 +1849,10 @@ button:focus-visible {
     columns = Math.floor(W / fontSize);
     drops=[];speeds=[];brightness=[];maxDepth=[];
     for(var i=0;i<columns;i++){ drops.push(Math.random()*H/fontSize); speeds.push(0.15+Math.random()*0.5); brightness.push(0.4+Math.random()*0.6); maxDepth.push(0.5+Math.random()*0.5); }
-    ctx.fillStyle='#0e1f38'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#1a2f52'; ctx.fillRect(0,0,W,H);
   }
   function step(fade){
-    if(fade){ ctx.fillStyle='rgba(14,31,56,0.06)'; ctx.fillRect(0,0,W,H); }
+    if(fade){ ctx.fillStyle='rgba(26,47,82,0.06)'; ctx.fillRect(0,0,W,H); }
     ctx.font = fontSize+'px "JetBrains Mono", monospace';
     for(var i=0;i<columns;i++){
       var ch=chars[Math.floor(Math.random()*chars.length)];

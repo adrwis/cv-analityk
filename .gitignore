@@ -1,5 +1,6 @@
 # PDFy CV — generowane lokalnie, nie commitujemy
 cv/*.pdf
+cv/**/*.pdf
 
 # Helpers / temp
 cv/_*.py

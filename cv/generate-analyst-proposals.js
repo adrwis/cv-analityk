@@ -5,7 +5,7 @@ const { chromium } = require('C:/Users/adria/OneDrive/Dokumenty/GitHub/adriana-g
 const fs = require('fs');
 const path = require('path');
 
-const OUT_DIR = __dirname + '/';
+const OUT_DIR = __dirname + '/template/';
 const PHOTO = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(__dirname, 'ada2_thumb.jpg')).toString('base64');
 
 /* ---------------- Shared real content ---------------- */
@@ -250,10 +250,11 @@ function tpl3() {
   .org{font-size:9pt;color:var(--teal);font-weight:600;margin-top:.02cm}
   ul{list-style:none;margin-top:.12cm}
   li{position:relative;padding-left:.4cm;margin-top:.09cm}
-  li::before{content:'—';position:absolute;left:0;color:var(--teal)}
+  li::before{content:'·';position:absolute;left:0;color:var(--teal);font-weight:700}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:.5cm 1cm;margin-top:.1cm}
   .skill-row b{font-family:'Fraunces';color:var(--ink);font-weight:600;font-size:10pt}
   .edu-item{margin-top:.14cm}.edu-item .d{font-weight:600}.edu-item .s{color:var(--muted);font-size:8.8pt}
+  .cert-item{margin-top:.14cm;font-size:9pt;color:#33433f}
   .meta-line{font-size:9.2pt;color:#33433f;margin-top:.12cm}
   .langs{font-size:9.4pt}.langs b{font-family:'Fraunces'}
   </style></head><body><div class="page">
@@ -268,8 +269,9 @@ function tpl3() {
     <div class="two">${C.skills.map(s=>`<div class="skill-row"><b>${esc(s.g)}</b><div class="meta-line">${s.items.map(esc).join(' · ')}</div></div>`).join('')}</div>
     <h2>Education <span class="n">03</span></h2>
     <div class="two">${C.edu.map(e=>`<div class="edu-item"><div class="d">${esc(e.d)}</div><div class="s">${esc(e.s)} · ${esc(e.y)}</div></div>`).join('')}</div>
-    <h2>Certifications & Languages <span class="n">04</span></h2>
-    <div class="meta-line">${C.certs.map(esc).join('  ·  ')}</div>
+    <h2>Certifications <span class="n">04</span></h2>
+    <div class="two">${C.certs.map(c=>`<div class="cert-item">${esc(c)}</div>`).join('')}</div>
+    <h2>Languages <span class="n">05</span></h2>
     <div class="langs meta-line">${C.langs.map(l=>`<b>${esc(l[0])}</b> ${esc(l[1])}`).join('  ·  ')}</div>
   </div></body></html>`;
 }

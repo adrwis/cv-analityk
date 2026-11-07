@@ -9,3 +9,9 @@ cv/_*.js
 # OS
 .DS_Store
 Thumbs.db
+
+# CV pod konkretne firmy: tylko lokalnie, repo jest publiczne (decyzja Ady 2026-11-07).
+# Pliki juz sledzone w gicie zostaja; nowe generatory i changelogi nie trafiaja do repo.
+cv/generate-cv-*.js
+cv/archiwum/generate-cv-*.js
+cv/**/CHANGELOG-*tailored-cv*.md
